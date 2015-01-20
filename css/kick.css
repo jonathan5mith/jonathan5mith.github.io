@@ -1,0 +1,263 @@
+ /* -----------Font awesome ----------- */
+
+.social-icons{
+	font-size: 30px;
+}
+
+ /*  -----------Body padding to account for Navbar-----------  */
+
+body { 
+	padding-top: 0px;
+	font-family: 'Karla' sans-serif;
+}
+
+/*  -----------Navbar overrides-----------  */
+
+.navbar-brand{
+	padding-top: 10px;
+}
+
+.navbar-default{
+	background-color: rgba(0,0,0,0.7);
+	border-width: 0px;
+	color:black;
+}
+
+.navbar-collapse{
+	border-top: none;
+	box-shadow: none;
+}
+	
+.navbar-default .navbar-nav > li > a {
+   color: white;
+   font-size: 17px;
+   
+    }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: rgba(255,255,255,0);
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;
+}
+
+
+.navbar-toggle {
+	border-width: 0px;
+}
+
+.icon-bar{
+	background-color:white;
+}
+
+
+
+
+/* -----------Sub navbar picture ----------- */
+
+.sub-navbar {
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-141%20(1).jpg');
+	background-repeat: no-repeat;
+	background-position: left;
+	width: 100%;	
+	height: 430px;
+	padding-top: 0px;
+	text-align: center;
+	}
+
+.sub-navbar1 {
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-190.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;	
+	height: 430px;
+	padding-top: 0px;
+	text-align: center;
+	}
+
+.sub-navbar2 {
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-54.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;	
+	height: 300px;
+	padding-top: 0px;
+	text-align: center;
+	}
+
+
+/* -----------Sub navbar text & container ----------- */
+
+.text-container {
+
+	margin-top: 190px;
+	display:inline-block;
+	text-align: center;
+	}
+
+.text-container1 {
+
+	margin-top: 290px;
+	display:inline-block;
+	text-align: center;
+
+	}
+
+.text-container1 p{
+	font-family: 'open sans extrabold', sans-serif;
+	font-size:80px;
+	font-weight:bold;
+	text-align: center;
+	color:white;
+}
+
+.line1{
+	background-color: rgba(0,0,0,0.5);
+	font-family: 'open sans extrabold', sans-serif;
+	font-size:40px;
+	font-weight:bold;
+	margin-left: 7px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 3px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 2px;
+	color:white;
+	width: 410px;
+	margin-right: auto;
+	margin-left: auto;
+	}
+
+
+.line2	{
+	background-color: rgba(0,0,0,0.5);
+	font-family: 'open sans extrabold', sans-serif;
+	font-size:40px;
+	font-weight:bold;
+	margin-left: 7px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 3px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 2px;
+	color:white;
+	width: 350px;
+	margin-right: auto;
+	margin-left: auto;
+	}
+	
+
+/* -----------Main content ----------- */
+
+.coltext {
+	text-align: center;
+}
+
+.maincontain{
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+
+}
+
+.mainheaders{
+	font-size: 33px;
+	font-weight: bold;
+	line-height: 70px;
+	}
+
+.maincontent{
+	padding-top: 30px;
+	max-width: 220px;
+	margin:auto;
+	font-size: 17px;
+}
+
+
+
+.col-md-4{
+		padding-bottom: 50px;
+}
+
+/* -----------Get started ----------- */
+
+.getstarted{
+	padding-top: 50px;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+#getstarted{
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 2px;
+	width: 170px;
+	margin:auto;
+	;
+}
+
+#getstarted a{
+	color:white;
+	text-decoration: none
+}
+#getstarted a:hover{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#getstarted a:active{
+	text-decoration: none;
+	}
+
+/* -----------Bottom Navbar ----------- */
+
+
+.positiontext{
+	text-align: center;
+}
+
+/* -----------Profile Pics ----------- */
+
+.pofilepic{
+	
+	background-position: center;
+	height:50px;
+	width: 50px;
+	border-radius: 100%;
+}
+
+#container
+{
+    height:200px;
+    width:400px;
+    border:0px black solid;
+}
+
+#inner
+{
+    height:170px;
+    width:170px;
+    background-size: 100%;
+    background-position: center;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+   
+    margin-top:-145px;
+    border: 7px solid rgba(0, 0, 0, .3);
+}
+
+#profilename{
+	text-align: left;
+	margin-top: 0px;
+	padding-top: 380px;
+	padding-left: 238px;
+	color: white;
+	font-weight: bold;
+	font-family: 'Karla', sans-serif;
+	font-size: 45px;
+	}
