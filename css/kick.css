@@ -254,10 +254,12 @@ body {
 #profilename{
 	text-align: left;
 	margin-top: 0px;
-	padding-top: 280px;
-	padding-left: 238px;
+	padding-top: 245px;
+	padding-left: 235px;
 	color: white;
 	font-weight: bold;
-	font-family: 'Karla', sans-serif;
-	font-size: 45px;
+	font-family: 'karla', sans-serif;
+	font-size: 40px;
+	text-shadow: 1px 1px lightgray; 
+
 	}
