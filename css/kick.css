@@ -63,7 +63,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: left;
 	width: 100%;	
-	height: 380px;
+	height: 430px;
 	padding-top: 0px;
 	text-align: center;
 	}
@@ -79,7 +79,7 @@ body {
 	}
 
 .sub-navbar2 {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-54.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-190.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
@@ -248,7 +248,7 @@ body {
     border-radius: 100px;
    
     margin-top:-145px;
-    border: 7px solid rgba(0, 0, 0, .3);
+    border: 0px solid rgba(0, 0, 0, .3);
 }
 
 #profilename{
