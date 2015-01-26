@@ -161,9 +161,12 @@
     var buyers = document.getElementById('buyers').getContext('2d');
     new Chart(buyers).Line(buyerData,{
       scaleShowGridLines : false,
-      scaleFontColor:"white",
-      scaleLineColor: "white",
+      scaleFontColor:"rgba(100,100,100,0)",
+      scaleLineColor: "rgba(100,100,100,0)",
       tooltipTemplate: "<%= label %>",
+      tooltipFillColor: "rgba(100,100,100,0.6)",
+      tooltipFontSize: 10,
+      tooltipCornerRadius: 3,
       animation:false,
          
     });
