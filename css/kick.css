@@ -306,14 +306,3 @@ body {
     border: 0px solid rgba(0, 0, 0, .3);
 }
 
-#profilename{
-	text-align: left;
-	margin-top: 0px;
-	padding-top: 245px;
-	padding-left: 235px;
-	color: white;
-	font-weight: bold;
-	font-family: 'karla', sans-serif;
-	font-size: 40px;
-
-	}
