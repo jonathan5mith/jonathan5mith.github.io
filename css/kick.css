@@ -224,6 +224,7 @@ body {
 	padding-top: 30px;
 	padding-left: 50px;
 	padding-right: 50px;
+	text-align: center;
 
 }
 
@@ -238,8 +239,6 @@ body {
 	margin:auto;
 	font-size: 17px;
 }
-
-
 
 .col-md-4{
 		padding-bottom: 50px;
