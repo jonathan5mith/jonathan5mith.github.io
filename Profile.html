@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kick</title>
-    <script src="js/Chart.js"></script>
+    <script src='js/Chart.js'></script>
+    </head>
 
 
 <!-- CSS -->
@@ -90,14 +91,15 @@
       <div id="container">
       <div id="inner" style="background-image: url(https://pbs.twimg.com/profile_images/498468050127953920/GrIT5VPp_400x400.jpeg)">
       </div>
-    </div>
-    
+</div>
+
+<canvas id="buyers" width="400" height="400"></canvas>
+
 <div class="row coltext">
     
-<div class="col-sm-4">
-    
 
-    
+<div class="col-sm-4">
+
 </div>
 
 <div class="col-sm-4">
@@ -127,7 +129,7 @@
 
 
 
-<!-- Javascript stuff-->
+<!-- Javascript - Bootstrap-->
 <!--==============================================-->
 
 
@@ -137,5 +139,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+<!-- Javascript - Charts.js-->
+<!--==============================================-->
+
+    <script>
+    
+   var buyerData = {
+  labels : ["19:01","19:52","19:34","19:45","19:32","19:01", "18:08"],
+  datasets : [
+    {
+      fillColor : "rgba(0,0,0,0)",
+      strokeColor : "gray",
+      pointColor : "black",
+      pointStrokeColor : "black",
+      data : [19,19.8,19.5,19.75,19.5,19,18],
+      }
+  ]
+}
+    var buyers = document.getElementById('buyers').getContext('2d');
+    new Chart(buyers).Line(buyerData,{
+      scaleShowGridLines : false,
+      scaleFontColor:"white",
+      scaleLineColor: "white",
+      tooltipTemplate: "<%= label %>" 
+         
+    });
+</script>
+
+
   </body>
 </html>
