@@ -9,6 +9,8 @@
 body { 
 	padding-top: 0px;
 	font-family: 'Karla' sans-serif;
+	margin:0px;
+	padding-right:0px;
 }
 
 /*  -----------Navbar overrides-----------  */
@@ -46,13 +48,12 @@ body {
 
 
 .navbar-toggle {
-	border-width: 0px;
+	border-width:0px;
 }
 
 .icon-bar{
 	background-color:white;
 }
-
 
 
 /* -----------Sub navbar picture ----------- */
@@ -240,6 +241,11 @@ body {
 		padding-bottom: 50px;
 }
 
+.row{ /*fix for column overflow*/
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* -----------Get started ----------- */
 
 .getstarted{
@@ -284,11 +290,11 @@ body {
 
 #container
 {
-    height:200px;
-    width:200px;
+    height:120px;
+    width:120px;
     border:0px black solid;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
 }
 
 #inner
@@ -379,8 +385,6 @@ body {
 
 
 
-canvas {
-            width: 100% !important;
-            max-width: 400px;
-            height: auto !important;
-}
+
+
+
