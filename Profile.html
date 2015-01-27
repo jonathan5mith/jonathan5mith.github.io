@@ -88,32 +88,53 @@
 
 <div class="maincontain">
 
-    <div id="container">
+  <div id="container">
       <div id="inner" style="background-image: url(https://pbs.twimg.com/profile_images/498468050127953920/GrIT5VPp_400x400.jpeg)">
       </div>
-    </div>
+  </div>
 
-<canvas id="buyers" width="400" height="200"></canvas>
 
-<div class="row coltext">
+
+  <div class="row coltext">
     
 
-<div class="col-sm-4">
+    <div class="col-sm-4">
+      <div class="border-bottom">
+        <h2>My Kicks</h2>
+      </div>
+      <div class="border-below">
+      
+      
+      <p id="stats">Number of kicks: 10</p>
+      <p id="stats">PB: 19:07</p>
+      <p id="stats">Last 10 kicks<p/>
+      </div>
+      <canvas id="buyers" width="400" height="200"></canvas>
+    </div>
 
-</div>
-
-<div class="col-sm-4">
+    <div class="col-sm-4">
  
-</div>
 
-<div class="col-sm-4">
+      <div class="border-bottom">
+        <h2>My Vests</h2>
+      </div>
+      <div class="border-below">
+      <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/helsinki.png"\>
+      <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/tokyo.png"\>
+      <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/london.png"\>
 
-</div>
+
+
+            </div>
+    </div>
+
+    <div class="col-sm-4">
+
+    </div>
   
 
 
-
-</div>
+  </div>
 </div>
 
 
@@ -150,25 +171,27 @@
   labels : ["19:01","19:52","19:34","19:45","19:32","19:01", "19:08"],
   datasets : [
     {
-      fillColor : "rgba(0,0,0,0)",
-      strokeColor : "gray",
-      pointColor : "black",
-      pointStrokeColor : "black",
+      strokeColor : "#d3d3d3",
+      pointColor : "#6996AD",
+      pointStrokeColor : "#6996AD",
       data : [19,19.8,19.5,19.75,19.5,19,19.1],
       }
   ]
 }
     var buyers = document.getElementById('buyers').getContext('2d');
+    buyers.canvas.width = 280;
+    buyers.canvas.height = 120;
     new Chart(buyers).Line(buyerData,{
       scaleShowGridLines : false,
       scaleFontColor:"rgba(100,100,100,0)",
       scaleLineColor: "rgba(100,100,100,0)",
       tooltipTemplate: "<%= label %>",
-      tooltipFillColor: "rgba(100,100,100,0.6)",
-      tooltipFontSize: 10,
+      tooltipFillColor: "rgba(100,100,100,0.8)",
+      tooltipFontSize: 13,
       tooltipCornerRadius: 3,
+      tooltipFontFamily: "'Karla', sans-serif",
       animation:false,
-         
+        
     });
 </script>
 
