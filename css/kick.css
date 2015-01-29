@@ -248,8 +248,8 @@ h2{
 }
 
 .col-md-4{
-		padding-bottom: 50px;
-		padding-top: 50px;
+		padding-bottom: 20px;
+		padding-top: 20px;
 	}
 
 .row{ /*fix for column overflow*/
@@ -458,8 +458,8 @@ canvas{
 	padding-right: 15px;
 	padding-left: 15px;
 	/* Shadow  */
-    box-shadow: 0 0 8px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 8px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.6);
-    -o-box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 6px rgba(0,0,0,0.6);
 }
