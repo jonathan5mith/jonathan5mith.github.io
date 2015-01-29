@@ -12,6 +12,7 @@ body {
 	font-weight: 300;
 	margin:0px;
 	padding-right:0px;
+	background: #f1f1f1;
 }
 
 h2{
@@ -248,7 +249,8 @@ h2{
 
 .col-md-4{
 		padding-bottom: 50px;
-}
+		padding-top: 50px;
+	}
 
 .row{ /*fix for column overflow*/
     margin-left: 0;
@@ -442,3 +444,22 @@ canvas{
 
 }
 
+
+/* -----------Cards ----------- */
+
+.cards{
+	background: white;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 4px;
+	padding-top:15px;
+	padding-bottom: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+	/* Shadow  */
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
