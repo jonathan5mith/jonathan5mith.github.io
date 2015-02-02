@@ -523,5 +523,13 @@ tr{
 	padding-top: 11px;
 }
 
+/* -----------Bottom Nav----------- */
 
+.bottomnav{
+	text-align: center;
+	color: gray;
+	font-size: 13px;
+	padding-bottom: 15px;
+	padding-top: 10px;
 
+}
