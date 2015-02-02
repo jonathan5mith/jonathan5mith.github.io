@@ -122,39 +122,40 @@ h2{
 @media (max-width: 767px) {
 
 .sub-navbar2 {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-238b.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-74b.jpg');
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: cener;
 	width: 100%;	
 	height: 210px;
 	padding-top: 0px;
-	text-align: center;
+	
 	}
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
 
 .sub-navbar2 {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-238a.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-74a.jpg');
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: center;
 	width: 100%;	
-	height: 315px;
+	height: 265px;
 	padding-top: 0px;
-	text-align: center;
+	
 	}
 
 }
 
 @media (min-width: 1200px) {
 .sub-navbar2 {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-238.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-74.jpg');
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: center;
 	width: 100%;	
-	height: 421px;
+	height: 354px;
 	padding-top: 0px;
-	text-align: center;
+
+
 	}
 }
 
@@ -412,6 +413,9 @@ h2{
 	text-align: center;
 	margin-top: 20px;
 }
+
+
+
 
 
 /* -----------Chart ----------- */
