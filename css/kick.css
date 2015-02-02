@@ -279,10 +279,10 @@ h2{
 #getstarted{
 	background-color: rgba(150,150,150,.9);
 	border-radius: 2px;
-	width: 200px;
+	width: 150px;
 	margin:auto;
-	line-height: 40px;
-	font-size:36px;
+	line-height: 30px;
+	font-size:26px;
 	padding-bottom: 5px;
 	;
 }
