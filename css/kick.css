@@ -232,9 +232,19 @@ h2{
 }
 
 .mainheaders{
-	font-size: 36px;
-	font-weight: 300;
+	font-size: 25px;
+	font-weight: 500;
 	}
+
+.mainheaderslight{
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.subheaders{
+	font-size: 20px;
+	font-weight: 400px;
+}
 
 .highlight-text{
 	background-color: gray;
@@ -249,6 +259,7 @@ h2{
 
 .col-md-4{
 		padding-top: 20px;
+
 	}
 
 .row{ /*fix for column overflow*/
@@ -266,22 +277,25 @@ h2{
 }
 
 #getstarted{
-	background-color: rgba(100,100,100,100.6);
+	background-color: rgba(150,150,150,.9);
 	border-radius: 2px;
 	width: 200px;
 	margin:auto;
 	line-height: 40px;
 	font-size:36px;
+	padding-bottom: 5px;
 	;
 }
 
 #getstarted a{
 	color:white;
 	text-decoration: none;
-	font-weight: 400;
+	font-weight: 300;
 }
 #getstarted a:hover{
 	text-decoration: none;
+	color:#cccccc;
+
 
 }
 
@@ -322,7 +336,7 @@ h2{
     border-radius: 100px;
    
     margin-top:-117px;
-    border: 5px solid rgba(150, 150, 150, .5);
+    border: 3px solid rgba(150, 150, 150, .5);
 }
 }
 
@@ -338,8 +352,8 @@ h2{
 
 #container
 {
-    height:200px;
-    width:200px;
+    height:150px;
+    width:150px;
     border:0px black solid;
     margin-left: auto;
     margin-right: auto;
@@ -356,7 +370,7 @@ h2{
     border-radius: 100px;
    
     margin-top:-135px;
-    border: 5px solid rgba(150, 150, 150, .5);
+    border: 3px solid rgba(150, 150, 150, .5);
 }
 }
 
@@ -372,8 +386,8 @@ h2{
 
 #container
 {
-    height:200px;
-    width:200px;
+    height:150px;
+    width:150px;
     border:0px black solid;
     margin-left: auto;
     margin-right: auto;
@@ -381,8 +395,8 @@ h2{
 
 #inner
 {
-    height:170px;
-    width:170px;
+    height:150px;
+    width:150px;
     background-size: 106%;
     background-position: center;
     -moz-border-radius: 100px;
@@ -390,8 +404,13 @@ h2{
     border-radius: 100px;
    
     margin-top:-145px;
-    border: 5px solid rgba(150, 150, 150, .5);
+    border: 3px solid rgba(150, 150, 150, .5);
 }
+}
+
+#profile-name{
+	text-align: center;
+	margin-top: 20px;
 }
 
 
@@ -399,42 +418,10 @@ h2{
 
 
 canvas{
-	margin-left: -18px;
+	margin-left: -25px;
 	margin-top: 30px;
 	}
 
-
-.border-bottom{
-	border-bottom: solid;
-	border-color: #B5B5B5;
-	border-width: 1px;
-	width: 100%;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	font-weight: 400;
-	padding-left: 0px;
-	padding-right: 0px;
-	background: #B5B5B5;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 3px 3px 0px 0px;
-	border-radius: 3px 3px 0px 0px; 
-	color:white;
-
-}
-
-.border-below{
-
-	border-color: gray;
-	border-width: 1px;
-	width: 250px;
-	text-align: left;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 20px;
-	font-size: 16px;
-	padding-bottom: 20px;
-}
 
 
 
@@ -449,23 +436,92 @@ canvas{
 
 }
 
+
 /* -----------Cards ----------- */
 
 .cards{
 	background: white;
-	max-width: 400px;
+	max-width: 370px;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 3px;
+	border-radius: 2px;
 	padding-top:0px;
 	padding-bottom: 15px;
 	padding-right: 0;
 	padding-left: 0;
 	/* Shadow  */
-	box-shadow: 0px 2px 5px #888888;
+	box-shadow: 0px 2px 3px #888888;
 	
-	}
+}
+
+.border-bottom{
+	border-bottom: solid;
+	border-color: rgba(150,150,150,.9);
+	border-width: 0px;
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+	
+	background: rgba(150,150,150,.9) ;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 2px 2px 0px 0px;
+	border-radius: 2px 2px 0px 0px; 
+	color:white ;
+
+}
+
+.border-below{
+
+	border-color: rgba(150,150,150,.9);
+	border-width: 1px;
+	width: 250px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	font-size: 16px;
+	padding-bottom: 10px;
+}
 
 .twoinrow{
 	margin-top: 20px;
-	}
+}
+
+.bottomlink{
+	text-align: center;
+	font-weight: 400;
+
+}
+
+.bottomlink i{
+	font-size: 15px;
+}
+
+.bottomlinkpadding{
+	padding-bottom: 0px;
+
+}
+
+#spacer{
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+/* -----------Table ----------- */
+
+td{
+	padding-left: 10px;
+}
+
+tr{
+	font-size:20px;
+}
+
+#tablefix{
+	padding-top: 11px;
+}
+
+
+

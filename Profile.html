@@ -92,56 +92,168 @@
 
 <div class="maincontain">
 
+<!-- Profile Image-->
+
+
   <div id="container">
-      <div id="inner" style="background-image: url(https://pbs.twimg.com/profile_images/498468050127953920/GrIT5VPp_400x400.jpeg)">
-      </div>
+     <div id="inner" style="background-image: url(https://pbs.twimg.com/profile_images/562245215738535937/_H_LZ5TF.jpeg)">
+    </div>
   </div>
 
-<div class="row coltext">
+<!-- Profile Name-->
+
+  <div id="profile-name">
+
+    <p class="mainheaders">Jonathan Smith </p>
+    <p class="subheaders">Sheffield, UK <i class="fa fa-check"></i></p>
+    <!-- <p class="subheaders">Validated <i class="fa fa-check"></i></p>-->
+  
+  </div>
+
+<!-- Columns-->
+
+  <div class="row coltext">
     
+<!-- Column 1-->
 
   <div class="col-md-4">
     <div class="cards">
       <div class="border-bottom">
         <p class="mainheaders">My Stats</p>
       </div>
+
       <div class="border-below">
       
-      <p id="stats">Points | {####}</p>
-      <p id="stats">Number of kicks | {####}</p>
-      <p id="stats">PB | {####}</p>
-      <p id="stats">Last 10 | </p>
+        <p id="stats">Points | {####}</p>
+        <p id="stats">Number of kicks | {####}</p>
+        <p id="stats">PB | {####}</p>
+
+      <p id="stats">Last 10 kicks </p>
       </div>
+      
       <canvas id="buyers" width="400" height="200"></canvas>
     </div>
   </div>
 
-    <div class="col-md-4 ">
+<!-- Column 2-->
+
+  <div class="col-md-4 ">
  
       <div class="cards">
         <div class="border-bottom">
           <p class="mainheaders">My Vests</p>
         </div>
         
-        <div class="border-below">
-          
-            <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/helsinki.png"\><p id="vesttag">Helsinki</p>
-          
-            <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/tokyo.png"\><p id="vesttag">Tokyo</p>
-          
+        <div class="border-below bottomlinkpadding">
+                 
+        <table>
+          <tr>
+            <td id="tablefix">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/helsinki.png"\><p id="vesttag">
+            </td>
+            <td>
+              Helsinki
+            </td>
+          </tr>
+          <tr>
+            <td id="tablefix">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/tokyo.png"\><p id="vesttag">
+            </td>
+            <td>
+              Tokyo
+            </td>
+          </tr>  
+        </table>
+        
+          <div id="spacer">
+            <p class="subheaders bottomlink"> All vests  <i class="fa fa-angle-right"></i></p>    
+          </div>
         </div>
       </div>
-    
 
-   <div class="cards twoinrow">
+
+
+    <div class="cards twoinrow">
       <div class="border-bottom">
-      <p class="mainheaders">Next Vest</p>
+        <p class="mainheaders">Next Vest</p>
       </div>
+      
       <div class="border-below">
-        <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/tokyo.png"\><p id="vesttag">Tokyo</p>
+        <table>
+          <tr>
+            <td id="tablefix">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/london.png"\><p id="vesttag">
+            </td>
+            <td>
+              London
+            </td>
+        </table>
       </div>
-  </div>
     </div>
+  </div>
+
+  <!-- Column 3-->
+  
+  <!-- Card 1-->
+    <div class="col-md-4">
+      <div class="cards">
+        <div class="border-bottom">
+          <p class="mainheaders">Completed Events</p>
+        </div>
+        <div class="border-below bottomlinkpadding">
+          <table >
+          <tr>
+            <td id="tablefix">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/bupa.png"\><p id="vesttag">
+            </td>
+            <td>
+              Great Online Run
+            </td>
+          </tr>
+          <tr>
+            <td id="tablefix">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/adidas.png"\><p id="vesttag">
+            </td>
+            <td>
+              Online Boost
+            </td>
+          </tr>
+          <tr>
+            <td id="tablefix">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/CR.png"\><p id="vesttag">
+            </td>
+            <td>
+              Kick Cancer
+            </td>
+          </tr>    
+          </table>
+          <div id="spacer">
+            <p class="subheaders bottomlink"> Events  <i class="fa fa-angle-right"></i></p>    
+          </div>
+        </div>
+      </div>
+
+  <!-- Card 2-->
+      
+      <div class="cards twoinrow">
+        <div class="border-bottom">
+          <p class="mainheaders">Next Event</p>
+        </div>
+      
+        <div class="border-below">
+          <table>
+          <tr>
+            <td id="tablefix">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/RW.png"\><p id="vesttag">
+            </td>
+            <td>
+              Runners World 10k
+            </td>
+          </table>
+        </div>
+      </div>
+
+
     </div>
   
 
@@ -186,17 +298,17 @@
   labels : ["19:01","19:52","19:34","19:45","19:32","19:01", "19:08"],
   datasets : [
     {
-      strokeColor : "#B5B5B5",
-      pointColor : "#236B8E",
-      pointStrokeColor : "#236B8E",
+      strokeColor : "rgba(150,150,150,.5)",
+      pointColor : "rgba(100,100,100,.9)",
+      pointStrokeColor : "rgba(100,100,100,.9)",
       pointHighlightFill: "#FFF",
-      pointHighlightStroke: "#236B8E",
+      pointHighlightStroke: "rgba(100,100,100,.9)",
       data : [19.9,19.9,19.7,19.4,19.5,19,19.1],
       }
   ]
 }
     var buyers = document.getElementById('buyers').getContext('2d');
-    buyers.canvas.width = 280;
+    buyers.canvas.width = 230;
     buyers.canvas.height = 150;
     new Chart(buyers).Line(buyerData,{
       scaleShowGridLines : false,
@@ -228,6 +340,12 @@ catch(e){window.attachEvent("onload", $buo_f)}
 
 	
 
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 
+</body>
+</html>
 
   </body>
 </html>
