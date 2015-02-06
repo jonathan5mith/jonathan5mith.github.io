@@ -8,9 +8,8 @@
     <title>Kick</title>
     <link rel="shortcut icon" href="https://dl.dropboxusercontent.com/u/10455351/Assets/browser_icon.ico">
     <script src='js/Chart.js'></script>
+    <script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
     </head>
-
-
 
 <!-- CSS -->
 <!--==============================================-->
@@ -272,18 +271,19 @@
 
 
 
-<!-- Javascript - Bootstrap-->
+<!-- Javascript Stuff-->
 <!--==============================================-->
 
 
 
+<!--Bootstrap-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-<!-- Javascript - Charts.js-->
+<!--Charts.js-->
 <!--==============================================-->
 
     <script>
@@ -320,6 +320,9 @@
     });
 </script>
 
+<!--Browser Warning.js-->
+<!--==============================================-->
+
 <script> 
 var $buoop = {c:2}; 
 function $buo_f(){ 
@@ -332,12 +335,23 @@ catch(e){window.attachEvent("onload", $buo_f)}
 </script> 
 	
 
-
+<!-- Parse-->
+<!--==============================================-->
 	
+<script type="text/javascript">
+Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
+</script>
+
+<script type="text/javascript">
+var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}).then(function(object) {
+  alert("yay! it worked");
+});
+</script>
 
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
  
 </body>
 </html>
