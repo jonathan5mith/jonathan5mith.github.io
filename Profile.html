@@ -125,7 +125,7 @@
       
         <p id="stats">Points | {####}</p>
         <p id="stats">Number of kicks | {####}</p>
-        <p id="stats">PB | <div id="PersonalBest"></div></p>
+        <p id="stats">PB | <div id="PB"></div></p>
 
       <p id="stats">Last 10 kicks </p>
       </div>
@@ -349,7 +349,8 @@ var query = new Parse.Query(PersonalBest);
 query.equalTo("TwitterHandle", "jonathan5mith");
 query.first({
   success: function(object) {
-    alert("Yay it worked:"+object.get('PersonalBest'));
+    alert("Yay it worked: "+object.get('PersonalBest'));
+    var PB = object.get('PersonalBest')
   },
   error: function(error) {
     alert("Error: Oh dear");
