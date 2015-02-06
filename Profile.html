@@ -350,7 +350,8 @@ query.equalTo("TwitterHandle", "jonathan5mith");
 query.first({
   success: function(object) {
     alert("Yay it worked: "+object.get('PersonalBest'));
-    var PB = object.get('PersonalBest')
+    var PB = object.get('PersonalBest');
+    document.getElementById("PB").innerHTML = PB;
   },
   error: function(error) {
     alert("Error: Oh dear");
