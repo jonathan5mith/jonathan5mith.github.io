@@ -349,7 +349,7 @@ var query = new Parse.Query(PersonalBest);
 query.equalTo("TwitterHandle", "jonathan5mith");
 query.first({
   success: function(object) {
-    alert("Error: Yay it worked!"+object.get('TwitterHandle'));
+    alert("Yay it worked:"+object.get('PersonalBest'));
   },
   error: function(error) {
     alert("Error: Oh dear");
