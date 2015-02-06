@@ -346,7 +346,13 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 var PersonalBest = Parse.upload1.extend("PersonalBest");
 var query = new Parse.Query(PersonalBest);
 query.equalTo("TwitterHandle", "jonathan5mith");
-alert(PersonalBest);
+query.first({
+  success: function(object) {
+    alert("Success: Yay");
+  },
+  error: function(error) {
+    alert("Error: Oh dear");
+  }
 });
 </script>
 
