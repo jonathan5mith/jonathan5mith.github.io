@@ -343,10 +343,10 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 </script>
 
 <script type="text/javascript">
-var TestObject = Parse.Object.extend("TestObject");
-var testObject = new TestObject();
-testObject.save({foo: "bar"}).then(function(object) {
-  alert("yay! it worked");
+var PersonalBest = Parse.upload1.extend("PersonalBest");
+var query = new Parse.Query(PersonalBest);
+query.equalTo("TwitterHandle", "jonathan5mith");
+alert(PersonalBest);
 });
 </script>
 
