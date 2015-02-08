@@ -333,12 +333,12 @@ queryName.first({
 var queryValidated = new Parse.Query(personalInfo);
 queryValidated.equalTo("TwitterHandle", person);
 queryValidated.find({
-  success: function(object) {
+  success: function(results) {
     var validated = object.get('validated');
     if (true) {
       document.getElementById("validateduser").innerHTML = '<i title="Validated User" class="fa fa-check-circle"></i>';
     } 
-    else{
+    else {
       document.getElementById("validateduser").innerHTML = '';
     }
   }
