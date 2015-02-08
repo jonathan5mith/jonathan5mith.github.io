@@ -293,10 +293,13 @@
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
-// PB
+// Defining class
 
 var person = prompt("Please enter your Twitter Handle?");
 var personalInfo = Parse.Object.extend("upload1");
+
+//PB query
+
 var queryPB = new Parse.Query(personalInfo);
 queryPB.equalTo("TwitterHandle", person);
 queryPB.first({
@@ -309,7 +312,7 @@ queryPB.first({
   }
 });
 
-// Name
+// Name query
 
 var queryName = new Parse.Query(personalInfo);
 queryName.equalTo("TwitterHandle", person);
@@ -325,7 +328,7 @@ queryName.first({
 
 
   }
-});
+);
 
 
 </script>
