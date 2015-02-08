@@ -283,6 +283,34 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
+
+<!-- Parse-->
+<!--==============================================-->
+  
+<script type="text/javascript">
+
+// Initialisation
+
+Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
+
+// Personal Information
+
+var person = prompt("Please enter your Twitter Handle?");
+var PersonalBest = Parse.Object.extend("upload1");
+var query = new Parse.Query(PersonalBest);
+query.equalTo("TwitterHandle", person);
+query.first({
+  success: function(object) {
+    var PB = object.get('personalBest');  
+    document.getElementById("PB").innerHTML = PB;
+  },
+  error: function(error) {
+    alert("No PB");
+  }
+});
+</script>
+
+
 <!--Charts.js-->
 <!--==============================================-->
 
@@ -335,28 +363,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 </script> 
 	
 
-<!-- Parse-->
-<!--==============================================-->
-	
-<script type="text/javascript">
-Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
-</script>
 
-<script type="text/javascript">
-var person = prompt("Please enter your Twitter Handle?");
-var PersonalBest = Parse.Object.extend("upload1");
-var query = new Parse.Query(PersonalBest);
-query.equalTo("TwitterHandle", person);
-query.first({
-  success: function(object) {
-    var PB = object.get('PersonalBest');  
-    document.getElementById("PB").innerHTML = PB;
-  },
-  error: function(error) {
-    alert("No PB");
-  }
-});
-</script>
 
 
 
