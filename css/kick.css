@@ -408,7 +408,7 @@ h2{
     border-radius: 100px;
    
     margin-top:-145px;
-    border: 8px solid #f1f1f1;
+    border: 6px solid #f1f1f1;
 }
 }
 
@@ -438,13 +438,6 @@ canvas{
 	font-weight: 300;
 }
 
-#statstable tr{
-	border:solid 1px white;
-}
-
-#statstable td{
-	border:solid 1px #f0f0f0;
-}
 
 #vesttag{
 	text-align: center;
