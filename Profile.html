@@ -337,15 +337,14 @@ queryValidated.first({
     var validated = object.get('validated');
     if (validated=true) {
       document.getElementById("validateduser").innerHTML = '"<i title="Validated User" class="fa fa-check-circle"></i>"';
+    } 
 
-    } else{
+    else{
       document.getElementById("validateduser").innerHTML = "";
     };
-  error: function(error) {
-    document.getElementById("validateduser").innerHTML = "N/A";
+  
   }
-  }
-);
+});
 
 
 </script>
