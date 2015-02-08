@@ -332,7 +332,6 @@ queryName.first({
 
 var queryValidated = new Parse.Query(personalInfo);
 queryValidated.equalTo("TwitterHandle", person);
-
 queryValidated.first({
   
   success: function(object) {
