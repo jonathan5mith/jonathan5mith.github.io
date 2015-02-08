@@ -341,7 +341,9 @@ queryValidated.first({
     } else{
       document.getElementById("validateduser").innerHTML = "";
     };
-
+error: function(error) {
+    document.getElementById("validateduser").innerHTML = "N/A";
+  }
   }
 });
 
