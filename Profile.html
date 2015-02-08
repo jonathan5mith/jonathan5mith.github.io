@@ -334,15 +334,14 @@ queryName.first({
 var queryValidated = new Parse.Query(personalInfo);
 queryValidated.equalTo("TwitterHandle", person);
 queryValidated.first({
-  
   success: function(object) {
     var validated = object.get('validated');
     if (validated==true) {
       document.getElementById("validateduser").innerHTML = '<i title="Validated User" class="fa fa-check-circle"></i>';
-    };
+    }
     else {
       document.getElementById("validateduser").innerHTML = '';
-    };
+    }
   },
   
   error: function(error) {
