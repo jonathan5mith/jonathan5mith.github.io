@@ -438,6 +438,16 @@ canvas{
 	font-weight: 300;
 }
 
+#statstable tr{
+	border-width: 1px;
+	border-color: white;
+}
+
+#statstable td{
+	border-width: 1px;
+	border-color: #f0f0f0;
+}
+
 #vesttag{
 	text-align: center;
 
