@@ -337,6 +337,12 @@ queryValidated.first({
   
   success: function(object) {
     var validated = object.get('validated');
+    if (validated==true) {
+      document.getElementById("validateduser").innerHTML = '<i title="Validated User" class="fa fa-check-circle"></i>';
+    };
+    else {
+      document.getElementById("validateduser").innerHTML = '';
+    };
   
   error: function(error) {
     document.getElementById("name").innerHTML = "N/A";
@@ -345,15 +351,10 @@ queryValidated.first({
   }
 );
 
-function(){
 
-if (validated==true) {
-      document.getElementById("validateduser").innerHTML = '<i title="Validated User" class="fa fa-check-circle"></i>';
-    } 
-    else {
-      document.getElementById("validateduser").innerHTML = '';
-    }
-}
+
+
+
 // Profile image
 
 var queryPic = new Parse.Query(personalInfo);
