@@ -123,8 +123,8 @@
 
       <div class="border-below">
       
-        <p id="stats">Points | {####}</p>
-        <p id="stats">Number of kicks | {####}</p>
+        <p id="stats">Points | <span id="points"></span></p>
+        <p id="stats">Number of kicks | <span id="totalKicks"></span></p>
         <p id="stats" >PB | <span id="PB"></span></p>
 
       <p id="stats">Last 10 kicks </p>
@@ -350,9 +350,33 @@ queryValidated.first({
   
 );
 
+// Points query
 
+var queryPoints = new Parse.Query(personalInfo);
+queryPoints.equalTo("TwitterHandle", person);
+queryPoints.first({
+  success: function(object) {
+    var points = object.get('points');  
+    document.getElementById("points").innerHTML = points;
+  },
+  error: function(error) {
+    document.getElementById("points").innerHTML = "N/A";
+  }
+});
 
+// Total Kicks query
 
+var queryTotalKicks = new Parse.Query(personalInfo);
+queryTotalKicks.equalTo("TwitterHandle", person);
+queryTotalKicks.first({
+  success: function(object) {
+    var totalKicks = object.get('totalKicks');  
+    document.getElementById("totalkicks").innerHTML = totalKicks;
+  },
+  error: function(error) {
+    document.getElementById("totalKicks").innerHTML = "N/A";
+  }
+});
 
 // Profile image
 
