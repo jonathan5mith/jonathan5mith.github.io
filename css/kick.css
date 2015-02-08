@@ -516,6 +516,10 @@ canvas{
 	padding-top: 20px;
 	padding-bottom: 0px;
 }
+
+#highlight{
+	background-color: green;
+}
 /* -----------Table ----------- */
 
 td{
