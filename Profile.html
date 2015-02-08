@@ -345,7 +345,7 @@ queryValidated.first({
   }
 );
 
-function()
+function(){
 
 if (validated==true) {
       document.getElementById("validateduser").innerHTML = '<i title="Validated User" class="fa fa-check-circle"></i>';
@@ -353,7 +353,7 @@ if (validated==true) {
     else {
       document.getElementById("validateduser").innerHTML = '';
     }
-
+}
 // Profile image
 
 var queryPic = new Parse.Query(personalInfo);
