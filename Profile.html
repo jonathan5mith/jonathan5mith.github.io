@@ -332,18 +332,27 @@ queryName.first({
 
 var queryValidated = new Parse.Query(personalInfo);
 queryValidated.equalTo("TwitterHandle", person);
-queryValidated.find({
-  success: function(results) {
+
+queryValidated.first({
+  
+  success: function(object) {
     var validated = object.get('validated');
-    if (true) {
+  
+  error: function(error) {
+    document.getElementById("name").innerHTML = "N/A";
+  }
+  }
+  }
+);
+
+function()
+
+if (validated==true) {
       document.getElementById("validateduser").innerHTML = '<i title="Validated User" class="fa fa-check-circle"></i>';
     } 
     else {
       document.getElementById("validateduser").innerHTML = '';
     }
-  }
-  }
-);
 
 // Profile image
 
@@ -359,6 +368,8 @@ queryPic.first({
   }
   }
 );
+
+
 
 // Location
 
