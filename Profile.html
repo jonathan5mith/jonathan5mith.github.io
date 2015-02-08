@@ -293,21 +293,41 @@
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
-// Personal Information
+// PB
 
 var person = prompt("Please enter your Twitter Handle?");
-var PersonalBest = Parse.Object.extend("upload1");
-var query = new Parse.Query(PersonalBest);
-query.equalTo("TwitterHandle", person);
-query.first({
+var personalInfo = Parse.Object.extend("upload1");
+var queryPB = new Parse.Query(personalInfo);
+queryPB.equalTo("TwitterHandle", person);
+queryPB.first({
   success: function(object) {
     var PB = object.get('personalBest');  
     document.getElementById("PB").innerHTML = PB;
   },
   error: function(error) {
-    alert("No PB");
+    document.getElementById("PB").innerHTML = "N/A";
   }
 });
+
+// Name
+
+var queryName = new Parse.Query(personalInfo);
+queryName.equalTo("TwitterHandle", person);
+queryName.first({
+  success: function(object) {
+    var firstname = object.get('firstName');
+    var lastname = object.get('lastName');
+    document.getElementById("name").innerHTML = firstname+" "+lastname;
+  },
+  error: function(error) {
+    document.getElementById("name").innerHTML = "N/A";
+  }
+
+
+  }
+});
+
+
 </script>
 
 
