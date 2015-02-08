@@ -124,7 +124,7 @@
       <div class="border-below">
       
         <p id="stats">Points | <span id="points"></span></p>
-        <p id="stats">Number of kicks | <span id="totalKicks"></span></p>
+        <p id="stats">Number of kicks | <span id="totalkicks"></span></p>
         <p id="stats" >PB | <span id="PB"></span></p>
 
       <p id="stats">Last 10 kicks </p>
@@ -374,7 +374,7 @@ queryTotalKicks.first({
     document.getElementById("totalkicks").innerHTML = totalKicks;
   },
   error: function(error) {
-    document.getElementById("totalKicks").innerHTML = "N/A";
+    document.getElementById("totalkicks").innerHTML = "N/A";
   }
 }
 );
