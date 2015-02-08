@@ -340,7 +340,7 @@ h2{
     -webkit-border-radius: 100px;
     border-radius: 100px;
     margin-top:-117px;
-    border: 3px solid #f1f1f1;
+    border: 5px solid #f1f1f1;
 }
 }
 
@@ -374,7 +374,7 @@ h2{
     border-radius: 100px;
    
     margin-top:-135px;
-    /*border: 3px solid rgba(150, 150, 150, .5);*/
+    border: 7px solid #f1f1f1;
 }
 }
 
@@ -408,7 +408,7 @@ h2{
     border-radius: 100px;
    
     margin-top:-145px;
-    /*border: 3px solid rgba(150, 150, 150, .5);*/
+    border: 10px solid #f1f1f1;
 }
 }
 
