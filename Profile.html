@@ -104,7 +104,7 @@
   <div id="profile-name">
 
     <p class="mainheaders"><span id="name"></span> </p>
-    <p class="subheaders">Sheffield, UK <a href="http://www.strava.com/athletes/jonathansmith"><i title="Validated User" class="fa fa-check-circle"></i></a></p>
+    <p class="subheaders">Sheffield, UK <span id="validateduser"></span></p>
     <!-- <p class="subheaders">Validated <i class="fa fa-check"></i></p>-->
   
   </div>
@@ -325,10 +325,25 @@ queryName.first({
   error: function(error) {
     document.getElementById("name").innerHTML = "N/A";
   }
-
-
   }
 );
+
+// Validated query
+
+var queryValidated = new Parse.Query(personalInfo);
+queryValidated.equalTo("TwitterHandle", person);
+queryValidated.first({
+  success: function(object) {
+    var validated = object.get('validated');
+    if (validated=true) {
+      document.getElementById("validateduser").innerHTML = '<i title="Validated User" class="fa fa-check-circle"></i>';
+
+    } else{
+      document.getElementById("validateduser").innerHTML = "";
+    };
+
+  }
+});
 
 
 </script>
