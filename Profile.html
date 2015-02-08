@@ -355,7 +355,23 @@ queryPic.first({
     document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url('+twitterpic+')">';
   },
   error: function(error) {
-    document.getElementById("name").innerHTML = "N/A";
+    document.getElementById("twitterpicture").innerHTML = "N/A";
+  }
+  }
+);
+
+// Location
+
+var queryLocation = new Parse.Query(personalInfo);
+queryLocation.equalTo("TwitterHandle", person);
+queryLocation.first({
+  success: function(object) {
+    var city = object.get('city');
+    var country = object.get('country');
+    document.getElementById("location").innerHTML = city+", "+country;
+  },
+  error: function(error) {
+    document.getElementById("location").innerHTML = "N/A";
   }
   }
 );
