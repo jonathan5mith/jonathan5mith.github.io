@@ -345,6 +345,21 @@ queryValidated.find({
   }
 );
 
+// Profile image
+
+var queryPic = new Parse.Query(personalInfo);
+queryPic.equalTo("TwitterHandle", person);
+queryPic.first({
+  success: function(object) {
+    var twitterpic = object.get('twitterPicture');
+    document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url('+twitterpic+')">';
+  },
+  error: function(error) {
+    document.getElementById("name").innerHTML = "N/A";
+  }
+  }
+);
+
 
 </script>
 
