@@ -434,12 +434,12 @@ queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
     var runtimes= times.slice(-7);
-    var runtimesstring = function({
-      for (var i = runtimes; i <7; i++) {
-        i=toString(i);
+    var arraytostring = function(x){
+      for(i in x){
+        i=i.toString();
       };
-    })
-
+    };
+    var runtimesstring = arraytostring(runtimes);
 
     var buyerData = {
   labels : runtimesstring,
