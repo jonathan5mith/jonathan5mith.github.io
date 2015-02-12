@@ -447,7 +447,8 @@ queryTimes.first({
   ]
 }
     var buyers = document.getElementById('buyers').getContext('2d');
-
+    buyers.canvas.width = 180;
+    buyers.canvas.height = 160;
     new Chart(buyers).Line(buyerData,{
       scaleShowGridLines : false,
       scaleFontColor:"rgba(100,100,100,0)",
