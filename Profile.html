@@ -431,7 +431,7 @@ queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
-    alert(times);
+   
   
   },
   error: function(error) {
@@ -447,7 +447,8 @@ queryTimes.first({
 
 
   
-  var timesList=[times]
+  var timesList=[times];
+  alert(timesList);
 
    var buyerData = {
   labels : ["19:01","19:52","19:34","19:45","19:32","19:01", "19:08"],
