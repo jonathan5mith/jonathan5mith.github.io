@@ -431,10 +431,12 @@ queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
+    alert('times');
+  
   },
   error: function(error) {
     document.getElementById("runtimes").innerHTML = "N/A";
-  }, 
+  },
 })
 
 
