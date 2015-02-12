@@ -427,17 +427,16 @@ queryLocation.first({
 // Times
 
 var queryTimes = new Parse.Query(personalInfo);
+var times;
 queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
-    var times = object.get('runTimes');
+    times = object.get('runTimes');
     },
   error: function(error) {
     document.getElementById("runtimes").innerHTML = "N/A";
   },
 });
-
-
 
 
 <!--Charts.js-->
