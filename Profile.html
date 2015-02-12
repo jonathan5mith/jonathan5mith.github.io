@@ -431,23 +431,9 @@ var runtimes;
 queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
-    window.times = object.get('runTimes');
-    },
-  error: function(error) {
-    document.getElementById("runtimes").innerHTML = "N/A";
-  },
-});
+    var times = object.get('runTimes');
 
-
-<!--Charts.js-->
-<!---->
-
-
-  alert(times);
-  var timesList=[times];
-  
-
-   var buyerData = {
+       var buyerData = {
   labels : ["19:01","19:52","19:34","19:45","19:32","19:01", "19:08"],
   datasets : [
     {
@@ -456,7 +442,7 @@ queryTimes.first({
       pointStrokeColor : "rgba(100,100,100,.9)",
       pointHighlightFill: "#FFF",
       pointHighlightStroke: "rgba(100,100,100,.9)",
-      data : timesList,
+      data : times,
       }
   ]
 }
@@ -476,6 +462,20 @@ queryTimes.first({
       pointHighlightFill: "white"
         
     });
+
+
+    },
+  error: function(error) {
+    document.getElementById("runtimes").innerHTML = "N/A";
+  },
+});
+
+
+<!--Charts.js-->
+<!---->
+
+
+
 </script>
 
 <!--Browser Warning.js-->
