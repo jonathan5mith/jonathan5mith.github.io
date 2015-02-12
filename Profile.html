@@ -432,7 +432,7 @@ queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
-    var runtimes= times.slice(-5, 0);
+    var runtimes= times.slice(-5, -1);
 
        var buyerData = {
   labels : ["19:01","19:52","19:34","19:45","19:32","19:01", "19:08"],
