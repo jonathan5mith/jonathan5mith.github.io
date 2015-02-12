@@ -311,7 +311,7 @@ var person1 = prompt("Please enter your Twitter Handle?");
 var person = person1.toLowerCase();
 var personalInfo = Parse.Object.extend("upload1");
 
-//PB query
+//-----------------PB query
 
 var queryPB = new Parse.Query(personalInfo);
 queryPB.equalTo("TwitterHandle", person);
@@ -325,7 +325,7 @@ queryPB.first({
   }
 });
 
-// Name query
+// -----------------Name query
 
 var queryName = new Parse.Query(personalInfo);
 queryName.equalTo("TwitterHandle", person);
@@ -341,7 +341,7 @@ queryName.first({
   }
 );
 
-// Validated query
+// -----------------Validated query
 
 
 var queryValidated = new Parse.Query(personalInfo);
@@ -363,7 +363,7 @@ queryValidated.first({
   
 );
 
-// Points query
+// -----------------Points query
 
 var queryPoints = new Parse.Query(personalInfo);
 queryPoints.equalTo("TwitterHandle", person);
@@ -377,7 +377,7 @@ queryPoints.first({
   }
 });
 
-// Total Kicks query
+// -----------------Total Kicks query
 
 var queryTotalKicks = new Parse.Query(personalInfo);
 queryTotalKicks.equalTo("TwitterHandle", person);
@@ -392,7 +392,7 @@ queryTotalKicks.first({
 }
 );
 
-// Profile image
+// -----------------Profile image
 
 var queryPic = new Parse.Query(personalInfo);
 queryPic.equalTo("TwitterHandle", person);
@@ -407,7 +407,7 @@ queryPic.first({
   }
 );
 
-// Location
+// -----------------Location
 
 var queryLocation = new Parse.Query(personalInfo);
 queryLocation.equalTo("TwitterHandle", person);
@@ -424,17 +424,25 @@ queryLocation.first({
 );
 
 
-// Times
+// -----------------Times
+
+//api
 
 var queryTimes = new Parse.Query(personalInfo);
-var runtimes;
 queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
     var runtimes= times.slice(-7);
+    var runtimesstring = function({
+      for (var i = runtimes; i <7; i++) {
+        i=toString(i);
+      };
+    })
+
+
     var buyerData = {
-  labels : ["19:01","19:52","19:34","19:45","19:32","19:01", "19:08"],
+  labels : runtimesstring,
   datasets : [
     {
       strokeColor : "rgba(150,150,150,.5)",
