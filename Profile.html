@@ -434,15 +434,16 @@ queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
     var runtimes= times.slice(-7);
-    var arraytostring = function(x){
-      for(i=0; i<7;i++){
-        i=i.toString();
-      }
-    };
-    var runtimesstring = arraytostring(runtimes);
-    alert(runtimesstring);
+    
+//    var arraytostring = function(x){
+//      for(i=0; i<7;i++){
+//        i=i.toString();
+//      }
+//    };
+//    var runtimesstring = arraytostring(runtimes);
+//    alert(runtimesstring);
     var buyerData = {
-  labels : runtimesstring,
+  labels : runtimes,
   datasets : [
     {
       strokeColor : "rgba(150,150,150,.5)",
