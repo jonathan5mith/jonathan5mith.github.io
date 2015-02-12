@@ -447,9 +447,7 @@ queryTimes.first({
   ]
 }
     var buyers = document.getElementById('buyers').getContext('2d');
-    var pixelRatio = window.devicePixelRatio || 1;
-    var width = 404 / pixelRatio;
-    var height = 404 / pixelRatio;
+
     new Chart(buyers).Line(buyerData,{
       scaleShowGridLines : false,
       scaleFontColor:"rgba(100,100,100,0)",
