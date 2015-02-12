@@ -431,7 +431,10 @@ queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
-  }
+  },
+  error: function(error) {
+    document.getElementById("runtimes").innerHTML = "N/A";
+  }, 
 })
 
 
@@ -453,7 +456,7 @@ queryTimes.first({
       pointStrokeColor : "rgba(100,100,100,.9)",
       pointHighlightFill: "#FFF",
       pointHighlightStroke: "rgba(100,100,100,.9)",
-      data : data1,
+      data : times,
       }
   ]
 }
