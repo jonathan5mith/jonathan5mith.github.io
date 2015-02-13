@@ -433,15 +433,7 @@ queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
-    var runtimes= times.slice(-7);
-    
-//    var arraytostring = function(x){
-//      for(i=0; i<7;i++){
-//        i=i.toString();
-//      }
-//    };
-//    var runtimesstring = arraytostring(runtimes);
-//    alert(runtimesstring);
+    var runtimes= times.slice(-5);
     var buyerData = {
   labels : runtimes,
   datasets : [
