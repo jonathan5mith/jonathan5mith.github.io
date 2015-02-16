@@ -1,3 +1,7 @@
+
+<!-- CSS -->
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -479,7 +483,14 @@ queryVests.equalTo("TwitterHandle", person);
 queryLocation.first({
   success: function(object) {
     var vests = object.get('vests');
-    alert(vests);
+
+    while(vests[i]==1){
+      document.getElementById("vests"+toString(vests.indexOf(i)+1)) = 
+    }
+
+
+
+    
   },
 
 });
