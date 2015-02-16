@@ -484,10 +484,10 @@ queryVests.equalTo("TwitterHandle", person);
 queryVests.first({
   success: function(object) {
     var vests = object.get('vests');  
-    document.getElementById("vests1").innerHTML = vests[1];
+    document.getElementById("vest1").innerHTML = vests[1];
   },
   error: function(error) {
-    document.getElementById("vests1").innerHTML = "N/A";
+    document.getElementById("vest1").innerHTML = "N/A";
   },
 }
 );
