@@ -485,24 +485,28 @@ queryVests.first({
   
   success: function(object) {
             var vests = object.get('vestsTogether');
-            if(vests[2]==true){
-              alert("yay");
+            var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/'
+            if(vests[0]==true){
+              document.getElementById("vest1").innerHTML = imgtag+'vest1.png">'
             }
             else{
-              alert("nay");
+              document.getElementById("vest1").innerHTML = imgtag+'london.png">'
+            };
+            if(vests[1]==true){
+              document.getElementById("vest2").innerHTML = imgtag+'vest2.png">'
+            }
+            else{
+              document.getElementById("vest1").innerHTML = imgtag+'london.png">'
             }
 
     },
     
-  
-
-
-}
+  }
 );
 
 
 
-      //document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
+      document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
 
 
 </script>
