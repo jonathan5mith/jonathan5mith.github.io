@@ -131,7 +131,7 @@
           <td><p id="stats"><span>Total Kicks</span></td>  <td><span id="totalkicks"></span></p></td>
         </tr>
 
-        <tr>
+        <tr id="borderbelowrow">
           <td><p id="stats" ><span>Best Kick</span></td> <td><span id="PB"></span></p></td>
         </tr>
 
@@ -471,6 +471,18 @@ queryTimes.first({
   },
 });
 
+// -----------------Vests
+
+
+var queryVests = new Parse.Query(personalInfo);
+queryVests.equalTo("TwitterHandle", person);
+queryLocation.first({
+  success: function(object) {
+    var vests = object.get('vests');
+    alert(vests);
+  },
+
+});
 
 <!--Charts.js-->
 <!---->
