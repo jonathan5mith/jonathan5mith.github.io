@@ -481,14 +481,14 @@ queryTimes.first({
 
 var queryVests = new Parse.Query(personalInfo);
 queryVests.equalTo("TwitterHandle", person);
-queryVests.find({
+queryVests.first({
   
 
   success: function(object) {
-    var vests = object.get('vests');  
-      for (var i=0, i<vests.length, i++){
-        var vestno = vests.indexOf(i);
-        console.log(vestno);
+            var vests = object.get('vests');  
+            for (var i=0, i<vests.length, i++){
+              var vestno = vests.indexOf(i);
+              console.log(vestno);
 
       //document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
     }
