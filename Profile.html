@@ -164,7 +164,7 @@
         <table>
           <tr>
             <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png"\><p id="vesttag">
+              <span id="vest1"></span>
             </td>
             <td>
               Helsinki
@@ -172,7 +172,7 @@
           </tr>
           <tr>
             <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest2.png"\><p id="vesttag">
+              <span id="vest2"></span>
             </td>
             <td>
               Tokyo
@@ -485,7 +485,7 @@ queryLocation.first({
     var vests = object.get('vests');
 
     while(vests[i]==1){
-      document.getElementById("vest"+toString(vests.indexOf(i)+1)) = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest'+toString(vests.indexOf(i)+1)+'.png"\><p id="vesttag">'
+      document.getElementById("vest"+toString(vests.indexOf(i)+1)) = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest'+toString(vests.indexOf(i)+1)+'.png"\>'
     }
    
   },
