@@ -139,7 +139,7 @@
           <td><p id="stats" ><span>Best Kick</span></td> <td><span id="PB"></span></p></td>
         </tr>
 
-        <tr id="gapbelow">
+        <tr>
           <td><p id="stats"><span>Recent Kicks</span></p></td><td></td>
         </tr>
 
@@ -164,7 +164,7 @@
         <table>
           <tr>
             <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/helsinki.png"\><p id="vesttag">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png"\><p id="vesttag">
             </td>
             <td>
               Helsinki
@@ -172,7 +172,7 @@
           </tr>
           <tr>
             <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/tokyo.png"\><p id="vesttag">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest2.png"\><p id="vesttag">
             </td>
             <td>
               Tokyo
@@ -477,7 +477,7 @@ queryTimes.first({
 
 // -----------------Vests
 
-/*
+
 var queryVests = new Parse.Query(personalInfo);
 queryVests.equalTo("TwitterHandle", person);
 queryLocation.first({
@@ -485,17 +485,14 @@ queryLocation.first({
     var vests = object.get('vests');
 
     while(vests[i]==1){
-      document.getElementById("vests"+toString(vests.indexOf(i)+1)) = 
+      document.getElementById("vest"+toString(vests.indexOf(i)+1)) = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest'+toString(vests.indexOf(i)+1)+'.png"\><p id="vesttag">'
     }
-
-
-
-    
+   
   },
 
 });
 
-*/
+
 
 
 </script>

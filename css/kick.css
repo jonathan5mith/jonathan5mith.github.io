@@ -509,7 +509,7 @@ canvas{
 	text-align: left;
 	font-size: 20px;
 	font-weight: 300;
-	padding-right: 50px;
+	
 }
 
 
@@ -573,9 +573,7 @@ canvas{
 
 }
 
-#gapbelow{
-	padding-top: 20px;
-}
+
 
 .twoinrow{
 	margin-top: 20px;
