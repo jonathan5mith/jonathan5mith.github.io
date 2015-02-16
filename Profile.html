@@ -479,7 +479,20 @@ queryTimes.first({
 
 
 
+var queryVests = new Parse.Query(personalInfo);
+queryVests.equalTo("TwitterHandle", person);
+queryVests.first({
+  success: function(object) {
+    var vests = object.get('vests');  
+    document.getElementById("vests1").innerHTML = vests;
+  },
+  error: function(error) {
+    document.getElementById("vests1").innerHTML = "N/A";
+  }
+}
+);
 
+/*
 var queryVests = new Parse.Query(personalInfo);
 queryVests.equalTo("TwitterHandle", person);
 queryVests.first({
@@ -492,7 +505,7 @@ queryVests.first({
     };
 
     );
-
+*/
 
 
 
