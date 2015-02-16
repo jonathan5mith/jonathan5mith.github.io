@@ -489,7 +489,9 @@ queryVests.first({
     
     for (var i=0, i<vests.length, i++){
       var vestno = vests.indexOf(i);
-      document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
+      console.log(vestno);
+
+      //document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
     }
     
   },
