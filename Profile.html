@@ -486,17 +486,20 @@ queryVests.first({
   success: function(object) {
             var vests = object.get('vestsTogether');
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/'
+            
             if(vests[0]==true){
-              document.getElementById("vest1").innerHTML = imgtag+'vest1.png">'
+              document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png">'
             }
             else{
-              document.getElementById("vest1").innerHTML = imgtag+'london.png">'
+              document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/london.png">'
             };
+            
+
             if(vests[1]==true){
-              document.getElementById("vest2").innerHTML = imgtag+'vest2.png">'
+              document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest2.png">'
             }
             else{
-              document.getElementById("vest1").innerHTML = imgtag+'london.png">'
+              document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/london.png">'
             }
 
     },
