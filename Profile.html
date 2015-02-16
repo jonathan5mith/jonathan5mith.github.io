@@ -486,9 +486,10 @@ queryVests.first({
 
   success: function(object) {
             var vests = object.get('vests');  
-            for (var i=0, i<vests.length, i++){
+            alert(vests);
+            /*for (var i=0, i<vests.length, i++){
               var vestno = vests.indexOf(i);
-              console.log(vestno);
+              console.log(vestno);*/
 
       //document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
     }
