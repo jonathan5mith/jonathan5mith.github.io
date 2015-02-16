@@ -80,7 +80,7 @@ h2{
 
 .line1{
 	background-color: rgba(100,100,100,0);
-	font-family: 'open sans extrabold', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size:40px;
 	font-weight:bold;
 	margin-left: 7px;
@@ -95,8 +95,9 @@ h2{
 	margin-right: auto;
 	margin-left: auto;
 	width: 280px;
-	text-decoration: underline;
-	
+	border-style: solid;
+	border-width: 5px;
+	border-color: white;
 	}
 
 	.text-container {
@@ -137,7 +138,9 @@ h2{
 	letter-spacing: 3px;
 	margin-right: auto;
 	margin-left: auto;
-	text-decoration: underline;
+	border-style: solid;
+	border-width: 5px;
+	border-color: white;
 	
 	}
 
@@ -177,7 +180,9 @@ h2{
 	letter-spacing: 3px;
 	margin-right: auto;
 	margin-left: auto;
-	text-decoration: underline;
+	border-style: solid;
+	border-width: 8px;
+	border-color: white;
 	
 	}
 
