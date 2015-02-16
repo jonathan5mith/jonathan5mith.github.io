@@ -485,10 +485,12 @@ queryVests.first({
   
   success: function(object) {
             var vests = object.get('vestsTogether');
-            alert(vests);
-            //for(var i = 0, i < vestsTogether.length; i++){
-              //console.log(vestsTogether[i]);
-            //}
+            if(vests[0]=true){
+              alert("yay");
+            }
+            else{
+              alert("nay");
+            }
 
     },
     
