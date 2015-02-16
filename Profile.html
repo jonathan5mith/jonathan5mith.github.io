@@ -477,10 +477,12 @@ queryTimes.first({
 
 // -----------------Vests
 
-/*
+
+
+
 var queryVests = new Parse.Query(personalInfo);
 queryVests.equalTo("TwitterHandle", person);
-queryLocation.first({
+queryVests.first({
   success: function(object) {
     var vests = object.get('vests');
     var vestno = vests.indexOf(2);
@@ -489,9 +491,7 @@ queryLocation.first({
     },
    
   );
-*/
 
-//document.getElementById('vest'+vestno.toString()) = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest'+vestno.toString()+'.png"\>';
 
 
 
