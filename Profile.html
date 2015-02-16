@@ -481,7 +481,7 @@ queryTimes.first({
 
 var queryVests = new Parse.Query(personalInfo);
 queryVests.equalTo("TwitterHandle", person);
-queryVests.first({
+queryVests.find({
   
   success: function(vestsTogether) {
             for(var i = 0, i < vestsTogether.length; i++){
