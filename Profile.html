@@ -484,7 +484,7 @@ queryVests.equalTo("TwitterHandle", person);
 queryVests.find({
   
 
-  success: function(results) {
+  success: function(queryVests) {
     var vests = object.get('vests');  
     
     for (var i=0, i<vests.length, i++){
