@@ -484,9 +484,9 @@ queryVests.equalTo("TwitterHandle", person);
 queryVests.first({
   
   success: function(vestsTogether) {
-            //var vests = [object.get('vests1'), object.get('vests2'), object.get('vests3'),object.get('vests4'),object.get('vests5'),object.get('vests6')];
-            alert(vestsTogether);
-
+            for(var i = 0, i < vestsTogether.length; i++){
+              console.log(vestsTogether[i]);
+            }
 
     },
     
