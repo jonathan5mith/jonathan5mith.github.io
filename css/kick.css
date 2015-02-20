@@ -324,7 +324,7 @@ h2{
 	max-width: 400px;
 	margin-left: auto;
 	margin-right:auto;
-	padding-top: 30px;
+	padding-top: 10px;
 }
 
 .subheaders{
@@ -338,6 +338,7 @@ h2{
 
 .maincontent{
 	padding-top: 30px;
+	padding-bottom: 30px;
 	max-width: 220px;
 	margin:auto;
 	font-size: 19px;
