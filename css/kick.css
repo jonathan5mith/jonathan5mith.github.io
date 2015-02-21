@@ -319,12 +319,13 @@ h2{
 	}
 
 .mainheaderslight{
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 300;
-	max-width: 400px;
+	max-width: 350px;
 	margin-left: auto;
 	margin-right:auto;
 	padding-top: 10px;
+	font-weight: 400;
 }
 
 .subheaders{
