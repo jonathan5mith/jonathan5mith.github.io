@@ -937,8 +937,7 @@ ul.icons li .icon-large:before {
 }
 
 body {
-  font-family: 'open sans extrabold', 'Roboto' Helvetica, Arial, sans-serif;
-  font-weight: 900;
+  font-family: times, Helvetica, Arial, sans-serif;
   line-height: 1.3;
 }
 
