@@ -1133,13 +1133,7 @@ body {
   text-align: center;
   
 }
-#headingselector{
-  font-family: times, 'open sans extrabold', sans-serif;
-}
 
-#paraselector{
-  font-family: times, 'open sans extrabold', sans-serif;
-}
 
 
 @media screen and (max-width: 767px) {
