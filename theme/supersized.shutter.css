@@ -25,7 +25,7 @@
 				@media (max-width: 767px) {
 
 
-				#prevslide, #nextslide{ position:absolute; height:100px; width:100px; top:50%; margin-top:-21px; opacity:0.6; }
+				#prevslide, #nextslide{ position:absolute; height:100px; width:100px; top:70%; margin-top:-21px; opacity:0.6; }
 					#prevslide{ left:10px; background:url('../img/back.png'); background-size: 100% }
 					#nextslide{ right:10px; background:url('../img/forward.png'); background-size: 100% }
 						#prevslide:active, #nextslide:active{ margin-top:-19px; }
