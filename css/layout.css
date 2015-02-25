@@ -1123,6 +1123,7 @@ body {
   border-color: white;
 }
 
+
 .container {
   position: relative;
   width: 50%;
@@ -1130,10 +1131,14 @@ body {
   margin: auto auto;
   padding: 10px 20px;
   text-align: center;
+  font-family: 'open sans extrabold', sans-serif;
 }
+
+
 @media screen and (max-width: 767px) {
   .container {
-    margin-top: 70px;
+    margin-top: 50px;
+    margin-left: auto;
     max-width: 100%;
     width: 100%;
     position: static;
