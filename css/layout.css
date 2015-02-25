@@ -1127,8 +1127,7 @@ body {
   position: relative;
   width: 50%;
   max-width: 500px;
-  left: 90px;
-  top: 13%;
+  margin: auto auto;
   padding: 10px 20px;
 }
 @media screen and (max-width: 767px) {
