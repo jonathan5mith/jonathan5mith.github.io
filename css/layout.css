@@ -1131,6 +1131,13 @@ body {
   margin: auto auto;
   padding: 10px 20px;
   text-align: center;
+  
+}
+#headingselector{
+  font-family: times, 'open sans extrabold', sans-serif;
+}
+
+#paraselector{
   font-family: times, 'open sans extrabold', sans-serif;
 }
 
