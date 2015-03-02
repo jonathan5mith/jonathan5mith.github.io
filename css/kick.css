@@ -660,14 +660,9 @@ a.twitter-timeline {
   white-space: nowrap;
 }
  
-a.twitter-timeline:hover,
-a.twitter-timeline:focus {
-  background-color: #dedede;
-}
- 
-/* Color Highlight for keyboard navigation */
- 
-a.twitter-timeline:focus {
-  outline: none;
-  border-color: #0089cb;
+.twitter{
+	text-align:center;
+	padding-top: 100px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
