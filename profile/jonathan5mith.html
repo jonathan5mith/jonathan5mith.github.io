@@ -438,6 +438,20 @@ queryPoints.first({
   }
 });
 
+// -----------------Total Kicks query
+
+var queryTotalKicks = new Parse.Query(personalInfo);
+queryTotalKicks.equalTo("TwitterHandle", person);
+queryTotalKicks.first({
+  success: function(object) {
+    var totalKicks = object.get('totalKicks');
+    document.getElementById("totalkicks").innerHTML = totalKicks;
+  },
+  error: function(error) {
+    document.getElementById("totalkicks").innerHTML = "N/A";
+  }
+}
+);
 
 // -----------------Profile image
 
@@ -465,8 +479,6 @@ queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
     var runtimes= times.slice(-5);
-    var totalkicks = times.length();
-    document.getElementById("totalkicks").innerHTML = totalkicks;
     var buyerData = {
   labels : runtimes,
   datasets : [
