@@ -363,8 +363,11 @@ var queryArray = new Parse.Query(personalInfo);
 queryArray.equalTo("twitterHandle", person);
 queryArray.first({
   success: function(object){
-    array = object.get('kickData');
-    alert(array[3].toString());},
+    var array = object.get('kickData');
+    alert(array[3].toString());
+    window.array = array;
+
+  },
   error: function(error){
     alert("No such user")
   }
