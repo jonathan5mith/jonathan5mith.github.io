@@ -465,6 +465,8 @@ queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
     var runtimes= times.slice(-5);
+    var totalkicks = times.length();
+    document.getElementById("totalkicks").innerHTML = totalkicks;
     var buyerData = {
   labels : runtimes,
   datasets : [
