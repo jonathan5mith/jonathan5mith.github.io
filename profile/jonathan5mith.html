@@ -171,7 +171,7 @@
         <table>
           <tr>
             <td id="tablefix">
-              <span id="vest4"></span>
+              <span id="vest1"></span>
             </td>
             <td>
               Kick
@@ -179,7 +179,7 @@
           </tr>
           <tr>
             <td id="tablefix">
-              <span id="vest4"></span>
+              <span id="vest2"></span>
             </td>
             <td>
               Helsinki
@@ -187,7 +187,7 @@
           </tr>
           <tr>
             <td id="tablefix">
-              <span id="vest4"></span>
+              <span id="vest3"></span>
             </td>
             <td>
               Tokyo
@@ -205,7 +205,7 @@
 
           <tr>
             <td id="tablefix">
-              <span id="vest4"></span>
+              <span id="vest5"></span>
             </td>
             <td>
               Los Angeles
@@ -214,7 +214,7 @@
 
           <tr>
             <td id="tablefix">
-              <span id="vest4"></span>
+              <span id="vest6"></span>
             </td>
             <td>
               London
@@ -622,7 +622,7 @@ queryVests.first({
   success: function(object) {
             var vests = object.get('vestsTogether');
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/'
-            
+            alert(vests);
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
 
             if(vests[0]==true){
