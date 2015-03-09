@@ -177,6 +177,9 @@
               Kick
             </td>
           </tr>
+        </table>
+        <div id="greyline"></div>
+        <table>
           <tr>
             <td id="tablefix">
               <span id="vest2"></span>
@@ -621,8 +624,7 @@ queryVests.first({
   
   success: function(object) {
             var vests = object.get('vestsTogether');
-            var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/'
-            alert(vests);
+            var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
 
             if(vests[0]==true){
