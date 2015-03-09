@@ -634,12 +634,15 @@ tr{
 	font-size:20px;
 }
 
-#tablefix{
+/*#tablefix{
 	margin-top: 4px;
 	padding-bottom: 4px;
+}*/
+
+.mid{
+	vertical-align: middle;
+
 }
-
-
 
 
 
