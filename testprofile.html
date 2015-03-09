@@ -358,16 +358,28 @@ var person = person1.toLowerCase();
 var personalInfo = Parse.Object.extend("KickData");
 var array
 
-//-----------------New Queries
+//-----------------Query
 
 var queryArray = new Parse.Query(personalInfo);
 queryArray.equalTo("twitterHandle", person);
 queryArray.first({
   success: function(object){
     var array = object.get('kickData');
-    alert(array[3].toString());
-    if(callback != null && callback != undefined){
-              callback(array);
+    
+// -------Personal Details
+
+var firstname = array[0];
+var lastname = array[1];
+document.getElementById("name").innerHTML = firstname+" "+lastname;
+
+
+
+
+
+
+
+
+
         }
   },
   error: function(error){
@@ -378,12 +390,9 @@ queryArray.first({
 
 // -----------------Name
 
-alert(array.toString());
 
-var firstname = array[0];
-var lastname = array[1];
 
-document.getElementById("name").innerHTML = firstname+" "+lastname;
+
 
 
 
