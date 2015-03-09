@@ -625,8 +625,8 @@ tr{
 	padding-top: 11px;
 }
 
-.tablecontainer{
-	text-align: center;
+table{
+	margin:0 auto;
 }
 
 
