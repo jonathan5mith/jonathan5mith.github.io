@@ -360,7 +360,7 @@ var personalInfo = Parse.Object.extend("KickData");
 //-----------------New Queries
 
 var queryArray = new Parse.Query(personalInfo);
-queryArray.equalTo("TwitterHandle", person);
+queryArray.equalTo("twitterHandle", person);
 queryArray.first({
   success: function(object){
     var array = object.get('kickData');
