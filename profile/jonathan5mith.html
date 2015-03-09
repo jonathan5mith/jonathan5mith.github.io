@@ -386,6 +386,22 @@ queryName.first({
   }
 );
 
+// -----------------Location
+
+var queryLocation = new Parse.Query(personalInfo);
+queryLocation.equalTo("TwitterHandle", person);
+queryLocation.first({
+  success: function(object) {
+    var city = object.get('city');
+    var country = object.get('country');
+    document.getElementById("location").innerHTML = city+", "+country;
+  },
+  error: function(error) {
+    document.getElementById("location").innerHTML = "N/A";
+  }
+  }
+);
+
 // -----------------Validated query
 
 
@@ -422,20 +438,6 @@ queryPoints.first({
   }
 });
 
-// -----------------Total Kicks query
-
-var queryTotalKicks = new Parse.Query(personalInfo);
-queryTotalKicks.equalTo("TwitterHandle", person);
-queryTotalKicks.first({
-  success: function(object) {
-    var totalKicks = object.get('totalKicks');  
-    document.getElementById("totalkicks").innerHTML = totalKicks;
-  },
-  error: function(error) {
-    document.getElementById("totalkicks").innerHTML = "N/A";
-  }
-}
-);
 
 // -----------------Profile image
 
@@ -452,22 +454,6 @@ queryPic.first({
   }
 );
 
-// -----------------Location
-
-var queryLocation = new Parse.Query(personalInfo);
-queryLocation.equalTo("TwitterHandle", person);
-queryLocation.first({
-  success: function(object) {
-    var city = object.get('city');
-    var country = object.get('country');
-    document.getElementById("location").innerHTML = city+", "+country;
-  },
-  error: function(error) {
-    document.getElementById("location").innerHTML = "N/A";
-  }
-  }
-);
-
 
 // -----------------Times
 
@@ -478,6 +464,7 @@ queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
+    document.getElementById("totalkicks").innerHTML = times.length();
     var runtimes= times.slice(-5);
     var buyerData = {
   labels : runtimes,
