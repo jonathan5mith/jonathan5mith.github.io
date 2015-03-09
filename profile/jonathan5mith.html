@@ -376,9 +376,8 @@ var queryName = new Parse.Query(personalInfo);
 queryName.equalTo("TwitterHandle", person);
 queryName.first({
   success: function(object) {
-    var firstname = object.get('firstName');
-    var lastname = object.get('lastName');
-    document.getElementById("name").innerHTML = firstname+" "+lastname;
+    var details = object.get('personalDeatails');
+    document.getElementById("name").innerHTML = details[0]+" "+details[1];
   },
   error: function(error) {
     document.getElementById("name").innerHTML = "N/A";
