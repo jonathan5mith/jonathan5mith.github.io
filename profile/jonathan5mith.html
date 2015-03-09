@@ -477,16 +477,13 @@ var queryTimes = new Parse.Query(personalInfo);
 queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
-    
-
-   
-
-    
-
-
-    
+        
     var times = object.get('runTimes');
+    
     var runtimes= times.slice(-5);
+    
+    //defining the conversion formula
+
     function minTommss(minutes){
       var sign = minutes < 0 ? "-" : "";
       var min = Math.floor(Math.abs(minutes))
