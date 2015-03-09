@@ -495,13 +495,13 @@ queryTimes.first({
 
     var runtimesformatted = [];
     
-    //manual loop over variable
+    //loop over variable
 
-    runtimesformatted[0] = minTommss(runtimes[0]);
-    runtimesformatted[1] = minTommss(runtimes[1]);
-    runtimesformatted[2] = minTommss(runtimes[2]);
-    runtimesformatted[3] = minTommss(runtimes[3]);
-    runtimesformatted[4] = minTommss(runtimes[4]);
+    for (var i = 0; i < runtimes.length; i++) {
+    runtimesformatted[i] = minTommss(runtimes[i]);
+    };
+
+
 
     //creating chart
 
