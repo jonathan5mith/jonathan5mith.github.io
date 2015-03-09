@@ -365,7 +365,7 @@ queryArray.first({
   success: function(object){
     var array = object.get('kickData');
     alert(array[3].toString());
-    window.array = array;
+    return array;
 
   },
   error: function(error){
