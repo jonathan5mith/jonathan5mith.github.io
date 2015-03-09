@@ -356,6 +356,7 @@ var person1 = "jonathan5mith"
 //url.substring(url.lastIndexOf('/')+1);
 var person = person1.toLowerCase();
 var personalInfo = Parse.Object.extend("KickData");
+var array
 
 //-----------------New Queries
 
@@ -363,10 +364,11 @@ var queryArray = new Parse.Query(personalInfo);
 queryArray.equalTo("twitterHandle", person);
 queryArray.first({
   success: function(object){
-    var array1 = object.get('kickData');
+    var array = object.get('kickData');
     alert(array[3].toString());
-    window.array = array1;
-
+    if(callback != null && callback != undefined){
+              callback(array);
+        }
   },
   error: function(error){
     alert("No such user")
