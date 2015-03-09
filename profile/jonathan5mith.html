@@ -464,7 +464,6 @@ queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
     var times = object.get('runTimes');
-    document.getElementById("totalkicks").innerHTML = times.length();
     var runtimes= times.slice(-5);
     var buyerData = {
   labels : runtimes,
