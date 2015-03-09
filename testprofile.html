@@ -365,7 +365,8 @@ queryArray.first({
   success: function(object){
     var array = object.get('kickData');
     alert(array[3].toString());
-    return array;
+    if(callback != null && callback != undefined){
+      callback(array);}
 
   },
   error: function(error){
