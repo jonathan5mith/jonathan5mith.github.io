@@ -355,12 +355,12 @@ var url = window.location.pathname;
 var person1 = "jonathan5mith"
 //url.substring(url.lastIndexOf('/')+1);
 var person = person1.toLowerCase();
-var personalInfo = Parse.Object.extend("KickData");
+var personalInfo = Parse.Object.extend("upload1");
 
 //-----------------New Queries
 
 var queryArray = new Parse.Query(personalInfo);
-queryArray.equalTo("twitterHandle", person);
+queryArray.equalTo("TwitterHandle", person);
 queryArray.first({
   success: function(object){
     var array = object.get('kickData');
