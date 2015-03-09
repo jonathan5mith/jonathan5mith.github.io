@@ -607,18 +607,24 @@ canvas{
 
 .bottomlink  a:link{
 text-decoration: none;
+color:black;
 }
 
 .bottomlink  a:visited{
 text-decoration: none;
+color:black;
 }
 
 .bottomlink a:hover {
 text-decoration: none;
+font-weight: bold;
+color:black;
+
 }
 
 .bottomlink a:active {
 text-decoration: none;
+color:black;
 }
 
 
