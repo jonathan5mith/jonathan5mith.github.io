@@ -364,7 +364,7 @@ queryArray.equalTo("TwitterHandle", person);
 queryArray.first({
   success: function(object){
     var array = object.get('kickData');
-    alert("array");},
+    alert(toString(array));},
   error: function(error){
     alert("No such user")
   }
