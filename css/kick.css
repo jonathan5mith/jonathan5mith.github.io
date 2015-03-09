@@ -625,6 +625,10 @@ tr{
 	padding-top: 11px;
 }
 
+.centerintable{
+	text-align: center;
+}
+
 /* -----------Bottom Nav----------- */
 
 .bottomnav{
