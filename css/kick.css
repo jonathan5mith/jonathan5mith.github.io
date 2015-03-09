@@ -681,3 +681,9 @@ a.twitter-timeline {
 	padding-left: 30px;
 	padding-right: 30px;
 }
+
+
+.talecontainer table, th, td{
+	border: 3px;
+
+}
