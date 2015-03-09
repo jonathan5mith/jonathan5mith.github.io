@@ -582,7 +582,10 @@ canvas{
 #greyline{
 	border-bottom: 2px solid #f1f1f1; 
 }
-
+#greyline1{
+	border-bottom: 2px solid #f1f1f1; 
+	margin-bottom: 10px;
+}
 
 #tablemarginbottom{
 	margin-bottom: 20px;
@@ -631,7 +634,7 @@ tr{
 }
 
 #tablefix{
-	
+	padding-bottom: 8px;
 }
 
 
