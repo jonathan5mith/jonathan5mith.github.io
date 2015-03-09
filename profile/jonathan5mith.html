@@ -477,6 +477,13 @@ var queryTimes = new Parse.Query(personalInfo);
 queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
+    function minTommss(minutes){
+      var sign = minutes < 0 ? "-" : "";
+      var min = Math.floor(Math.abs(minutes))
+      var sec = Math.floor((Math.abs(minutes) * 60) % 60);
+      return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
+    };
+    alert(minTommss(3.5));
     var times = object.get('runTimes');
     var runtimes= times.slice(-5);
     var buyerData = {
