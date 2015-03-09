@@ -603,11 +603,31 @@ canvas{
 .bottomlink{
 	text-align: center;
 	font-weight: 400;
-
 }
+
+.bottomlink  a:link{
+text-decoration: none;
+}
+
+.bottomlink  a:visited{
+text-decoration: none;
+}
+
+.bottomlink a:hover {
+text-decoration: none;
+}
+
+.bottomlink a:active {
+text-decoration: none;
+}
+
+
+
 
 .bottomlink i{
 	font-size: 15px;
+}.bottomlink  a:visited{
+text-decoration: none;
 }
 
 .bottomlinkpadding{
