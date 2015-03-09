@@ -477,17 +477,30 @@ var queryTimes = new Parse.Query(personalInfo);
 queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
   success:function(object) {
+    
+
+   
+
+    
+
+
+    
+    var times = object.get('runTimes');
+    var runtimes= times.slice(-5);
     function minTommss(minutes){
       var sign = minutes < 0 ? "-" : "";
       var min = Math.floor(Math.abs(minutes))
       var sec = Math.floor((Math.abs(minutes) * 60) % 60);
       return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
     };
-    alert(minTommss(3.5));
-    var times = object.get('runTimes');
-    var runtimes= times.slice(-5);
+    var runtimesformatted
+    for (var i = 0; i < runtimes.length; i++) {
+      runtimesformatted[i] = minTommss(runtimes[i])
+    };
+
+
     var buyerData = {
-  labels : runtimes,
+  labels : runtimesformatted,
   datasets : [
     {
       strokeColor : "rgba(150,150,150,.5)",
