@@ -635,10 +635,9 @@ tr{
 	height:70px;
 }
 
-/*#tablefix{
-	margin-top: 4px;
-	padding-bottom: 4px;
-}*/
+#tablefix{
+	height:70px;
+}
 
 .mid{
 	vertical-align: middle;
