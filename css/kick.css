@@ -234,7 +234,11 @@ h2{
 .line1{
 	width: 330px;
 	color:white;
+<<<<<<< HEAD
+	border-color:white;
+=======
 	border-color:#333;
+>>>>>>> origin/master
 }
 
 
@@ -262,7 +266,11 @@ h2{
 	.line1{
 
 	color:white;
+<<<<<<< HEAD
+	border-color:white;
+=======
 	border-color:#333;
+>>>>>>> origin/master
 }
 
 
@@ -292,7 +300,11 @@ h2{
 		.line1{
 
 	color:white;
+<<<<<<< HEAD
+	border-color:white;
+=======
 	border-color:#333;
+>>>>>>> origin/master
 
 }
 
