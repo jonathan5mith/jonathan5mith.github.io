@@ -67,7 +67,7 @@ h2{
 
 /* -----------Sub navbar picture ----------- */
 
-/* -----Index -----*/
+/* -----Home -----*/
 
 @media (max-width: 767px) {
 
@@ -197,17 +197,7 @@ h2{
 	}
 }
 
-/* -----How_it_works -----*/
 
-.sub-navbar1 {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-190.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 100%;	
-	height: 430px;
-	padding-top: 0px;
-	text-align: center;
-	}
 
 /* -----Profile -----*/
 
@@ -224,7 +214,7 @@ h2{
 	
 	}
 
-.text-container {
+.text-container2 {
 
 	margin-top: 80px;
 	display:inline-block;
@@ -233,8 +223,12 @@ h2{
 
 .line1{
 	width: 330px;
-	color:#333;
+	color:white;
+<<<<<<< HEAD
+	border-color:white;
+=======
 	border-color:#333;
+>>>>>>> origin/master
 }
 
 
@@ -252,7 +246,7 @@ h2{
 	text-align: center;
 	
 	}
-	.text-container {
+	.text-container2 {
 
 	margin-top: 115px;
 	display:inline-block;
@@ -261,8 +255,12 @@ h2{
 	}
 	.line1{
 
-	color:#333;
+	color:white;
+<<<<<<< HEAD
+	border-color:white;
+=======
 	border-color:#333;
+>>>>>>> origin/master
 }
 
 
@@ -282,7 +280,7 @@ h2{
 
 	}
 
-		.text-container {
+		.text-container2 {
 
 	margin-top: 135px;
 	display:inline-block;
@@ -291,8 +289,12 @@ h2{
 
 		.line1{
 
-	color:#333;
+	color:white;
+<<<<<<< HEAD
+	border-color:white;
+=======
 	border-color:#333;
+>>>>>>> origin/master
 
 }
 
