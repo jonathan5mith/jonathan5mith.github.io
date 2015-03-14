@@ -301,6 +301,136 @@ h2{
 
 }
 
+
+/*------------------------Steel-------------------------------------*/
+
+@media (max-width: 767px) {
+
+.sub-navbar-steel {
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2b.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;	
+	height: 350px;
+	padding-top: 0px;
+	text-align: center;
+	}
+
+
+.text-container-steel {
+
+	margin-top: 70px;
+	display:inline-block;
+	text-align: center;
+	
+	}
+
+.text-container-steel img{
+
+height:100px;
+width: 100px;
+}
+
+.line-steel{
+	font-family: Segoe UI Black, sans-serif;
+	color:white;
+	font-size: 50px;
+	text-shadow: 0 0 0.1em black;
+}
+
+.line-steel1{
+	font-family: Segoe UI Black, sans-serif;
+	color:white;
+	font-size: 20px;
+	width: 280px;
+	text-shadow: 0 0 0.1em black;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+.sub-navbar-steel {
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2a.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;	
+	height: 500px;
+	padding-top: 0px;
+	text-align: center;
+	}
+
+
+.text-container-steel {
+
+	margin-top: 80px;
+	display:inline-block;
+	text-align: center;
+
+	}
+
+.text-container-steel img{
+
+height:170px;
+width: 170px;
+}
+
+.line-steel{
+	font-family: Segoe UI Black, sans-serif;
+	color:white;
+	font-size: 90px;
+	text-shadow: 0 0 0.1em black;
+}
+
+.line-steel1{
+	font-family: Segoe UI Black, sans-serif;
+	color:white;
+	font-size: 25px;
+	width: 400px;
+	text-shadow: 0 0 0.1em black;
+}
+}
+
+
+
+@media (min-width: 1200px) {
+.sub-navbar-steel {
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;	
+	height: 600px;
+	padding-top: 0px;
+	text-align: center;
+	}
+
+
+.text-container-steel {
+
+	margin-top: 110px;
+	display:inline-block;
+	text-align: center;
+
+	}
+
+.line-steel{
+	font-family: Segoe UI Black, sans-serif;
+	color:white;
+	font-size: 110px;
+	text-shadow: 0 0 0.1em black;
+}
+
+.line-steel1{
+	font-family: Segoe UI Black, sans-serif;
+	color:white;
+	font-size: 30px;
+	width: 400px;
+	text-shadow: 0 0 0.1em black;
+}
+}
+
+
+
+
 /* -----------Sub navbar text & container ----------- */
 
 
