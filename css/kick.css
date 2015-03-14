@@ -333,6 +333,7 @@ width: 100px;
 
 .line-steel{
 	font-family: Segoe UI Black, 'Roboto', sans-serif;
+	font-weight: bold;
 	color:white;
 	font-size: 50px;
 	text-shadow: 0 0 0.1em black;
@@ -340,6 +341,7 @@ width: 100px;
 
 .line-steel1{
 	font-family: Segoe UI Black, 'Roboto', sans-serif;
+	font-weight: bold;
 	color:white;
 	font-size: 20px;
 	width: 250px;
@@ -376,6 +378,7 @@ width: 170px;
 
 .line-steel{
 	font-family: Segoe UI Black, 'Roboto', sans-serif;
+	font-weight: bold;
 	color:white;
 	font-size: 90px;
 	text-shadow: 0 0 0.1em black;
@@ -383,6 +386,7 @@ width: 170px;
 
 .line-steel1{
 	font-family: Segoe UI Black, 'Roboto', sans-serif;
+	font-weight: bold;
 	color:white;
 	font-size: 25px;
 	width: 400px;
@@ -414,6 +418,7 @@ width: 170px;
 
 .line-steel{
 	font-family: Segoe UI Black, 'Roboto', sans-serif;
+	font-weight: bold;
 	color:white;
 	font-size: 110px;
 	text-shadow: 0 0 0.1em black;
@@ -421,6 +426,7 @@ width: 170px;
 
 .line-steel1{
 	font-family: Segoe UI Black, 'Roboto', sans-serif;
+	font-weight: bold;
 	color:white;
 	font-size: 30px;
 	width: 400px;
