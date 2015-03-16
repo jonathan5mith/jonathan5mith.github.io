@@ -306,7 +306,7 @@ h2{
 
 @media (max-width: 767px) {
 
-.sub-navbar-steel {
+#sub-navbar-steel {
 	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2b.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -319,7 +319,7 @@ h2{
 
 .text-container-steel {
 
-	margin-top: 55px;
+	margin-top: 70px;
 	display:inline-block;
 	text-align: center;
 	
@@ -327,7 +327,7 @@ h2{
 
 .text-container-steel img{
 
-height:300px;
+height:255px;
 
 }
 
@@ -351,7 +351,7 @@ height:300px;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-.sub-navbar-steel {
+#sub-navbar-steel {
 	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2a.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -397,7 +397,7 @@ height:400px;
 
 
 @media (min-width: 1200px) {
-.sub-navbar-steel {
+#sub-navbar-steel {
 	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
