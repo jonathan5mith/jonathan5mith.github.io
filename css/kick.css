@@ -307,7 +307,7 @@ h2{
 @media (max-width: 767px) {
 
 .sub-navbar-steel {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2b.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel6b.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
@@ -319,7 +319,7 @@ h2{
 
 .text-container-steel {
 
-	margin-top: 70px;
+	margin-top: 55px;
 	display:inline-block;
 	text-align: center;
 	
@@ -327,8 +327,8 @@ h2{
 
 .text-container-steel img{
 
-height:100px;
-width: 100px;
+height:300px;
+
 }
 
 .line-steel{
@@ -352,7 +352,7 @@ width: 100px;
 
 @media (min-width: 768px) and (max-width: 1199px) {
 .sub-navbar-steel {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2a.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel6a.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
@@ -372,8 +372,8 @@ width: 100px;
 
 .text-container-steel img{
 
-height:170px;
-width: 170px;
+height:400px;
+
 }
 
 .line-steel{
@@ -398,7 +398,7 @@ width: 170px;
 
 @media (min-width: 1200px) {
 .sub-navbar-steel {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel3.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
@@ -415,6 +415,12 @@ width: 170px;
 	text-align: center;
 
 	}
+
+	.text-container-steel img{
+
+height:450px;
+
+}
 
 .line-steel{
 	font-family: Segoe UI Black, 'Roboto',Impact, sans-serif;
