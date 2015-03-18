@@ -311,7 +311,7 @@ h2{
 	color:RGB(242,242,242);
 	text-align: right;
 	padding-right: 20px;
-	margin-top: -20px;
+	margin-top: -25px;
 	}
 
 	.steel-image-attribute a{
@@ -332,13 +332,13 @@ h2{
 
 @media (max-width: 768px) {
 .steel-image-attribute{
-	text-align: right;
-	padding-right: 20px;
+	text-align: center;
 	margin-top: 10px;
+	color:#939393;
 	}
 
 	.steel-image-attribute a{
-	color:gray;
+	color:#939393;
 	text-decoration: none;
 	font-weight: 400;
 }
