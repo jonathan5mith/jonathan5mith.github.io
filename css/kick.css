@@ -109,6 +109,8 @@ h2{
 	display:inline-block;
 	text-align: center;
 	}
+
+
 }
 
 
@@ -319,7 +321,7 @@ h2{
 
 .text-container-steel {
 
-	margin-top: 70px;
+	margin-top: 63px;
 	display:inline-block;
 	text-align: center;
 	
@@ -327,7 +329,7 @@ h2{
 
 .text-container-steel img{
 
-height:255px;
+height:280px;
 
 }
 
@@ -346,6 +348,10 @@ height:255px;
 	font-size: 20px;
 	width: 250px;
 	text-shadow: 0 0 0.1em black;
+}
+
+#steel-logo{
+	height: 150px;
 }
 
 }
@@ -392,6 +398,11 @@ height:400px;
 	width: 400px;
 	text-shadow: 0 0 0.1em black;
 }
+
+#steel-logo{
+	height: 180px;
+}
+
 }
 
 
@@ -437,6 +448,9 @@ height:450px;
 	font-size: 30px;
 	width: 400px;
 	text-shadow: 0 0 0.1em black;
+}
+#steel-logo{
+	height: 200px;
 }
 }
 
@@ -523,6 +537,19 @@ height:450px;
 	background-color: gray;
 }
 
+@media (max-width: 768px){
+
+.maincontent{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	max-width: 220px;
+	margin:auto;
+	font-size: 17px;
+}
+}
+
+@media (min-width: 769px){
+
 .maincontent{
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -530,6 +557,8 @@ height:450px;
 	margin:auto;
 	font-size: 19px;
 }
+}
+
 
 .col-md-4{
 		padding-top: 20px;
