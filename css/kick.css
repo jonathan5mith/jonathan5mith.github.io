@@ -306,6 +306,56 @@ h2{
 
 /*------------------------Steel-------------------------------------*/
 
+@media (min-width: 769px) {
+.steel-image-attribute{
+	color:RGB(242,242,242);
+	text-align: right;
+	padding-right: 20px;
+	margin-top: -20px;
+	}
+
+	.steel-image-attribute a{
+	color:white;
+	text-decoration: none;
+	font-weight: 400;
+}
+.steel-image-attribute a:hover{
+	text-decoration: none;
+	font-weight: 500;
+
+}
+
+.steel-image-attribute a:active{
+	text-decoration: none;
+	}
+}
+
+@media (max-width: 768px) {
+.steel-image-attribute{
+	text-align: right;
+	padding-right: 20px;
+	margin-top: 10px;
+	}
+
+	.steel-image-attribute a{
+	color:gray;
+	text-decoration: none;
+	font-weight: 400;
+}
+.steel-image-attribute a:hover{
+	text-decoration: none;
+	font-weight: 500;
+
+}
+
+.steel-image-attribute a:active{
+	text-decoration: none;
+	}
+}
+
+
+
+
 @media (max-width: 767px) {
 
 #sub-navbar-steel {
@@ -333,22 +383,7 @@ height:280px;
 
 }
 
-.line-steel{
-	font-family: Segoe UI Black, 'Roboto',Impact,  sans-serif;
-	font-weight: bold;
-	color:white;
-	font-size: 50px;
-	text-shadow: 0 0 0.1em black;
-}
 
-.line-steel1{
-	font-family: Segoe UI Black, 'Roboto', Impact, sans-serif;
-	font-weight: bold;
-	color:white;
-	font-size: 20px;
-	width: 250px;
-	text-shadow: 0 0 0.1em black;
-}
 
 #steel-logo{
 	height: 150px;
@@ -382,22 +417,6 @@ height:400px;
 
 }
 
-.line-steel{
-	font-family: Segoe UI Black, 'Roboto', Impact, sans-serif;
-	font-weight: bold;
-	color:white;
-	font-size: 90px;
-	text-shadow: 0 0 0.1em black;
-}
-
-.line-steel1{
-	font-family: Segoe UI Black, 'Roboto', Impact,  sans-serif; 
-	font-weight: bold;
-	color:white;
-	font-size: 25px;
-	width: 400px;
-	text-shadow: 0 0 0.1em black;
-}
 
 #steel-logo{
 	height: 180px;
@@ -433,26 +452,12 @@ height:450px;
 
 }
 
-.line-steel{
-	font-family: Segoe UI Black, 'Roboto',Impact, sans-serif;
-	font-weight: bold;
-	color:white;
-	font-size: 110px;
-	text-shadow: 0 0 0.1em black;
-}
-
-.line-steel1{
-	font-family: Segoe UI Black, 'Roboto',Impact,  sans-serif;
-	
-	color:white;
-	font-size: 30px;
-	width: 400px;
-	text-shadow: 0 0 0.1em black;
 }
 #steel-logo{
 	height: 200px;
 }
 }
+
 
 
 
