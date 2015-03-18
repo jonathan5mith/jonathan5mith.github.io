@@ -804,7 +804,7 @@ canvas{
 	padding-left: 0px;
 	padding-right: 0px;
 	
-	background: rgba(150,150,150,.9) ;
+	background: RGB(89,89,89) ;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 2px 2px 0px 0px;
 	border-radius: 2px 2px 0px 0px; 
