@@ -359,7 +359,7 @@ h2{
 @media (max-width: 767px) {
 
 #sub-navbar-steel {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel6b.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2b.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
@@ -393,7 +393,7 @@ height:280px;
 
 @media (min-width: 768px) and (max-width: 1199px) {
 #sub-navbar-steel {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel6a.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2a.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
@@ -428,7 +428,7 @@ height:400px;
 
 @media (min-width: 1200px) {
 #sub-navbar-steel {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel6.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
