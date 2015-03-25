@@ -21,7 +21,7 @@
   <style type="text/css">
    @media (min-width: 1200px) {
     #sub-navbar-steel {
-      background-repeat: no-repeat;
+       background-repeat: no-repeat;
       background-position: center;
       width: 100%;  
       height: 600px;
@@ -59,7 +59,7 @@
   <script type="text/javascript">
    $(function() {
     var images = ['https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel1.jpg', 'https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel2.jpg', 'https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel3.jpg', 'https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel4.jpg', 'https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel5.jpg', 'https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel6.jpg' ];
-    $('#sub-navbar-steel').css({'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+    $('#sub-navbar-steel').css({'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
    });  
   </script>
 
