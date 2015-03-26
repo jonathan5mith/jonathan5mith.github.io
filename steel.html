@@ -285,11 +285,9 @@ function formSubmit() {
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
 var firstname = document.getElementById("firstname").value;
-var lastname = document.getElementById("lastname");
-var emailaddress = document.getElementById("emailaddress");
-var twitterhandle = document.getElementById("twitterhandle");
-
-alert(firstname);
+var lastname = document.getElementById("lastname").value;
+var emailaddress = document.getElementById("emailaddress").value;
+var twitterhandle = document.getElementById("twitterhandle").value;
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
