@@ -192,9 +192,6 @@
       <div class="border-below">
        
         <form>
-
-
-
           
           <div class="form-group">
             <label for="exampleInputPassword1">First Name</label>
@@ -294,10 +291,10 @@ function formSubmit() {
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
-var firstname = document.getElementById("emailaddress").value;
-var lastname = document.getElementById("twitterhandle").value;
-var emailaddres = document.getElementById("emailaddress").value;
-var twitterhandle = document.getElementById("twitterhandle").value;
+var firstname = document.getElementById("emailaddress");
+var lastname = document.getElementById("twitterhandle");
+var emailaddres = document.getElementById("emailaddress");
+var twitterhandle = document.getElementById("twitterhandle");
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
