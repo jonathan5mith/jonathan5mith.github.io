@@ -307,16 +307,13 @@ steelDetails.set("twitterHandle", twitterhandle);
 
 steelDetails.save(null, {
   success: function(steelDetails) {
-    // Execute any logic that should take place after the object is saved.
     alert(firstname+' '+lastname+", your details have been saved");
   },
   error: function(steelDetails, error) {
-    // Execute any logic that should take place if the save fails.
-    // error is a Parse.Error with an error code and message.
     alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we can get to the bottom of it");
   }
 });
-}
+};
 
 </script>
 
