@@ -180,7 +180,7 @@
   <div class="formcontain">
     <div class="cardsform">
       <div class="border-bottom">
-        <p class="mainheaders-steel"><img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/signup.png"/img></p>
+        <p class="mainheaders-steel"><span id="thanks"></span><span id="removeimage"><img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/signup.png"/img></span></p>
       </div>
       <div class="border-below">
        
@@ -306,6 +306,9 @@ steelDetails.save(null, {
     document.getElementById("formconfirm").innerHTML = "Thanks for entering Steel 10k! We'll be in touch by email closer to the event to let you know how to submit your time!";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
+    var elem = document.getElementById("removeimage");
+    elem.parentNode.removeChild(elem);
+    document.getElementById("formconfirm").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/thanks.png"/img>';
     
   },
   error: function(steelDetails, error) {
