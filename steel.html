@@ -207,7 +207,7 @@
 
                     <div class="form-group">
             <label for="exampleInputEmail1">Email Address</label>
-            <input type="twitterhandle" class="form-control" id="twitterhandle" placeholder="Email address">
+            <input type="twitterhandle" class="form-control" id="emailaddress" placeholder="Email address">
           </div>
           
           <div class="form-group">
@@ -219,6 +219,7 @@
             <label for="exampleInputEmail1">Club</label>
             <select class="form-control">
               <option value='' disabled selected style='display:none;'>Select a Club</option>
+              <option value="one">None</option>
               <option value="one">Askern and District RC</option>
               <option value="one">Barnsley Athletic Club</option>
               <option value="one">Barnsley Harriers</option>
@@ -282,6 +283,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+<!-- Parse stuff-->
+<!--==============================================-->
+
+
+<script type="text/javascript">
+
+// Initialisation
+
+Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
+
+function formSubmit() {
+
+var firstname = document.getElementById("firstname").value;
+var lastname = document.getElementById("firstname").value;
+var emailaddres = document.getElementById("emailaddress").value;
+var twitterhandle = document.getElementById("twitterhandle").value;
+
+var SteelDetails = Parse.Object.extend("SteelTest");
+var steeldetails = new SteelDetails();
+
+steeldetails.save({
+
+  firstName: firstname
+  
+  }).then(function(object) {
+        alert("Saved first name");
+    });
+
+};
+
+
+</script>
 
 <!--Browser Warning.js-->
 <!--==============================================-->
