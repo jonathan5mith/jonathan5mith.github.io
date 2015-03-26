@@ -1060,3 +1060,7 @@ a.twitter-timeline {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
+iframe.twitter-tweet {
+margin:10px auto !important;
+}
