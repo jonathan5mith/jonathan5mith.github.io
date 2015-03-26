@@ -1048,3 +1048,15 @@ a.twitter-timeline {
 .form-group label{
 	font-weight: 400;
 }
+
+#featuredkicks{
+	max-width: 850px;
+	margin:auto auto;
+	text-align: center;
+}
+
+#featuredkicks img{
+	max-width:380px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
