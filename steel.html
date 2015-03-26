@@ -187,27 +187,27 @@
         <form>
           
           <div class="form-group">
-            <label for="exampleInputPassword1">First Name</label>
+            <label>First Name</label>
             <input type="text" class="form-control" id="firstname" placeholder="First Name">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Last Name</label>
+            <label>Last Name</label>
             <input type="text" class="form-control" id="lastname" placeholder="Last Name">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">Email Address</label>
+            <label>Email Address</label>
             <input type="text" class="form-control" id="emailaddress" placeholder="Email address">
           </div>
           
           <div class="form-group">
-            <label for="exampleInputEmail1">Twitter Handle</label>
+            <label>Twitter Handle</label>
             <input type="text" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">Club</label>
+            <label>Club</label>
             <select class="form-control">
               <option value='' disabled selected style='display:none;'>Select a Club</option>
               <option value="one">None</option>
@@ -245,6 +245,7 @@
           <p class="pager" style="line-height: 60px;">
             <button type="submit" id="submit" onclick="formSubmit();" class="btn btn-default">Submit</button>
           </p>
+
         </form>
 
 
@@ -288,7 +289,7 @@ var lastname = document.getElementById("lastname");
 var emailaddress = document.getElementById("emailaddress");
 var twitterhandle = document.getElementById("twitterhandle");
 
-alert(firstname);
+alert(firstname.toString());
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
