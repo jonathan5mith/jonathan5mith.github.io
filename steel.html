@@ -294,25 +294,25 @@
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
-function formSubmit() {
-
-var firstname = document.getElementById("firstname").value;
-var lastname = document.getElementById("firstname").value;
-var emailaddres = document.getElementById("emailaddress").value;
-var twitterhandle = document.getElementById("twitterhandle").value;
+var firstname = "Jonathan"
+var lastname = "Smith"
+//var emailaddres = document.getElementById("emailaddress").value;
+//var twitterhandle = document.getElementById("twitterhandle").value;
 
 var SteelDetails = Parse.Object.extend("SteelTest");
-var steeldetails = new SteelDetails();
+var steelDetails = new SteelDetails();
 
-steeldetails.save({
-
-  firstName: firstname
-  
-  }).then(function(object) {
-        alert("Saved first name");
-    });
-
-};
+steelDetails.save({
+  firstName: firstname,
+  lastName: lastname
+}, {
+  success: function(steelDetails) {
+    alert("Saved");
+  },
+  error: function(steelDetails, error) {
+    alert("Not saved");
+  }
+});
 
 
 </script>
