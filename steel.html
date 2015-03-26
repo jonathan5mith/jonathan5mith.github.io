@@ -184,7 +184,7 @@
       </div>
       <div class="border-below">
        
-        <div>
+        <div id="formremove">
           
           <div class="form-group">
             <label>First Name</label>
@@ -304,6 +304,9 @@ steelDetails.set("club", club);
 steelDetails.save(null, {
   success: function(steelDetails) {
     document.getElementById("formconfirm").innerHTML = "Thanks for entering Steel 10k! We'll be in touch by email closer to the event to let you know how to submit your time!";
+    var elem = document.getElementById("formremove");
+    elem.parentNode.removeChild(elem);
+    
   },
   error: function(steelDetails, error) {
     alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we'll see if we can get to the bottom of it");
