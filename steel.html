@@ -195,22 +195,22 @@
           
           <div class="form-group">
             <label for="exampleInputPassword1">First Name</label>
-            <input type="text" class="form-control" id="firstname" placeholder="First Name">
+            <input class="form-control" id="firstname" placeholder="First Name">
           </div>
 
           <div class="form-group">
             <label for="exampleInputPassword1">Last Name</label>
-            <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+            <input class="form-control" id="lastname" placeholder="Last Name">
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">Email Address</label>
-            <input type="text" class="form-control" id="emailaddress" placeholder="Email address">
+            <input class="form-control" id="emailaddress" placeholder="Email address">
           </div>
           
           <div class="form-group">
             <label for="exampleInputEmail1">Twitter Handle</label>
-            <input type="text" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
+            <input class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
           </div>
 
           <div class="form-group">
@@ -287,12 +287,12 @@
 
 // Initialisation
 
-function formSubmit() {
+function formSubmit(){
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
-var firstname = document.getElementById("emailaddress");
-var lastname = document.getElementById("twitterhandle");
+var firstname = document.getElementById("firstname");
+var lastname = document.getElementById("lastname");
 var emailaddres = document.getElementById("emailaddress");
 var twitterhandle = document.getElementById("twitterhandle");
 
@@ -317,6 +317,7 @@ steelDetails.save(null, {
   }
 });
 }
+
 </script>
 
 <!--Browser Warning.js-->
