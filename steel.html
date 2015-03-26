@@ -303,15 +303,19 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
 
-steelDetails.save({
-  firstName: "Jonathan",
-  lastName: "Smith"
-}, {
+steelDetails.set("firstName", "Jonathan");
+steelDetails.set("lastName", "Smith");
+
+
+steelDetails.save(null, {
   success: function(steelDetails) {
-    alert("Saved: "+firstname);
+    // Execute any logic that should take place after the object is saved.
+    alert('New object created with objectId: ');
   },
   error: function(steelDetails, error) {
-    alert("Not saved");
+    // Execute any logic that should take place if the save fails.
+    // error is a Parse.Error with an error code and message.
+    alert('Failed to create new object, with error code: ');
   }
 });
 
