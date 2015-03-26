@@ -208,7 +208,7 @@
 
           <div class="form-group">
             <label>Club</label>
-            <select class="form-control">
+            <select class="form-control" id="club">
               <option value='' disabled selected style='display:none;'>Select a Club</option>
               <option value="one">None</option>
               <option value="one">Askern and District RC</option>
@@ -288,6 +288,7 @@ var firstname = document.getElementById("firstname").value;
 var lastname = document.getElementById("lastname").value;
 var emailaddress = document.getElementById("emailaddress").value;
 var twitterhandle = document.getElementById("twitterhandle").value;
+var club = document.getElementById("club").value;
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
@@ -296,6 +297,7 @@ steelDetails.set("firstName", firstname);
 steelDetails.set("lastName", lastname);
 steelDetails.set("emailAddress", emailaddress);
 steelDetails.set("twitterHandle", twitterhandle);
+steelDetails.set("club", club);
 
 steelDetails.save(null, {
   success: function(steelDetails) {
