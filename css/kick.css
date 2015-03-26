@@ -489,9 +489,11 @@ height:370px;
 .coltext h1{
 	font-weight: 600;
 	text-align: left;
-	padding-left: 50px;
+	padding-left: 20px;
 	padding-top: 30px;
 	padding-bottom: 20px;
+	border-bottom: solid 1px gray;
+	border
 }
 
 .maincontain{
