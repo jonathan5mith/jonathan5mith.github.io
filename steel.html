@@ -197,27 +197,27 @@
 
           
           <div class="form-group">
-            <label for="exampleInputPassword1">First Name</label>
-            <input type="firstname" class="form-control" id="firstname" placeholder="First Name">
+            <label>First Name</label>
+            <input  class="form-control" id="firstname" placeholder="First Name">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Last Name</label>
-            <input type="lastname" class="form-control" id="lastname" placeholder="Last Name">
+            <label>Last Name</label>
+            <input  class="form-control" id="lastname" placeholder="Last Name">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">Email Address</label>
-            <input type="twitterhandle" class="form-control" id="emailaddress" placeholder="Email address">
+            <label>Email Address</label>
+            <input  class="form-control" id="emailaddress" placeholder="Email address">
           </div>
           
           <div class="form-group">
-            <label for="exampleInputEmail1">Twitter Handle</label>
-            <input type="twitterhandle" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
+            <label>Twitter Handle</label>
+            <input class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">Club</label>
+            <label>Club</label>
             <select class="form-control">
               <option value='' disabled selected style='display:none;'>Select a Club</option>
               <option value="one">None</option>
@@ -294,10 +294,10 @@ function formSubmit() {
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
-var firstname = document.getElementById("emailaddress");
-var lastname = document.getElementById("twitterhandle");
-var emailaddres = document.getElementById("emailaddress");
-var twitterhandle = document.getElementById("twitterhandle");
+var firstname = document.getElementById("emailaddress").value;
+var lastname = document.getElementById("twitterhandle").value;
+var emailaddres = document.getElementById("emailaddress").value;
+var twitterhandle = document.getElementById("twitterhandle").value;
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
