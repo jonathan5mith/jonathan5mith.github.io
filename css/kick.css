@@ -492,8 +492,8 @@ height:370px;
 	padding-left: 20px;
 	padding-top: 30px;
 	padding-bottom: 20px;
-	border-bottom: solid 1px gray;
-	border
+	border-bottom: solid 1px lightgray;
+
 }
 
 .maincontain{
@@ -1063,6 +1063,9 @@ a.twitter-timeline {
 	max-width: 1100px;
 	margin:auto auto;
 	text-align: center;
+}
+#featuredkicks h1{
+	font-weight: 600;
 }
 
 #featuredkicks img{
