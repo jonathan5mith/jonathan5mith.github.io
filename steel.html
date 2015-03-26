@@ -290,30 +290,36 @@
 
 // Initialisation
 
+function formSubmit() {
+
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
-//var emailaddres = document.getElementById("emailaddress").value;
-//var twitterhandle = document.getElementById("twitterhandle").value;
+var firstname = document.getElementById("emailaddress").value;
+var lastname = document.getElementById("twitterhandle").value;
+var emailaddres = document.getElementById("emailaddress").value;
+var twitterhandle = document.getElementById("twitterhandle").value;
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
 
-steelDetails.set("firstName", "Jonathan");
-steelDetails.set("lastName", "Smith");
+steelDetails.set("firstName", firstname);
+steelDetails.set("lastName", lastname);
+steelDetails.set("emailAddress", emailaddres);
+steelDetails.set("twitterHandle", twitterhandle);
 
 
 steelDetails.save(null, {
   success: function(steelDetails) {
     // Execute any logic that should take place after the object is saved.
-    alert('New object created with objectId: ');
+    alert(firstname+' '+lastname+", your details have been saved");
   },
   error: function(steelDetails, error) {
     // Execute any logic that should take place if the save fails.
     // error is a Parse.Error with an error code and message.
-    alert('Failed to create new object, with error code: ');
+    alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we can get to the bottom of it");
   }
 });
-
+}
 </script>
 
 <!--Browser Warning.js-->
