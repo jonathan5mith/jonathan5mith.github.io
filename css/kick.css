@@ -483,6 +483,13 @@ height:370px;
 	text-align: center;
 }
 
+#featuredblurb{
+	max-width: 500px;
+	margin:auto auto;
+	color: gray;
+	font-size: 13px;
+}
+
 @media (min-width: 768px) {
 
 .coltext h1{
@@ -800,6 +807,7 @@ canvas{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
 
 .border-bottom-explore{
 	border-bottom: solid;
