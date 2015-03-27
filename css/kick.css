@@ -74,7 +74,7 @@ h2{
 .sub-navbar {
 	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-141a.jpg');
 	background-repeat: no-repeat;
-	background-position: left;
+	background-position: center;
 	width: 100%;	
 	height: 286px;
 	padding-top: 0px;
@@ -120,7 +120,7 @@ h2{
 .sub-navbar {
 	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-141.jpg');
 	background-repeat: no-repeat;
-	background-position: left;
+	background-position: center;
 	width: 100%;	
 	height: 414px;
 	padding-top: 0px;
@@ -162,7 +162,7 @@ h2{
 .sub-navbar {
 	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-141b.jpg');
 	background-repeat: no-repeat;
-	background-position: left;
+	background-position: center;
 	width: 100%;	
 	height: 430px;
 	padding-top: 0px;
@@ -534,7 +534,12 @@ height:370px;
 
 	.mainheaders-steel{
 	padding-top: 10px;
-	}	
+	}
+
+	.mainheaders-explore{
+	font-size: 30px;
+	font-weight: 600;
+	}
 
 .mainheaderslight{
 	font-size: 20px;
@@ -775,6 +780,136 @@ canvas{
 	padding-left: 0;
 	/* Shadow  */
 	box-shadow: 0px 0px 2px #888888;
+}
+
+@media (max-width: 768px){
+
+.cards-explore{
+	background: white;
+	max-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2px;
+	padding-top:0px;
+	padding-bottom: 15px;
+	padding-right: 0;
+	padding-left: 0;
+	/* Shadow  */
+	box-shadow: 0px 0px 2px #888888;
+}
+
+#featuredkicks img{
+	max-width:200px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.border-bottom-explore{
+	border-bottom: solid;
+	border-color: rgba(150,150,150,.9);
+	border-width: 0px;
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 0px;
+	background: lightgray ;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 2px 2px 0px 0px;
+	border-radius: 2px 2px 0px 0px; 
+	color:#333;
+
+
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+
+.cards-explore{
+	background: white;
+	max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2px;
+	padding-top:0px;
+	padding-bottom: 15px;
+	padding-right: 0;
+	padding-left: 0;
+	/* Shadow  */
+	box-shadow: 0px 0px 2px #888888;
+}
+
+#featuredkicks img{
+	max-width:200px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.border-bottom-explore{
+	border-bottom: solid;
+	border-color: rgba(150,150,150,.9);
+	border-width: 0px;
+	width: 100%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 0px;
+	background: lightgray ;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 2px 2px 0px 0px;
+	border-radius: 2px 2px 0px 0px; 
+	color:#333;
+
+
+}
+
+}
+
+@media (min-width: 1200px){
+
+.cards-explore{
+	background: white;
+	max-width: 950px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2px;
+	padding-top:0px;
+	padding-bottom: 15px;
+	padding-right: 0;
+	padding-left: 0;
+	/* Shadow  */
+	box-shadow: 0px 0px 2px #888888;
+}
+
+#featuredkicks img{
+	max-width:260px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.border-bottom-explore{
+	border-bottom: solid;
+	border-color: rgba(150,150,150,.9);
+	border-width: 0px;
+	width: 100%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 0px;
+	background: lightgray ;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 2px 2px 0px 0px;
+	border-radius: 2px 2px 0px 0px; 
+	color:#333;
+
+
+}
+
+}
 	
 }.cardsform{
 	background: white;
@@ -825,11 +960,26 @@ canvas{
 
 }
 
+
+
 .border-below{
 
 	border-color: rgba(150,150,150,.9);
 	border-width: 1px;
 	width: 250px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+
+.border-below-explore{
+
+	border-color: rgba(150,150,150,.9);
+	border-width: 1px;
+
 	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
@@ -1075,7 +1225,7 @@ a.twitter-timeline {
 }
 
 #featuredkicks{
-	max-width: 900px;
+	max-width: 1100px;
 	margin:auto auto;
 	text-align: center;
 }
@@ -1084,11 +1234,6 @@ a.twitter-timeline {
 	padding-bottom: 30px;
 }
 
-#featuredkicks img{
-	max-width:360px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
 
 #featuredheader{
 	font-weight: 600;
