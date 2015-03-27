@@ -102,7 +102,7 @@ h2{
 	letter-spacing: 3px;
 	margin-right: auto;
 	margin-left: auto;
-	max-width: 250px;
+	max-width: 500px;
 
 	}
 
@@ -785,7 +785,7 @@ canvas{
 
 .cards-explore{
 	background: #f1f1f1;
-	max-width: 380px;
+	max-width: 330px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 2px;
@@ -813,11 +813,11 @@ canvas{
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 0px;
-	background: lightgray ;
+	background: gray ;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 2px 2px 0px 0px;
 	border-radius: 2px 2px 0px 0px; 
-	color:#333;
+	color:white;
 
 
 }
@@ -856,11 +856,11 @@ canvas{
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 0px;
-	background: lightgray ;
+	background: gray ;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 2px 2px 0px 0px;
 	border-radius: 2px 2px 0px 0px; 
-	color:#333;
+	color:white;
 
 
 }
@@ -899,11 +899,11 @@ canvas{
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 0px;
-	background: lightgray ;
+	background: gray ;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 2px 2px 0px 0px;
 	border-radius: 2px 2px 0px 0px; 
-	color:#333;
+	color:white;
 
 
 }
