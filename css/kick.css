@@ -6,9 +6,7 @@
 
  /*  -----------Body padding to account for Navbar-----------  */
 
-#bodyexplore{
-	background: white;
-}
+
 body { 
 	padding-top: 0px;
 	font-family: 'Lato', sans-serif;
@@ -784,7 +782,7 @@ canvas{
 @media (max-width: 768px){
 
 .cards-explore{
-	background: #f1f1f1;
+	background: white;
 	max-width: 330px;
 	margin-left: auto;
 	margin-right: auto;
@@ -827,7 +825,7 @@ canvas{
 @media (min-width: 768px) and (max-width: 1199px){
 
 .cards-explore{
-	background: #f1f1f1;
+	background: white;
 	max-width: 750px;
 	margin-left: auto;
 	margin-right: auto;
@@ -870,7 +868,7 @@ canvas{
 @media (min-width: 1200px){
 
 .cards-explore{
-	background: #f1f1f1;
+	background: white;
 	max-width: 950px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1236,4 +1234,9 @@ a.twitter-timeline {
 
 #featuredheader{
 	font-weight: 600;
+}
+
+.tweetpad{
+	padding-left: 10px;
+	padding-right: 10px;
 }
