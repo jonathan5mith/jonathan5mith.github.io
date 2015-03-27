@@ -6,6 +6,9 @@
 
  /*  -----------Body padding to account for Navbar-----------  */
 
+#bodyexplore{
+	background: white;
+}
 body { 
 	padding-top: 0px;
 	font-family: 'Lato', sans-serif;
@@ -14,6 +17,8 @@ body {
 	padding-right:0px;
 	background: #f1f1f1;
 }
+
+
 
 h2{
 	font-weight: 500px;
@@ -785,8 +790,8 @@ canvas{
 @media (max-width: 768px){
 
 .cards-explore{
-	background: white;
-	max-width: 320px;
+	background: #f1f1f1;
+	max-width: 380px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 2px;
@@ -799,7 +804,7 @@ canvas{
 }
 
 #featuredkicks img{
-	max-width:200px;
+	max-width:220px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -828,7 +833,7 @@ canvas{
 @media (min-width: 768px) and (max-width: 1199px){
 
 .cards-explore{
-	background: white;
+	background: #f1f1f1;
 	max-width: 750px;
 	margin-left: auto;
 	margin-right: auto;
@@ -842,7 +847,7 @@ canvas{
 }
 
 #featuredkicks img{
-	max-width:200px;
+	max-width:210px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -871,7 +876,7 @@ canvas{
 @media (min-width: 1200px){
 
 .cards-explore{
-	background: white;
+	background: #f1f1f1;
 	max-width: 950px;
 	margin-left: auto;
 	margin-right: auto;
