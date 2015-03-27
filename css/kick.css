@@ -483,11 +483,22 @@ height:370px;
 	text-align: center;
 }
 
+@media (min-width: 768px){
 #featuredblurb{
 	max-width: 500px;
 	margin:auto auto;
 	color: gray;
 	font-size: 13px;
+}
+}
+
+@media (max-width: 767px){
+#featuredblurb{
+	max-width: 300px;
+	margin:auto auto;
+	color: gray;
+	font-size: 12px;
+}
 }
 
 @media (min-width: 768px) {
@@ -501,6 +512,7 @@ height:370px;
 	border-bottom: solid 1px lightgray;
 
 }
+
 }
 
 @media (max-width: 767px) {
