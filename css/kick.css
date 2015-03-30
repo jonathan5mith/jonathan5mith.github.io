@@ -928,9 +928,9 @@ canvas{
 
 }
 	
-}.cardsform{
+.cardsform{
 	background: white;
-	max-width: 350px;
+	width: 350px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 2px;
