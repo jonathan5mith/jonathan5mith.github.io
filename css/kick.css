@@ -24,6 +24,12 @@ h2{
 
 /*  -----------Navbar overrides-----------  */
 
+.navbar-fixed-top{
+
+position: absolute;
+
+}
+
 .navbar-brand{
 	padding-top: 10px;
 }
@@ -1263,8 +1269,3 @@ a.twitter-timeline {
 	padding-bottom: 5px;
 }
 
-.navbar-fixed-top{
-
-position: absolute;
-
-}
