@@ -1262,3 +1262,9 @@ a.twitter-timeline {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
+.navbar-fixed-top{
+
+position: absolute;
+
+}
