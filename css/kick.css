@@ -837,7 +837,7 @@ canvas{
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 0px;
-	background: gray ;
+	background-image: url("https://dl.dropboxusercontent.com/u/10455351/Assets/feetbanner.jpg");
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 2px 2px 0px 0px;
 	border-radius: 2px 2px 0px 0px; 
@@ -880,7 +880,7 @@ canvas{
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 0px;
-	background: gray ;
+	background-image: url("https://dl.dropboxusercontent.com/u/10455351/Assets/feetbanner.jpg");
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 2px 2px 0px 0px;
 	border-radius: 2px 2px 0px 0px; 
@@ -923,7 +923,10 @@ canvas{
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 0px;
-	background: gray ;
+	background-image: url("https://dl.dropboxusercontent.com/u/10455351/Assets/feetbanner.jpg");
+	background-position: center middle;
+
+	text-align: center;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 2px 2px 0px 0px;
 	border-radius: 2px 2px 0px 0px; 
