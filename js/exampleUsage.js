@@ -64,7 +64,7 @@
 // id "example1". Also automatically hyperlinks URLS and user mentions and
 // hashtags.
 var config1 = {
-  "id": '345170787868762112',
+  "id": '583021273061728256',
   "domId": 'example1',
   "maxTweets": 1,
   "enableLinks": true
