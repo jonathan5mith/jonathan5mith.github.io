@@ -79,7 +79,7 @@ twitterFetcher.fetch(config1);
 // request to Twitter specifiying we would like results where possible in
 // English language.
 var config2 = {
-  "id": '347099293930377217',
+  "id": '583021273061728256',
   "domId": 'example2',
   "maxTweets": 5,
   "enableLinks": true,
@@ -94,7 +94,7 @@ twitterFetcher.fetch(config2);
 // A simple example to get latest 5 tweets for #API tag and shows any images
 // attached to tweets.
 var config3 = {
-  "id": '502160051226681344',
+  "id": '583021273061728256',
   "domId": 'example3',
   "maxTweets": 5,
   "enableLinks": true,
@@ -109,7 +109,7 @@ twitterFetcher.fetch(config3);
 // custom format to display the date/time of the post, and does not show
 // retweets.
 var config4 = {
-  "id": '345690956013633536',
+  "id": '583021273061728256',
   "domId": 'example4',
   "maxTweets": 3,
   "enableLinks": true,
@@ -137,7 +137,7 @@ twitterFetcher.fetch(config4);
 // if you need full control over the output.
 
 var config5 = {
-  "id": '345690956013633536',
+  "id": '583021273061728256',
   "domId": '',
   "maxTweets": 3,
   "enableLinks": true,
@@ -171,7 +171,7 @@ twitterFetcher.fetch(config5);
 // alternative custom format with moment.js to display the age of the post,
 // and does not show retweets.
 var config6 = {
-  "id": '345690956013633536',
+  "id": '583021273061728256',
   "domId": 'example6',
   "maxTweets": 3,
   "enableLinks": true,
@@ -204,7 +204,7 @@ twitterFetcher.fetch(config6);
 // usage through Browserify or compatible bundler.
 var fetcher = require('twitter-fetcher'); //debowerify may be needed
 var config7 = {
-  "id": '345170787868762112',
+  "id": '583021273061728256',
   "domId": 'example1',
   "maxTweets": 1,
   "enableLinks": true
@@ -217,7 +217,7 @@ fetcher.fetch(config7);
 // usage with Require.js or similar loader.
 require(['twitter-fetcher'], function (fetcher) {
   var config7 = {
-    "id": '345170787868762112',
+    "id": '583021273061728256',
     "domId": 'example1',
     "maxTweets": 1,
     "enableLinks": true
