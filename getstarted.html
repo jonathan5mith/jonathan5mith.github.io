@@ -102,11 +102,11 @@
   <div class="formcontain">
     <div class="cardsform">
       <div class="border-bottom">
-        <p class="mainheaders">Sign Up Here</p>
+        <p class="mainheaders-steel"><span id="thanks"></span><span id="removeimage"><img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/signup.png"/img></span></p>
       </div>
       <div class="border-below">
        
-        <div>
+        <div id="formremove">
           
           <div class="form-group">
             <label>First Name</label>
@@ -156,7 +156,8 @@
 
         </div>
 
-        
+        <span id="formconfirm"></span>
+
 
 
 
@@ -226,7 +227,7 @@ newUser.set("runTimes", runtimes);
 
 newUser.save(null, {
   success: function(newUser) {
-    document.getElementById("formconfirm").innerHTML = "<p>Thanks for entering Steel 10k! We'll be in touch by email closer to the event to let you know how to submit your time!</p> <p>In the meantime you can race any time by entering a Kick, <a href='http://runwithkick.com/getstarted'>find out more here</a></p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Congratuations "+firstname+", you're all signed up!</p> <p>Why not check out your <a href='http://runwithkick.com/profile/jonathan5mith'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
