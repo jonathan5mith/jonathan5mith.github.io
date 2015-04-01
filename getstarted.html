@@ -203,9 +203,14 @@ var twitterhandle = twitterhandle1.split("@").pop()
 var twitterpic = 'https://twitter.com/'+twitterhandle+'/profile_image?size=original'
 var city = document.getElementById("city").value;
 var country = document.getElementById("country").value;
-var mm = document.getElementById("mm").value;
-var ss = document.getElementById("ss").value;
+var mma = document.getElementById("mm").value;
+var ssa = document.getElementById("ss").value;
+var mm = Integer.parseInt(mma);
+var ss = Integer.parseInt(ssa);
+var dectime = mm+(ss/60);
 
+alert(mm+ss);
+alert(dectime);
 
 
 var NewUser = Parse.Object.extend("upload1");
