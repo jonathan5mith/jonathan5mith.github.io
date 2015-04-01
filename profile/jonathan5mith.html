@@ -127,7 +127,7 @@
       </div>
 
       <div class="border-below">
-      <div id="removestats">
+      <div id="statsremove">
       <table>
         
         <tr>
@@ -562,7 +562,7 @@ queryVests.first({
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
 
-            if(times.length==0){
+            if(times[0]==0){
               var elem = document.getElementById("statsremove");
               elem.parentNode.removeChild(elem);
             }
