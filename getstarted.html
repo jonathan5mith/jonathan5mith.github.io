@@ -200,13 +200,15 @@ var lastname = document.getElementById("lastname").value;
 var emailaddress = document.getElementById("emailaddress").value;
 var twitterhandle1 = document.getElementById("twitterhandle").value;
 var twitterhandle = twitterhandle1.split("@").pop()
+var twitterpic = 'https://twitter.com/'+twitterhandle+'/profile_image?size=original'
 var city = document.getElementById("city").value;
 var country = document.getElementById("country").value;
 var mm = document.getElementById("mm").value;
 var ss = document.getElementById("ss").value;
 
-var NewUser = Parse.Object.extend("upload1");
 
+
+var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
 newUser.set("firstName", firstname);
@@ -215,6 +217,7 @@ newUser.set("emailAddress", emailaddress);
 newUser.set("TwitterHandle", twitterhandle);
 newUser.set("city", city);
 newUser.set("country", country);
+newUser.set("twitterPicture", twitterpic);
 
 
 newUser.save(null, {
