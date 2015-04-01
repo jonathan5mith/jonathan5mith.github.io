@@ -661,6 +661,7 @@ height:370px;
 .pofilepic{
 	
 	background-position: center;
+	background-repeat: no-repeat;
 	height:50px;
 	width: 50px;
 	border-radius: 100%;
@@ -694,6 +695,7 @@ height:370px;
 .pofilepic{
 	
 	background-position: center;
+	background-repeat: no-repeat;
 	height:50px;
 	width: 50px;
 	border-radius: 100%;
@@ -728,6 +730,7 @@ height:370px;
 .pofilepic{
 	
 	background-position: center;
+	background-repeat: no-repeat;
 	height:50px;
 	width: 50px;
 	border-radius: 100%;
