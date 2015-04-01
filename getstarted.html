@@ -102,6 +102,7 @@
   <div class="formcontain">
     <div class="cardsform">
       <div class="border-bottom">
+        <p class="mainheaders" id="removeimage">Sign Up Here</p>
         <p class="mainheaders-steel"><span id="thanks"></span><span id="removeimage"><img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/signup.png"/img></span></p>
       </div>
       <div class="border-below">
@@ -232,7 +233,7 @@ newUser.save(null, {
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
     elem.parentNode.removeChild(elem);
-    document.getElementById("thanks").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/thanks.png"/img>';
+    document.getElementById("thanks").innerHTML = 'Congratuations!';
     
   },
   error: function(newUser, error) {
