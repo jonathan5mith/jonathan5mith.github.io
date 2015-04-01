@@ -365,19 +365,7 @@ var person = person1.toLowerCase();
 
 var personalInfo = Parse.Object.extend("upload1");
 
-//-----------------PB query
 
-var queryPB = new Parse.Query(personalInfo);
-queryPB.equalTo("TwitterHandle", person);
-queryPB.first({
-  success: function(object) {
-    var PB = object.get('personalBest');  
-    document.getElementById("PB").innerHTML = PB;
-  },
-  error: function(error) {
-    document.getElementById("PB").innerHTML = "N/A";
-  }
-});
 
 // -----------------Name query
 
@@ -447,20 +435,6 @@ queryPoints.first({
   }
 });
 
-// -----------------Total Kicks query
-
-var queryTotalKicks = new Parse.Query(personalInfo);
-queryTotalKicks.equalTo("TwitterHandle", person);
-queryTotalKicks.first({
-  success: function(object) {
-    var totalKicks = object.get('totalKicks');
-    //document.getElementById("totalkicks").innerHTML = totalKicks;
-  },
-  error: function(error) {
-    document.getElementById("totalkicks").innerHTML = "N/A";
-  }
-}
-);
 
 // -----------------Profile image
 
@@ -563,11 +537,12 @@ queryVests.first({
             var times = object.get('runTimes');
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
+            
+            document.getElementById("PB").innerHTML = Math.min.apply(Math, times);            
 
             if(times.length>0){
               document.getElementById("totalkicks").innerHTML = times.length;
-            }
-            
+            }            
 
             if(times[0]==null){
               var elem = document.getElementById("statsremove");
