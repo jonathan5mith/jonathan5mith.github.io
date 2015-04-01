@@ -144,12 +144,15 @@
           <td><p id="stats"><span>Best Kick</span></td> <td><span id="PB"></span></p></td>
         </tr>
       </table>
+
+      <div id="canvasremove">
       <div id="greyline"></div>
       <table id="marginbetweentables">
         <tr>
           <td><p id="stats"><span>Last 5 Kicks</span></p></td><td></td>
         </tr>
       </table>
+    </div>
       </div>
       </div>
       
@@ -556,6 +559,13 @@ queryVests.first({
               elem.parentNode.removeChild(elem);
               document.getElementById("statsreplace").innerHTML = '<p>As soon as you upload your first Kick, your stats will appear here.</p>'
             }
+
+            if(times.length==1 && times[0]!=null){
+              var elem = document.getElementById("canvasremove");
+              elem.parentNode.removeChild(elem);
+            }
+
+
 
 
             if(times.length>=1 && times[0]!=null){
