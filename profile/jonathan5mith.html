@@ -454,7 +454,7 @@ queryTotalKicks.equalTo("TwitterHandle", person);
 queryTotalKicks.first({
   success: function(object) {
     var totalKicks = object.get('totalKicks');
-    document.getElementById("totalkicks").innerHTML = totalKicks;
+    //document.getElementById("totalkicks").innerHTML = totalKicks;
   },
   error: function(error) {
     document.getElementById("totalkicks").innerHTML = "N/A";
@@ -563,6 +563,11 @@ queryVests.first({
             var times = object.get('runTimes');
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
+
+            if(times.length>0){
+              document.getElementById("totalkicks").innerHTML = times.length;
+            }
+            
 
             if(times[0]==null){
               var elem = document.getElementById("statsremove");
