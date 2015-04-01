@@ -224,7 +224,10 @@ newUser.set("city", city);
 newUser.set("country", country);
 newUser.set("twitterPicture", twitterpic);
 newUser.set("runTimes", runtimes);
-newUser.set("vestsTogether", [false,false,false,false,false])
+newUser.set("vestsTogether", [false,false,false,false,false]);
+if(runtimes!=null){
+  newUser.set("points", 5);
+};
 
 
 newUser.save(null, {
