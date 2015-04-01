@@ -356,8 +356,8 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 
 var url = window.location.pathname;
 var person1 = url.substring(url.lastIndexOf('/')+1);
-//var person = "person1.toLowerCase();"
-var person = "lucysmith"
+var person = "person1.toLowerCase();"
+
 
 var personalInfo = Parse.Object.extend("upload1");
 
@@ -556,10 +556,11 @@ queryVests.first({
   
   success: function(object) {
             var vests = object.get('vestsTogether');
+            var times = object.get('runTimes');
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
 
-            if(vests[0]==true){
+            if(times.length()>=1){
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png" height="85">'
             }
             else{
