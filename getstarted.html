@@ -103,25 +103,20 @@
       </div>
       <div class="border-below">
        
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Twitter Handle</label>
-            <input type="twitterhandle" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
-          </div>
+        <div>
           
           <div class="form-group">
-            <label for="exampleInputPassword1">First Name</label>
+            <label>First Name</label>
             <input type="firstname" class="form-control" id="firstname" placeholder="First Name">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Last Name</label>
+            <label>Last Name</label>
             <input type="lastname" class="form-control" id="lastname" placeholder="Last Name">
           </div>
 
-
           <div class="form-group">
-            <label for="exampleInputPassword1">City</label>
+            <label>City</label>
             <input type="city" class="form-control" id="city" placeholder="City">
           </div>
 
@@ -130,18 +125,45 @@
             <input type="country" class="form-control" id="country" placeholder="Country">
           </div>
 
+          <div class="form-group">
+            <label>Twitter Handle</label>
+            <input type="twitterhandle" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-control" id="emailaddress" placeholder="Email address">
+          </div>
+
+          
+        <div class="form-group">
+          <p style="font-weight:400;">Recent 5k Time</p>
+          <div class="col-xs-4">
+              <input type="text" class="form-control" placeholder="hh" id="hh"/>
+          </div>
+          <div class="col-xs-4">
+              <input type="text" class="form-control" placeholder="mm" id="mm"/>
+          </div>
+          <div class="col-xs-4">
+              <input type="text" class="form-control" placeholder="ss" id="ss"/>
+          </div>    
+        </div>
+
+          <p class="pager" style="line-height: 60px;">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </p>
+
+        </div>
+
+        
 
 
-
-
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
 
 
         </div>
       </div>
   </div>
-<div/>
+</div>
 
 <!-- Get started-->
 <!--==============================================-->
@@ -161,8 +183,57 @@
 
 
 
-<!-- Javascript stuff-->
+<!-- Parse stuff-->
 <!--==============================================-->
+
+
+<script type="text/javascript">
+// Initialisation
+
+function formSubmit() {
+
+Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
+
+var firstname = document.getElementById("firstname").value;
+var lastname = document.getElementById("lastname").value;
+var emailaddress = document.getElementById("emailaddress").value;
+var twitterhandle = document.getElementById("twitterhandle").value;
+var city = document.getElementById("city").value;
+var country = document.getElementById("country").value;
+var hh = document.getElementById("hh").value;
+var mm = document.getElementById("mm").value;
+var ss = document.getElementById("ss").value;
+
+var NewUser = Parse.Object.extend("upload1");
+var newUser = new NewUser();
+
+newUser.set("firstName", firstname);
+newUser.set("lastName", lastname);
+newUser.set("emailAddress", emailaddress);
+newUser.set("twitterHandle", twitterhandle);
+newUser.set("city", city);
+newUser.set("country", country);
+
+
+newUser.save(null, {
+  success: function(newUser) {
+    document.getElementById("formconfirm").innerHTML = "<p>Thanks for entering Steel 10k! We'll be in touch by email closer to the event to let you know how to submit your time!</p> <p>In the meantime you can race any time by entering a Kick, <a href='http://runwithkick.com/getstarted'>find out more here</a></p>";
+    var elem = document.getElementById("formremove");
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById("removeimage");
+    elem.parentNode.removeChild(elem);
+    document.getElementById("thanks").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/thanks.png"/img>';
+    
+  },
+  error: function(newUser, error) {
+    alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we'll see if we can get to the bottom of it");
+  }
+});
+}
+
+</script>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
