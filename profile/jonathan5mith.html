@@ -484,6 +484,13 @@ queryTimes.first({
     runtimesformatted[i] = minTommss(runtimes[i]);
     };
 
+    //defining runtimesformatted variable 
+    
+    varPBa = Math.min.apply(Math, times); 
+    var PB = minTommss(PBa);
+    
+    document.getElementById("PB").innerHTML = PB;
+
     //creating chart
 
     var buyerData = {
@@ -538,7 +545,7 @@ queryVests.first({
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
             
-            document.getElementById("PB").innerHTML = Math.min.apply(Math, times);            
+                     
 
             if(times.length>0){
               document.getElementById("totalkicks").innerHTML = times.length;
