@@ -679,17 +679,17 @@ var querySubmitTime = new Parse.Query(personalInfo);
 querySubmitTime.get(uniqueid, {
   success: function(object) {
     var dog = object.get('runTimes');
-    if(dog[0]==null){
+    if(dog==null){
     object.addUnique("runTimes", dectime);
     object.addUnique("runTimesHidden", dectime);
     object.set("points",5);
     object.save(); 
     //explaination that you've uploaded first time
-    }
+    };
     else{
     object.addUnique("runTimesHidden", dectime);
     //explaination that you've just uploaded a new time
-    }
+    };
   },
   error: function(object, error) { 
     alert("nope");
