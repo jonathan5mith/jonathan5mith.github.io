@@ -660,8 +660,6 @@ queryVests.first({
 );
 
 
-document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
-
 
 // Timesubmit
 
@@ -678,10 +676,10 @@ var dectime = mm+(ss/60);
 var runtimes = [dectime];
 
 var querySubmitTime = new Parse.Query(personalInfo);
-query.get(uniqueid, {
-  success: function(querySubmitTime) {
-    querySubmitTime.addUnique("runTimes", dectime); 
-    querySubmitTime.save(); 
+querySubmitTime.get(uniqueid, {
+  success: function(object) {
+    object.addUnique("runTimes", dectime); 
+    object.save(); 
   },
   error: function(object, error) { 
     alert("nope");
