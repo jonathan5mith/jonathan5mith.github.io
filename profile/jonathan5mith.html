@@ -161,18 +161,43 @@
     </div>
     </div>
 
-        <div class="cards twoinrow">
+    <div class="cards twoinrow">
       <div class="border-bottom">
-        <p class="mainheaders">More Vests</p>
+        <p class="mainheaders">Upload a Kick</p>
       </div>
       
       <div class="border-below">
-        <table>
-          <tr>
-            <td>
-              More vests coming soon!
-            </td>
-        </table>
+        
+        <div id="formremove">
+          
+
+          <div class="form-group">
+            <label>Twitter Handle</label>
+            <input type="twitterhandle" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
+          </div>
+
+          <div class="form-group">
+            <label>Unique ID</label>
+            <input type="email" class="form-control" id="uniqueid" placeholder="Unique ID">
+          </div>
+
+          
+        <div class="form-group">
+          <p style="font-weight:400;">Recent 5k Time</p>
+
+          <div class="col-xs-6">
+              <input type="text" class="form-control" placeholder="mm" id="mm"/>
+          </div>
+          <div class="col-xs-6">
+              <input type="text" class="form-control" placeholder="ss" id="ss"/>
+          </div>    
+        </div>
+
+          <p class="pager" style="line-height: 60px;">
+            <button type="submit" id="submit" onclick="formSubmit();" class="btn btn-default">Submit</button>
+          </p>
+
+        </div>
       </div>
     </div>
     
@@ -635,8 +660,43 @@ queryVests.first({
 );
 
 
+document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
 
-      document.getElementById("vest"+vestno.toString()).innerHTML = 'vest'+vestno.toString();
+
+// Timesubmit
+
+function formSubmit() {
+
+var uniqueid = document.getElementById("uniqueid").value;
+var twitterhandle1 = document.getElementById("twitterhandle").value;
+var twitterhandle = twitterhandle1.split("@").pop()
+var mma = document.getElementById("mm").value;
+var ssa = document.getElementById("ss").value;
+var mm = parseFloat(mma);
+var ss = parseFloat(ssa);
+var dectime = mm+(ss/60);
+var runtimes = [dectime];
+
+var querySubmitTime = new Parse.Query(personalInfo);
+querySubmitTime.equalTo("objectID", uniqueid);
+
+querySubmitTime.first({
+  success: function(object) {
+    object.addUnique("runTimes",dectime);
+  }, 
+  error: function(error) {
+    alert("hmm somethings gone wrong");
+  }
+  }
+);
+
+
+
+
+}
+
+</script>
+
 
 
 </script>
