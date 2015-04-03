@@ -662,13 +662,7 @@ queryVests.first({
 function formSubmit() {
 
 
-    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, "+firstname+", you've submitted your Kick!</p> <p>your time will appear on your profile when the Kick finishes and we'll tweet you your result!</p>";
-    var elem = document.getElementById("formremove");
-    elem.parentNode.removeChild(elem);
-    var elem = document.getElementById("removeimage");
-    elem.parentNode.removeChild(elem);
-    document.getElementById("thanks").innerHTML = '...and rest';
-    
+
 var uniqueid = document.getElementById("uniqueid").value;
 var mma = document.getElementById("mm").value;
 var ssa = document.getElementById("ss").value;
@@ -684,12 +678,19 @@ querySubmitTime.get(uniqueid, {
     object.addUnique("runTimes", dectime);
     object.addUnique("runTimesHidden", dectime);
     object.save();
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick!</p> <p>your time will appear on your profile when the Kick finishes and we'll tweet you your result!</p>";
+    var elem = document.getElementById("formremove");
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById("removeimage");
+    elem.parentNode.removeChild(elem);
+    document.getElementById("thanks").innerHTML = '...and rest';
     
   },
   error: function(object, error) { 
     alert("nope");
   }
 });
+
 
 
 
