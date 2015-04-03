@@ -171,10 +171,6 @@
         <div id="formremove">
           
 
-          <div class="form-group">
-            <label>Twitter Handle</label>
-            <input type="twitterhandle" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
-          </div>
 
           <div class="form-group">
             <label>Unique ID</label>
@@ -183,7 +179,7 @@
 
           
         <div class="form-group">
-          <p style="font-weight:400;">Recent 5k Time</p>
+          <p style="font-weight:400;">Your 5k time</p>
 
           <div class="col-xs-6">
               <input type="text" class="form-control" placeholder="mm" id="mm"/>
@@ -666,8 +662,6 @@ queryVests.first({
 function formSubmit() {
 
 var uniqueid = document.getElementById("uniqueid").value;
-var twitterhandle1 = document.getElementById("twitterhandle").value;
-var twitterhandle = twitterhandle1.split("@").pop()
 var mma = document.getElementById("mm").value;
 var ssa = document.getElementById("ss").value;
 var mm = parseFloat(mma);
