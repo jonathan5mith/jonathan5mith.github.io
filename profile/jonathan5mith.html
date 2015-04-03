@@ -676,7 +676,7 @@ querySubmitTime.get(uniqueid, {
     
     var dog = object.get("runTimes");
 
-    if(dog==null){
+    if(dog[0]==null){
     object.addUnique("runTimesHidden", dectime);
     object.save();
     document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick!</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
