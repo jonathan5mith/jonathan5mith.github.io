@@ -678,11 +678,21 @@ var dectime = mm+(ss/60);
 var runtimes = [dectime];
 
 var querySubmitTime = new Parse.Query(personalInfo);
-querySubmitTime.equalTo("objectID", uniqueid);
+query.get(uniqueid, {
+  success: function(object) {
+    object.addUnique("runTimes", dectime); 
+    object.save(); 
+  },
+  error: function(object, error) { 
+    alert("nope");
+
+  }
+});
+
 
 querySubmitTime.first({
-  success: function(querySubmitTime) {
-    querySubmitTime.addUnique("runTimes",dectime);
+  success: function(object) {
+    object.addUnique("runTimes",dectime);
   }, 
   error: function(error) {
     alert("hmm somethings gone wrong");
