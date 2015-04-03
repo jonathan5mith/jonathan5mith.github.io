@@ -163,7 +163,7 @@
 
     <div class="cards twoinrow">
       <div class="border-bottom">
-        <p class="mainheaders" id="removeimage">Upload a Kick<span id="removeimage"></span><span id="thanks"></p>
+        <span><p class="mainheaders" id="removeimage">Upload a Kick<span id="removeimage"></span><span id="thanks"></p>
       </div>
       
       <div class="border-below">
@@ -678,7 +678,7 @@ querySubmitTime.get(uniqueid, {
     object.addUnique("runTimes", dectime);
     object.addUnique("runTimesHidden", dectime);
     object.save();
-    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick!</p> <p>your time will appear on your profile when the Kick finishes and we'll tweet you your result!</p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick!</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
