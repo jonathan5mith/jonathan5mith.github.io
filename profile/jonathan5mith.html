@@ -679,9 +679,9 @@ var runtimes = [dectime];
 
 var querySubmitTime = new Parse.Query(personalInfo);
 query.get(uniqueid, {
-  success: function(personalInfo) {
-    personalInfo.addUnique("runTimes", dectime); 
-    personalInfo.save(); 
+  success: function(querySubmitTime) {
+    querySubmitTime.addUnique("runTimes", dectime); 
+    querySubmitTime.save(); 
   },
   error: function(object, error) { 
     alert("nope");
