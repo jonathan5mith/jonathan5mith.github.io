@@ -661,8 +661,6 @@ queryVests.first({
 
 function formSubmit() {
 
-
-
 var uniqueid = document.getElementById("uniqueid").value;
 var mma = document.getElementById("mm").value;
 var ssa = document.getElementById("ss").value;
@@ -675,7 +673,10 @@ var querySubmitTime = new Parse.Query(personalInfo);
 querySubmitTime.get(uniqueid, {
   
   success: function(object) {
-    object.addUnique("runTimes", dectime);
+    
+    var dog = object.get("runTimes");
+
+    if(dog=null){
     object.addUnique("runTimesHidden", dectime);
     object.save();
     document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick!</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
@@ -684,7 +685,22 @@ querySubmitTime.get(uniqueid, {
     var elem = document.getElementById("removeimage");
     elem.parentNode.removeChild(elem);
     document.getElementById("thanks").innerHTML = '...and rest';
-    
+
+    }
+
+    else{
+    object.addUnique("runTimes", dectime);
+    object.addUnique("runTimesHidden", dectime);
+    object.save();
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your first Kick!</p> <p>If you refresh the page you'll see your time, some points and your first badge! Now go enter some Kicks and come back here to submit your times</p>";
+    var elem = document.getElementById("formremove");
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById("removeimage");
+    elem.parentNode.removeChild(elem);
+    document.getElementById("thanks").innerHTML = '...and rest';
+
+    }
+   
   },
   error: function(object, error) { 
     alert("nope");
