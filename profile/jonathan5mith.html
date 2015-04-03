@@ -681,8 +681,8 @@ var querySubmitTime = new Parse.Query(personalInfo);
 querySubmitTime.equalTo("objectID", uniqueid);
 
 querySubmitTime.first({
-  success: function(object) {
-    object.addUnique("runTimes",dectime);
+  success: function(querySubmitTime) {
+    querySubmitTime.addUnique("runTimes",dectime);
   }, 
   error: function(error) {
     alert("hmm somethings gone wrong");
