@@ -226,10 +226,8 @@ newUser.set("twitterPicture", twitterpic);
 newUser.set("runTimes", runtimes);
 newUser.set("vestsTogether", [false,false,false,false,false]);
 newUser.set("runTimesHidden",[]);
-alert(runtimes.length);
-if(runtimes[0]!=null){
-  newUser.set("points", 5);
-};
+newUser.set("points", 5);
+
 
 
 newUser.save(null, {
