@@ -305,30 +305,16 @@
         </div>
         <div class="border-below bottomlinkpadding">
           <table>
+          
           <tr>
             <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel.png" height="70px"\><p id="vesttag">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel.png" height="85px"\><p id="vesttag">
             </td>
             <td>
-              Steel 10
+              Steel 10K
             </td>
           </tr>
-          <!--<tr>
-            <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/adidas.png"\><p id="vesttag">
-            </td>
-            <td>
-              Online Boost
-            </td>
-          </tr>
-          <tr>
-            <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/CR.png"\><p id="vesttag">
-            </td>
-            <td>
-              Kick Cancer
-            </td>
-          </tr>   --> 
+          
           </table>
           <div id="spacer">
             <p class="subheaders bottomlink"><a href="http://runwithkick.com/events">Events </a><i class="fa fa-angle-right"></i></p>    
@@ -347,7 +333,7 @@
           <table>
           <tr>
             <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/iffley.png" height="70px"\><p id="vesttag">
+              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/iffley.png" height="85px"\><p id="vesttag">
             </td>
             <td>
               Iffley 3
@@ -677,7 +663,7 @@ querySubmitTime.get(uniqueid, {
     object.addUnique("runTimes", dectime);
     object.set("points",5);
     object.save();
-    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your first Kick!</p> <p>Refresh the page and you should see your time, 5 points and your first vest appear!</p><p>Why not <a href='http://www.runwithkick.com/explore'>explore</a> some kicks</p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your first Kick!</p> <p>Refresh the page and you should see your time, 5 points and your first vest appear!</p><p>Why not <a href='http://www.runwithkick.com/explore'>explore</a> some Kicks and enter your first race</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
@@ -688,7 +674,7 @@ querySubmitTime.get(uniqueid, {
     else{
     object.addUnique("runTimesHidden", dectime);
     object.save();
-    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick!</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
