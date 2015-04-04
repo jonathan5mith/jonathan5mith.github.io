@@ -225,8 +225,9 @@ newUser.set("country", country);
 newUser.set("twitterPicture", twitterpic);
 newUser.set("vestsTogether", [false,false,false,false,false]);
 newUser.set("runTimesHidden",runtimes);
-if (runtimes === undefined || runtimes === null) {
-    newUser.set("runtimes", []);
+
+if (runtimes === NaN) {
+    newUser.set("runTimes", []);
 };
 else{
   newUser.set("runTimes", runtimes);
