@@ -217,12 +217,13 @@ else{
   var runtimes = [];
 }
 
+alert(runtimes.length);
 
 var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
 
-if (runtimes == []) {
+if (runtimes.length == 0) {
     newUser.set("firstName", firstname);
     newUser.set("lastName", lastname);
     newUser.set("emailAddress", emailaddress);
