@@ -210,15 +210,19 @@ var ssa = document.getElementById("ss").value;
 var mm = parseFloat(mma);
 var ss = parseFloat(ssa);
 var dectime = mm+(ss/60);
-var runtimes = [dectime];
-
+if (dectime>0){
+  var runtimes = [dectime];
+}
+else{
+  var runtimes = [];
+}
 
 
 var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
 
-if (runtimes === null || runtimes === undefined) {
+if (runtimes []) {
     newUser.set("firstName", firstname);
     newUser.set("lastName", lastname);
     newUser.set("emailAddress", emailaddress);
