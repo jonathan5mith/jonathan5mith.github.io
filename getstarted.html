@@ -211,14 +211,14 @@ var mm = parseFloat(mma);
 var ss = parseFloat(ssa);
 var dectime = mm+(ss/60);
 var runtimes = [dectime];
-alert(runtimes.length);
+
 
 
 var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
 
-/*if (runtimes === NaN) {
+if (runtimes === null || runtimes === undefined) {
     newUser.set("firstName", firstname);
     newUser.set("lastName", lastname);
     newUser.set("emailAddress", emailaddress);
@@ -242,7 +242,7 @@ else{
   newUser.set("runTimes", runtimes);
   newUser.set("runTimesHidden",runtimes);
   newUser.set("points",5);
-}*/
+}
 
 
 newUser.save(null, {
