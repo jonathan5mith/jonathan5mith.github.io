@@ -217,8 +217,6 @@ var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
 
-
-
 if (runtimes === NaN) {
     newUser.set("firstName", firstname);
     newUser.set("lastName", lastname);
@@ -230,7 +228,7 @@ if (runtimes === NaN) {
     newUser.set("vestsTogether", [false,false,false,false,false]);
     newUser.set("runTimes", []);
     newUser.set("runTimesHidden",runtimes);
-};
+}
 else{
   newUser.set("firstName", firstname);
   newUser.set("lastName", lastname);
@@ -243,7 +241,7 @@ else{
   newUser.set("runTimes", runtimes);
   newUser.set("runTimesHidden",runtimes);
   newUser.set("points",5);
-};
+}
 
 
 newUser.save(null, {
