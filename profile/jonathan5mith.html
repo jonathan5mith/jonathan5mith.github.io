@@ -317,7 +317,7 @@
           
           </table>
           <div id="spacer">
-            <p class="subheaders bottomlink"><a href="http://runwithkick.com/events">Enter now </a><i class="fa fa-angle-right"></i></p>    
+            <p class="subheaders bottomlink"><a href="http://runwithkick.com/steel">Enter now </a><i class="fa fa-angle-right"></i></p>    
           </div>
         </div>
       </div>
@@ -686,8 +686,12 @@ querySubmitTime.get(uniqueid, {
    
   },
   error: function(object, error) { 
-    alert("nope");
-  }
+    document.getElementById("formconfirm").innerHTML = "<p>It looks like that's not worked. Check your Unique ID, and if there's still a problem, get in touch at jon@runwithkick.com</p>";
+        var elem = document.getElementById("formremove");
+        elem.parentNode.removeChild(elem);
+        var elem = document.getElementById("removeimage");
+        elem.parentNode.removeChild(elem);
+          }
 });
 
 
