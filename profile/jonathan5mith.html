@@ -671,9 +671,22 @@ querySubmitTime.get(uniqueid, {
   success: function(object) {
     
     var dog = object.get("runTimes");
-
+    
+    if (dog.length==0){
     object.addUnique("runTimesHidden", dectime);
-    object.addUnique("runTimes", dectime);//remove this ultimately
+    object.addUnique("runTimes", dectime);
+    object.set("points",5);
+    object.save();
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your first Kick!</p> <p>Refresh the page and you should see your time, 5 points and your first vest appear!</p><p>Why not <a href='http://www.runwithkick.com/explore'>explore</a> some kicks</p>";
+    var elem = document.getElementById("formremove");
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById("removeimage");
+    elem.parentNode.removeChild(elem);
+    document.getElementById("thanks").innerHTML = '...and rest';
+
+    }
+    else{
+    object.addUnique("runTimesHidden", dectime);
     object.save();
     document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick!</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
     var elem = document.getElementById("formremove");
@@ -681,6 +694,7 @@ querySubmitTime.get(uniqueid, {
     var elem = document.getElementById("removeimage");
     elem.parentNode.removeChild(elem);
     document.getElementById("thanks").innerHTML = '...and rest';
+    }
 
    
   },
