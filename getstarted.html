@@ -216,21 +216,32 @@ var runtimes = [dectime];
 var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
-newUser.set("firstName", firstname);
-newUser.set("lastName", lastname);
-newUser.set("emailAddress", emailaddress);
-newUser.set("TwitterHandle", twitterhandle);
-newUser.set("city", city);
-newUser.set("country", country);
-newUser.set("twitterPicture", twitterpic);
-newUser.set("vestsTogether", [false,false,false,false,false]);
-newUser.set("runTimesHidden",runtimes);
+
+
 
 if (runtimes === NaN) {
+    newUser.set("firstName", firstname);
+    newUser.set("lastName", lastname);
+    newUser.set("emailAddress", emailaddress);
+    newUser.set("TwitterHandle", twitterhandle);
+    newUser.set("city", city);
+    newUser.set("country", country);
+    newUser.set("twitterPicture", twitterpic);
+    newUser.set("vestsTogether", [false,false,false,false,false]);
     newUser.set("runTimes", []);
+    newUser.set("runTimesHidden",runtimes);
 };
 else{
+  newUser.set("firstName", firstname);
+  newUser.set("lastName", lastname);
+  newUser.set("emailAddress", emailaddress);
+  newUser.set("TwitterHandle", twitterhandle);
+  newUser.set("city", city);
+  newUser.set("country", country);
+  newUser.set("twitterPicture", twitterpic);
+  newUser.set("vestsTogether", [false,false,false,false,false]);
   newUser.set("runTimes", runtimes);
+  newUser.set("runTimesHidden",runtimes);
   newUser.set("points",5);
 };
 
