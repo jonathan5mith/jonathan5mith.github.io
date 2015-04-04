@@ -222,7 +222,7 @@ var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
 
-if (runtimes []) {
+if (runtimes == []) {
     newUser.set("firstName", firstname);
     newUser.set("lastName", lastname);
     newUser.set("emailAddress", emailaddress);
@@ -232,7 +232,7 @@ if (runtimes []) {
     newUser.set("twitterPicture", twitterpic);
     newUser.set("vestsTogether", [false,false,false,false,false]);
     newUser.set("runTimes", []);
-    newUser.set("runTimesHidden",runtimes);
+    newUser.set("runTimesHidden",[]);
 }
 else{
   newUser.set("firstName", firstname);
