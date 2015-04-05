@@ -16,6 +16,8 @@
     <script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://raw.github.com/mtrpcic/pathjs/master/path.js"></script>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
 
     </head>
 
@@ -381,9 +383,9 @@
 
 //-------------------------Path
 
-
-
-
+Path.map("#/:name").to(function(){
+    alert("Username: " + this.params['name']);
+});
 
 
 // Initialisation
