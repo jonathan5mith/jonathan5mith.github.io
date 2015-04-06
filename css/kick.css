@@ -1276,7 +1276,6 @@ a.twitter-timeline {
 
 #personlink{
 	text-align: right;
-	margin-bottom: 10px; 
+	vertical-align: bottom;
 	margin-right: 10px;
-
 }
