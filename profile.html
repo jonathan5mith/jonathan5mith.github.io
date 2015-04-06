@@ -1,3 +1,19 @@
+Skip to content
+ This repository
+Explore
+Gist
+Blog
+Help
+@jonathan5mith jonathan5mith
+ 
+ Unwatch 1
+  Star 0
+  Fork 0
+jonathan5mith/jonathan5mith.github.io
+ tree: 48e42c7219  jonathan5mith.github.io/jonathan5mith.html
+@smithjassmithjas 19 hours ago asd
+1 contributor
+RawBlameHistory    734 lines (542 sloc)  21.498 kb
 
 <!-- CSS -->
 
@@ -15,8 +31,7 @@
     <script src='../js/Chart.js'></script>
     <script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
+    <script type="text/javascript" src="https://raw.github.com/mtrpcic/pathjs/master/path.js"></script>
 
     </head>
 
@@ -42,8 +57,8 @@
 <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,500,700,900|Merriweather' rel='stylesheet' type='text/css'> 
-   
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,500,700,900|Merriweather' rel='stylesheet' type='text/css'>
+
 
 <!-- Font Awesome -->
 <!--==============================================-->
@@ -375,31 +390,19 @@
     <script src="js/bootstrap.min.js"></script>
 
 
-<!-- Path & Parse-->
+<!-- Parse-->
 <!--==============================================-->
   
 <script type="text/javascript">
-
-
-
 // Initialisation
-
-
+Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 // Defining class
-
 //var url = window.location.pathname;
 //var person1 = url.substring(url.lastIndexOf('/')+1);
-//var person1 = prompt("Please enter your handle");
-
-var person = "jonathan5mith";
-
-
+var person1 = prompt("Please enter your handle");
+var person = person1.toLowerCase();
 var personalInfo = Parse.Object.extend("upload1");
-
-
-
 // -----------------Name query
-
 var queryName = new Parse.Query(personalInfo);
 queryName.equalTo("TwitterHandle", person);
 queryName.first({
@@ -413,9 +416,7 @@ queryName.first({
   }
   }
 );
-
 // -----------------Location
-
 var queryLocation = new Parse.Query(personalInfo);
 queryLocation.equalTo("TwitterHandle", person);
 queryLocation.first({
@@ -429,10 +430,7 @@ queryLocation.first({
   }
   }
 );
-
 // -----------------Validated query
-
-
 var queryValidated = new Parse.Query(personalInfo);
 queryValidated.equalTo("TwitterHandle", person);
 queryValidated.first({
@@ -451,9 +449,7 @@ queryValidated.first({
   }
   
 );
-
 // -----------------Points query
-
 var queryPoints = new Parse.Query(personalInfo);
 queryPoints.equalTo("TwitterHandle", person);
 queryPoints.first({
@@ -465,10 +461,7 @@ queryPoints.first({
     document.getElementById("points").innerHTML = "N/A";
   }
 });
-
-
 // -----------------Profile image
-
 var queryPic = new Parse.Query(personalInfo);
 queryPic.equalTo("TwitterHandle", person);
 queryPic.first({
@@ -481,12 +474,8 @@ queryPic.first({
   }
   }
 );
-
-
 // -----------------Times
-
 //api
-
 var queryTimes = new Parse.Query(personalInfo);
 queryTimes.equalTo("TwitterHandle", person);
 queryTimes.first({
@@ -497,33 +486,26 @@ queryTimes.first({
     var runtimes= times.slice(-5);
     
     //defining the conversion formula
-
     function minTommss(minutes){
       var sign = minutes < 0 ? "-" : "";
       var min = Math.floor(Math.abs(minutes))
       var sec = Math.floor((Math.abs(minutes) * 60) % 60);
       return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
     };
-
     //defining runtimesformatted variable 
-
     var runtimesformatted = [];
     
     //loop over variable
-
     for (var i = 0; i < runtimes.length; i++) {
     runtimesformatted[i] = minTommss(runtimes[i]);
     };
-
     //defining runtimesformatted variable 
     
     var PBa = Math.min.apply(Math, times); 
     var PB = minTommss(PBa);
     
     document.getElementById("PB").innerHTML = PB;
-
     //creating chart
-
     var buyerData = {
     labels : runtimesformatted,
     datasets : [
@@ -554,18 +536,12 @@ queryTimes.first({
       pointHighlightFill: "white"
         
     });
-
-
     },
   error: function(error) {
     document.getElementById("runtimes").innerHTML = "N/A";
   },
 });
-
 // -----------------Vests
-
-
-
 var queryVests = new Parse.Query(personalInfo);
 queryVests.equalTo("TwitterHandle", person);
 queryVests.first({
@@ -577,22 +553,18 @@ queryVests.first({
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
             
                      
-
             if(times.length>0){
               document.getElementById("totalkicks").innerHTML = times.length;
             }            
-
             if(times[0]==null){
               var elem = document.getElementById("statsremove");
               elem.parentNode.removeChild(elem);
               document.getElementById("statsreplace").innerHTML = '<p>As soon as you upload your first Kick, your stats will appear here.</p>'
             }
-
             if(times.length==1 && times[0]!=null){
               var elem = document.getElementById("canvasremove");
               elem.parentNode.removeChild(elem);
             }
-
             if(times.length>=1 && times[0]!=null){
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png" height="85">'
             }
@@ -600,28 +572,24 @@ queryVests.first({
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png "height="85">'
             };
             
-
             if(vests[0]==true){
               document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest2.png" height="85">'
             }
             else{
               document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-
             if(vests[1]==true){
               document.getElementById("vest3").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest3.png" height="85">'
             }
             else{
               document.getElementById("vest3").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-
             if(vests[2]==true){
               document.getElementById("vest4").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest4.png" height="85">'
             }
             else{
               document.getElementById("vest4").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-
             if(vests[3]==true){
               document.getElementById("vest5").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest5.png" height="85">'
             }
@@ -635,18 +603,12 @@ queryVests.first({
             else{
               document.getElementById("vest6").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-
     },
     
   }
 );
-
-
-
 // Timesubmit
-
 function formSubmit() {
-
 var uniqueid = document.getElementById("uniqueid").value;
 var mma = document.getElementById("mm").value;
 var ssa = document.getElementById("ss").value;
@@ -654,7 +616,6 @@ var mm = parseFloat(mma);
 var ss = parseFloat(ssa);
 var dectime = mm+(ss/60);
 var runtimes = [dectime];
-
 var querySubmitTime = new Parse.Query(personalInfo);
 querySubmitTime.get(uniqueid, {
   
@@ -673,7 +634,6 @@ querySubmitTime.get(uniqueid, {
     var elem = document.getElementById("removeimage");
     elem.parentNode.removeChild(elem);
     document.getElementById("thanks").innerHTML = '...and rest';
-
     }
     else{
     object.addUnique("runTimesHidden", dectime);
@@ -685,7 +645,6 @@ querySubmitTime.get(uniqueid, {
     elem.parentNode.removeChild(elem);
     document.getElementById("thanks").innerHTML = '...and rest';
     }
-
    
   },
   error: function(object, error) { 
@@ -696,11 +655,7 @@ querySubmitTime.get(uniqueid, {
         elem.parentNode.removeChild(elem);
           }
 });
-
-
-
 };
-
 </script>
 
 
@@ -732,3 +687,5 @@ catch(e){window.attachEvent("onload", $buo_f)}
 
   </body>
 </html>
+Status API Training Shop Blog About
+© 2015 GitHub, Inc. Terms Privacy Security Contact
