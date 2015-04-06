@@ -23,7 +23,7 @@
     //-------------------------Path
 
 Path.map("#/:name").to(function(){
-    alert("Username: " + this.params[':name']);
+    alert(':name');
 });
 
 Path.listen();
