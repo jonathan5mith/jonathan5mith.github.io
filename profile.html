@@ -389,7 +389,7 @@ function getQueryVariable(variable)
        return(false);
 }
 
-getQueryVariable("id");
+var person = getQueryVariable("id");
 
 // Initialisation
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
@@ -398,7 +398,7 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 //var person1 = url.substring(url.lastIndexOf('/')+1);
 //var person1 = prompt("Please enter your handle");
 //var person = person1.toLowerCase();
-var person = "jonathan5mith";
+
 
 var personalInfo = Parse.Object.extend("upload1");
 // -----------------Name query
