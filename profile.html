@@ -384,12 +384,13 @@ function getQueryVariable(variable)
        var vars = query.split("&");
        for (var i=0;i<vars.length;i++) {
                var pair = vars[i].split("=");
-               if(pair[0] == variable){alert(pair[1]);}
+               if(pair[0] == variable){return pair[1];}
        }
        return(false);
 }
 
-var person = getQueryVariable("id");
+var person1 = getQueryVariable("id");
+var person = person1.toLowerCase();
 
 // Initialisation
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
@@ -398,7 +399,6 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 //var person1 = url.substring(url.lastIndexOf('/')+1);
 //var person1 = prompt("Please enter your handle");
 //var person = person1.toLowerCase();
-
 
 var personalInfo = Parse.Object.extend("upload1");
 // -----------------Name query
