@@ -16,6 +16,7 @@
     <script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://raw.github.com/mtrpcic/pathjs/master/path.js"></script>
+    <script src="js/page.js"></script>
 
     </head>
 
@@ -378,6 +379,32 @@
 <!--==============================================-->
   
 <script type="text/javascript">
+
+//page.js
+
+      // the "notfound" implements a catch-all
+      // with page('*', notfound). Here we have
+      // no catch-all, so page.js will redirect
+      // to the location of paths which do not
+      // match any of the following routes
+      //
+      page.base('/');
+      page('/', index);
+      page('/about', about);
+      page('/contact', contact);
+      page('/contact/:contactName', contact);
+      page();
+      function index() {
+        alert("index")
+      }
+      function about() {
+        alert("about")
+      }
+      function contact(ctx) {
+        alert("contact")
+      }
+
+
 // Initialisation
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 // Defining class
@@ -662,10 +689,6 @@ catch(e){window.attachEvent("onload", $buo_f)}
   
 
 
-
-
-
- 
 </body>
 </html>
 
