@@ -31,16 +31,13 @@
       page('/contact/:contactName', contact);
       page();
       function index() {
-        document.querySelector('p')
-          .textContent = 'viewing index';
+        alert("hello");
       }
       function about() {
-        document.querySelector('p')
-          .textContent = 'viewing about';
+        alert("hello");
       }
       function contact(ctx) {
-        document.querySelector('p')
-          .textContent = 'viewing contact ' + (ctx.params.contactName || '');
+        alert("hello");
       }
     </script>
   </body>
