@@ -312,25 +312,51 @@ position: absolute;
 /*------------------------Steel-------------------------------------*/
 
 @media (min-width: 769px) {
-.profile-image-attribute{
+.steel-image-attribute{
 	color:RGB(242,242,242);
 	text-align: right;
 	padding-right: 20px;
-	margin-top: -70px;
+	margin-top: -25px;
 	}
+
+	.steel-image-attribute a{
+	color:white;
+	text-decoration: none;
+	font-weight: 400;
+}
+.steel-image-attribute a:hover{
+	text-decoration: none;
+	font-weight: 500;
 
 }
 
+.steel-image-attribute a:active{
+	text-decoration: none;
+	}
+}
+
 @media (max-width: 768px) {
-.profile-image-attribute{
+.steel-image-attribute{
 	text-align: center;
 	margin-top: 10px;
 	color:#939393;
 	}
 
+	.steel-image-attribute a{
+	color:#939393;
+	text-decoration: none;
+	font-weight: 400;
+}
+.steel-image-attribute a:hover{
+	text-decoration: none;
+	font-weight: 500;
+
+}
+
+.steel-image-attribute a:active{
+	text-decoration: none;
 	}
-
-
+}
 
 
 
