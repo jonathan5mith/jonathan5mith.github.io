@@ -16,10 +16,29 @@
     <script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="js/underscore.js"></script>
-    <script src="js/backbone.js"></script>
-    <script src="js/myApp.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
 
+<script>
+    var AppRouter = Backbone.Router.extend({
+        routes: {
+            "posts/:id": "getPost",
+            "*actions": "defaultRoute" // Backbone will try to match the route above first
+        }
+    });
+    // Instantiate the router
+    var app_router = new AppRouter;
+    app_router.on('route:getPost', function (id) {
+        // Note the variable in the route definition being passed in here
+        alert( "Get post number " + id );   
+    });
+    app_router.on('route:defaultRoute', function (actions) {
+        alert( actions ); 
+    });
+    // Start Backbone history a necessary step for bookmarkable URL's
+    Backbone.history.start();
+
+</script>
 
     </head>
 
