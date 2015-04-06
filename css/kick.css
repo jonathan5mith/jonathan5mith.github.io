@@ -1274,3 +1274,7 @@ a.twitter-timeline {
 	padding-bottom: 5px;
 }
 
+#personlink{
+	vertical-align: bottom;
+	text-align: right;
+}
