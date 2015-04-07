@@ -490,6 +490,7 @@ height:370px;
 .coltext {
 	text-align: center;
 }
+submitbtn{display:none;}
 
 @media (min-width: 768px){
 #featuredblurb{
