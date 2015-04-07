@@ -13,6 +13,18 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon.png">
     <title>Kick &middot; your next race is now</title>
 
+  <script>
+
+  var profile = location.pathname.match(/\/profile\/(.*)/)[1];
+  alert(profile);
+
+  if (profile.length()>0){
+    window.location.replace("http://runwithkick.com/profile?id="+profile);
+  }
+
+  </script>
+
+
 
 <!-- jQuery -->
 <!--==============================================-->
