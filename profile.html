@@ -368,7 +368,7 @@
           <form class="form-inline" role="form">
             <div class="form-group">
               <label for="text">Enter Twitter Handle</label>
-              <input type="text" class="form-control" id="email" placeholder="e.g. @runwithkick" >
+              <input type="text" class="form-control" id="twitterhandleprofile" placeholder="e.g. @runwithkick" >
             </div>
             <button type="submit" class="btn btn-default" onclick="formSubmit1();">Go!</button>
           </form>
@@ -691,6 +691,17 @@ querySubmitTime.get(uniqueid, {
           }
 });
 };
+
+function formSubmit1() {
+
+var twitterhandle1 = document.getElementById("twitterhandleprofile").value;
+var twitterhandle2 = twitterhandle1.split("@").pop();
+var twitterhandle = twitterhandle2.toLowerCase();
+
+window.location.replace("http://runwithkick.com/profile?id="+twitterhandle);
+
+}
+
 </script>
 
 
