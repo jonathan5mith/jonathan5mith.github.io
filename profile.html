@@ -356,21 +356,22 @@
         </div>
       </div>
 
-            <div class="cards twoinrow">
+    <!-- Card 3-->
+
+      <div class="cards twoinrow">
         <div class="border-bottom">
           <p class="mainheaders">Coming soon</p>
         </div>
       
         <div class="border-below">
-          <table>
-          <tr>
-            <td id="tablefix">
-              <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/iffley.png" height="85px"\>
-            </td>
-            <td>
-              Iffley Road mile
-            </td>
-          </table>
+
+          <form class="form-inline" role="form">
+            <div class="form-group">
+              <label for="text">Enter Twitter Handle</label>
+              <input type="text" class="form-control" id="email" placeholder="e.g. @runwithkick">
+            </div>
+            <button type="submit" class="btn btn-default" onclick="formSubmit1();">Go!</button>
+          </form>
 
         </div>
       </div>
@@ -432,6 +433,8 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 //var person1 = url.substring(url.lastIndexOf('/')+1);
 //var person1 = prompt("Please enter your handle");
 //var person = person1.toLowerCase();
+
+
 
 var personalInfo = Parse.Object.extend("upload1");
 // -----------------Name query
