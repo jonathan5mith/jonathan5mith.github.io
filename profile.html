@@ -365,7 +365,7 @@
       
         <div class="border-below">
 
-          <p>Enter a twitter handle to find other users</p>
+          <p>Enter a twitter handle to navigate to other users:</p>
           <div class="form-inline profileform" role="form">
             <div class="form-group">
               <input type="text" class="form-control" class="col-xs-8" id="twitterhandleprofile" placeholder="e.g. @runwithkick" >
@@ -506,6 +506,7 @@ queryPic.equalTo("TwitterHandle", person);
 queryPic.first({
   success: function(object) {
     var twitterpic = object.get('TwitterHandle');
+    alert(twitterpic.length);
     document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://twitter.com/'+twitterpic+'/profile_image?size=original)"></div>';
   }, 
   error: function(error) {
