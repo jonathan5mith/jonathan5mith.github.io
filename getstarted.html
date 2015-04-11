@@ -158,6 +158,9 @@
         </div>
 
         <span id="formconfirm"></span>
+        <span id="emailconfirm"></span>
+        
+
 
 
 
@@ -265,11 +268,14 @@ newUser.save(null, {
     document.getElementById("thanks").innerHTML = 'Congratuations!';
 
       Parse.Cloud.run('myMandrillFunction', {
-      Address: emailaddress
+      Address: emailaddress,
+      EmailText: "Hi, "+firstname+" welcome to Kick!"
       }, {
           // Success handler
           success: function(message) {
               alert('Success: the email has been sent');
+          document.getElementById("emailconfirm").innerHTML = '<p>An email will be sent to '+emailaddress+" with your Unique ID. Please email jon@runwithkick.com if you don't get it within the next day or so</p>";
+
           },
           // Error handler
           error: function(message) {
