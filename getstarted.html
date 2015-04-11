@@ -258,7 +258,7 @@ query.first({
     var uniqueid = object.get("objectId");
     newUser.save(null, {
   success: function(newUser) {
-    document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p> <p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p> '<p>An email will be sent to '+emailaddress+" with your Kick ID</p>"<p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
@@ -272,7 +272,6 @@ query.first({
           // Success handler
           success: function(message) {
           alert('Success: the email has been sent');
-          document.getElementById("emailconfirm").innerHTML = '<p>An email will be sent to '+emailaddress+" with your Kick ID</p>";
 
           },
           // Error handler
