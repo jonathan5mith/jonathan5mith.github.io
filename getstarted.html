@@ -279,7 +279,6 @@ newUser.save(null, {
       Parse.Cloud.run('myMandrillFunction', {
       Address: emailaddress,
       EmailText: "Hi, "+firstname+" welcome to Kick! Your Kick ID is "+kickId
-      "Congratuations!"
       }, {
           // Success handler
           success: function(message) {
