@@ -232,7 +232,6 @@ function makeid()
 }
 
 var kickId = makeid();
-alert(kickId);
 var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
@@ -268,13 +267,9 @@ else{
   newUser.set("kickId", kickId);
 }
 
-
-
-
-
 newUser.save(null, {
   success: function(newUser) {
-    document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!";
     document.getElementById("formconfirm1").innerHTML ="<p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
@@ -288,12 +283,12 @@ newUser.save(null, {
       }, {
           // Success handler
           success: function(message) {
-          document.getElementById("emailconfirm").innerHTML = '<p>An email will be sent to '+emailaddress+" with your Kick ID</p>";
+          document.getElementById("emailconfirm").innerHTML = 'An email will be sent to '+emailaddress+" with your Kick ID</p>";
 
           },
           // Error handler
           error: function(message) {
-          document.getElementById("emailconfirm").innerHTML = "<p>At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and we'll sort it all out</p>";
+          document.getElementById("emailconfirm").innerHTML = "At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and we'll sort it all out</p>";
           }
       });
 
