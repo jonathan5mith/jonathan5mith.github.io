@@ -159,6 +159,9 @@
 
         <span id="formconfirm"></span>
         <span id="emailconfirm"></span>
+        <span id="formconfirm1"></span>
+
+        
         
 
         </div>
@@ -271,7 +274,8 @@ else{
 
 newUser.save(null, {
   success: function(newUser) {
-    document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p> <p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p>";
+    document.getElementById("formconfirm1").innerHTML ="<p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
@@ -284,13 +288,12 @@ newUser.save(null, {
       }, {
           // Success handler
           success: function(message) {
-              alert('Success: the email has been sent');
           document.getElementById("emailconfirm").innerHTML = '<p>An email will be sent to '+emailaddress+" with your Kick ID</p>";
 
           },
           // Error handler
           error: function(message) {
-              alert('Error: the email has not been sent');
+          document.getElementById("emailconfirm").innerHTML = "<p>At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and we'll sort it all out</p>";
           }
       });
 

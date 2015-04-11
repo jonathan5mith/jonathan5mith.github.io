@@ -656,6 +656,7 @@ var ss = parseFloat(ssa);
 var dectime = mm+(ss/60);
 var runtimes = [dectime];
 var querySubmitTime = new Parse.Query(personalInfo);
+
 querySubmitTime.get(uniqueid, {
   
   success: function(object) {
