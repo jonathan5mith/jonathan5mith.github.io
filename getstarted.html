@@ -269,7 +269,7 @@ else{
 newUser.save(null, {
   success: function(newUser) {
     document.getElementById("formconfirm").innerHTML = "Congratuations, "+firstname+", you're all signed up. ";
-    document.getElementById("formconfirm1").innerHTML ="<p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
+    document.getElementById("formconfirm1").innerHTML ="<p>Now you can check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
@@ -287,7 +287,7 @@ newUser.save(null, {
           },
           // Error handler
           error: function(message) {
-          document.getElementById("emailconfirm").innerHTML = "At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and we'll sort it all out</p>";
+          document.getElementById("emailconfirm").innerHTML = "At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and I'll sort it all out</p>";
           }
       });
 
