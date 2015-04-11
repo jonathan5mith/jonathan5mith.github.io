@@ -662,7 +662,6 @@ querySubmitTime.get(uniqueid, {
   success: function(object) {
     
     var dog = object.get("runTimes");
-    
     if (dog.length==0){
     object.addUnique("runTimesHidden", dectime);
     object.addUnique("runTimes", dectime);
