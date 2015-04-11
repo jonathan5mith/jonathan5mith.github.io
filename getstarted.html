@@ -255,7 +255,7 @@ var query = new Parse.Query(NewUser);
 query.equalTo("TwitterHandle",twitterhandle);
 query.first({
   success: function(object){
-    var uniqueid = object.get("objectID");
+    var uniqueid = object.get("objectId");
     newUser.save(null, {
   success: function(newUser) {
     document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p> <p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
