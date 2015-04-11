@@ -255,7 +255,7 @@ else{
   newUser.set("points",5);
 }
 
-
+var uniqueid = newUser.get("objectID");
 
 
 newUser.save(null, {
@@ -269,12 +269,12 @@ newUser.save(null, {
 
       Parse.Cloud.run('myMandrillFunction', {
       Address: emailaddress,
-      EmailText: "Hi, "+firstname+" welcome to Kick!"
+      EmailText: "Hi, "+firstname+" welcome to Kick! Your Kick ID is "+uniqueid
       }, {
           // Success handler
           success: function(message) {
               alert('Success: the email has been sent');
-          document.getElementById("emailconfirm").innerHTML = '<p>An email will be sent to '+emailaddress+" with your Unique ID. Please email jon@runwithkick.com if you don't get it within the next day or so</p>";
+          document.getElementById("emailconfirm").innerHTML = '<p>An email will be sent to '+emailaddress+" with your Kick ID. Please email jon@runwithkick.com if you don't get it within the next day or so</p>";
 
           },
           // Error handler
