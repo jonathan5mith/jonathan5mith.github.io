@@ -223,6 +223,8 @@ var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
 
+
+
 if (runtimes.length == 0) {
     newUser.set("firstName", firstname);
     newUser.set("lastName", lastname);
@@ -251,6 +253,8 @@ else{
 }
 
 
+
+
 newUser.save(null, {
   success: function(newUser) {
     document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p> <p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p>";
@@ -259,6 +263,21 @@ newUser.save(null, {
     var elem = document.getElementById("removeimage");
     elem.parentNode.removeChild(elem);
     document.getElementById("thanks").innerHTML = 'Congratuations!';
+
+      Parse.Cloud.run('myMandrillFunction', {
+      Address: emailaddress
+      }, {
+          // Success handler
+          success: function(message) {
+              alert('Success: the email has been sent');
+          },
+          // Error handler
+          error: function(message) {
+              alert('Error: the email has not been sent');
+          }
+      });
+
+
     
   },
   error: function(newUser, error) {
