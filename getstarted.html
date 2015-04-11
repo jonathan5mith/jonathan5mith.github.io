@@ -217,6 +217,19 @@ else{
 }
 
 
+function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+var kickId = makeid();
+
 var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
@@ -235,6 +248,7 @@ if (runtimes.length == 0) {
     newUser.set("runTimes", []);
     newUser.set("runTimesHidden",[]);
     newUser.set("points",0);
+    newUser.set("kickId", kickId);
 }
 else{
   newUser.set("firstName", firstname);
@@ -248,19 +262,16 @@ else{
   newUser.set("runTimes", runtimes);
   newUser.set("runTimesHidden",runtimes);
   newUser.set("points",5);
+  newUser.set("kickId", kickId);
 }
 
 
-var query = new Parse.Query(NewUser);
-query.equalTo("TwitterHandle",twitterhandle);
-query.first({
-  success: function(object){
-    var uniqueid1 = object.get("objectId");
-    alert(uniqueid1);
-    //var uniqueid = uniqueid1.toString();
-    newUser.save(null, {
+
+
+
+newUser.save(null, {
   success: function(newUser) {
-    document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p> '<p>An email will be sent to '+emailaddress+" with your Kick ID</p>"<p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Congratuations, "+firstname+", you're all signed up!</p> <p>Why not check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"'>profile</a>, or, <a href='http://runwithkick.com/explore'>explore some Kicks</a></p><p>Please email jon@runwithkick.com if you have any issues</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
@@ -269,11 +280,12 @@ query.first({
 
       Parse.Cloud.run('myMandrillFunction', {
       Address: emailaddress,
-      EmailText: "Hi, "+firstname+" welcome to Kick! Your Kick ID is "+uniqueid1
+      EmailText: "Hi, "+firstname+" welcome to Kick! Your Kick ID is "+kickId
       }, {
           // Success handler
           success: function(message) {
-          alert('Success: the email has been sent');
+              alert('Success: the email has been sent');
+          document.getElementById("emailconfirm").innerHTML = '<p>An email will be sent to '+emailaddress+" with your Kick ID</p>";
 
           },
           // Error handler
@@ -282,18 +294,12 @@ query.first({
           }
       });
 
-
-    
+   
   },
   error: function(newUser, error) {
     alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we'll see if we can get to the bottom of it");
   }
 });
-
-  }
-})
-
-
 }
 
 
