@@ -226,21 +226,6 @@ var daily = [5, 0, 4, 8, 5, 5, 13];
 var weeklylabels = ["12","13","14","15","12"];
 var dailylabels = ["5", "0", "4", "8", "5", "5", "13"];
 
-//function arraytostring(x){
-
-  //for (var i = 0; i < x.length; i++) {
-    //x[i] = x[i].toString();
-//}; 
-//};
-
-//var weeklylabels = arraytostring(weekly);
-//var dailylabels = arraytostring(daily);
-
-alert(weeklylabels[0]);
-alert(dailylabels[0]);
-
-
-
 
     var buyerData = {
     labels : weeklylabels,
@@ -280,10 +265,10 @@ var data = {
     datasets: [
         {
             label: "My First dataset",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
+            fillColor: "rgba(100,100,100,1)",
+            strokeColor: "rgba(100,100,100,1)",
+            highlightFill: "rgba(100,100,100,1)",
+            highlightStroke: "rgba(100,100,100,1)",
             data: daily
         },
         
@@ -292,7 +277,7 @@ var data = {
 
     var buyers1 = document.getElementById('buyers1').getContext('2d');
     buyers1.canvas.width = 240;
-    buyers1.canvas.height = 160;
+    buyers1.canvas.height = 100;
     new Chart(buyers1).Bar(data,{
       scaleShowGridLines : false,
       scaleFontColor:"rgba(100,100,100,0)",
