@@ -219,15 +219,15 @@
 
 // -----------------Chart 1 - weekly
 
-var weekly = [12,13,14,15,12],
+var weekly = [12,13,14,15,12]
 var daily = [5, 0, 4, 8, 5, 5, 13]
 
 function arraytostring(x){
   
   for (var i = 0; i < x.length; i++) {
     x[i] = i.toString();
-} 
-}
+}; 
+};
 
 var weeklylabels = arraytostring(weekly);
 var dailylabels = arraytostring(daily);
@@ -236,6 +236,7 @@ var dailylabels = arraytostring(daily);
 
 
     var buyerData = {
+    labels : weeklylabels,
     datasets : [
       {
       strokeColor : "rgba(150,150,150,.5)",
@@ -268,6 +269,7 @@ var dailylabels = arraytostring(daily);
 // -----------------Chart 2 - daily
 
 var data = {
+    labels: dailylabels,
     datasets: [
         {
             label: "My First dataset",
