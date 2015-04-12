@@ -552,6 +552,14 @@ height:370px;
 	
 }
 
+.maincontain-about{
+	padding-top: 55px;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
 .mainheaders{
 	font-size: 30px;
 	font-weight: 500;
