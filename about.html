@@ -180,12 +180,12 @@
 
 <div id="chartsholder">
   <canvas id="buyers" width="400" height="200"></canvas>
-
-
-
-
 </div>
 
+
+<div id="chartsholder">
+  <canvas id="buyers1" width="400" height="200"></canvas>
+</div>
 
 
 
@@ -217,9 +217,10 @@
   
 <script type="text/javascript">
 
-// -----------------Times
-//api
-    //creating chart
+// -----------------Chart 1 - weekly
+
+
+
     var buyerData = {
     labels : ["8:45","8:45","8:45","8:45","8:45"],
     datasets : [
@@ -251,8 +252,40 @@
         
     });
 
+// -----------------Chart 2 - daily
 
-// -----------------Vests
+var data = {
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.5)",
+            strokeColor: "rgba(220,220,220,0.8)",
+            highlightFill: "rgba(220,220,220,0.75)",
+            highlightStroke: "rgba(220,220,220,1)",
+            data: [65, 59, 80, 81, 56, 55, 40]
+        },
+        
+    ]
+};
+
+    var buyers1 = document.getElementById('buyers1').getContext('2d');
+    buyers1.canvas.width = 240;
+    buyers1.canvas.height = 160;
+    new Chart(buyers1).Line(data,{
+      scaleShowGridLines : false,
+      scaleFontColor:"rgba(100,100,100,0)",
+      scaleLineColor: "rgba(100,100,100,0)",
+      tooltipTemplate: "<%= label %>",
+      tooltipFillColor: "rgba(100,100,100,0.8)",
+      tooltipFontSize: 11,
+      tooltipCornerRadius: 3,
+      pointDotRadius : 6,
+      tooltipFontFamily: "'Lato', sans-serif",
+      animation:false,
+      pointHighlightFill: "white"
+        
+    });
 
 
 </script>
