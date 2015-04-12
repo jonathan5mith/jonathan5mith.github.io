@@ -1291,6 +1291,7 @@ a.twitter-timeline {
 
 #chartsholder{
 	text-align: center;
+	margin-left: -10px;
 }
 
 canvas {
