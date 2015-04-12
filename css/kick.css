@@ -491,6 +491,10 @@ height:370px;
 	text-align: center;
 }
 
+.coltext1 {
+	text-align: left;
+}
+
 
 @media (min-width: 768px){
 #featuredblurb{
@@ -1297,4 +1301,11 @@ a.twitter-timeline {
 
 canvas {
    display: inline;
+}
+
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
