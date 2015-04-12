@@ -620,7 +620,7 @@ height:370px;
 .maincontent1{
 	padding-top: 30px;
 	padding-bottom: 30px;
-
+	max-width: 220px;
 	margin:auto;
 	font-size: 17px;
 }
