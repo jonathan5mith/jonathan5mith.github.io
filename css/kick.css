@@ -491,6 +491,20 @@ height:370px;
 	text-align: center;
 }
 
+@media (min-width: 768px){
+
+.coltext1 {
+	text-align: left;
+}
+}
+
+@media (max-width: 767px){
+
+.coltext1 {
+	text-align: center;
+}
+}
+
 
 @media (min-width: 768px){
 #featuredblurb{
