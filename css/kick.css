@@ -816,6 +816,11 @@ canvas{
 	text-align: center;
 	}
 
+#chartsholder canvas{
+	margin-left: 0px;
+	text-align: center;
+	}
+
 
 
 #stats{
