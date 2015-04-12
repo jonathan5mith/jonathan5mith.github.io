@@ -491,14 +491,14 @@ height:370px;
 	text-align: center;
 }
 
-@media (min-width: 768px){
+@media (min-width: 992px){
 
 .coltext1 {
 	text-align: left;
 }
 }
 
-@media (max-width: 767px){
+@media (max-width: 991px){
 
 .coltext1 {
 	text-align: center;
@@ -607,7 +607,7 @@ height:370px;
 	background-color: gray;
 }
 
-@media (max-width: 768px){
+@media (max-width: 991px){
 
 .maincontent{
 	padding-top: 30px;
@@ -626,7 +626,7 @@ height:370px;
 }
 }
 
-@media (min-width: 769px){
+@media (min-width: 992px){
 
 .maincontent{
 	padding-top: 30px;
