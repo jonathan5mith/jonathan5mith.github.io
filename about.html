@@ -237,7 +237,7 @@
     var buyers = document.getElementById('buyers').getContext('2d');
     buyers.canvas.width = 240;
     buyers.canvas.height = 160;
-    new Chart(buyers).Bar(buyerData,{
+    new Chart(buyers).Line(buyerData,{
       scaleShowGridLines : false,
       scaleFontColor:"rgba(100,100,100,0)",
       scaleLineColor: "rgba(100,100,100,0)",
@@ -272,7 +272,7 @@ var data = {
     var buyers1 = document.getElementById('buyers1').getContext('2d');
     buyers1.canvas.width = 240;
     buyers1.canvas.height = 160;
-    new Chart(buyers1).Line(data,{
+    new Chart(buyers1).Bar(data,{
       scaleShowGridLines : false,
       scaleFontColor:"rgba(100,100,100,0)",
       scaleLineColor: "rgba(100,100,100,0)",
