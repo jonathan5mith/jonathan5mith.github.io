@@ -279,7 +279,7 @@ newUser.save(null, {
 
       Parse.Cloud.run('myMandrillFunction', {
       Address: emailaddress,
-      EmailText: setBody("Hi, "+firstname+" welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+".\r\n\r\nThe next step is to follow @runwithkick on twitter and we'll ask you to send your Kick ID back so I can check it's actually you!\r\n\r\nYou can still Kick in the meantime, but if we don't validate you within 2 weeks your account will be deleted.\r\n\r\nHappy Kicking!");
+      EmailText: setBody("Hi, "+firstname+" welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+".\r\n\r\nThe next step is to follow @runwithkick on twitter and we'll ask you to send your Kick ID back so I can check it's actually you!\r\n\r\nYou can still Kick in the meantime, but if we don't validate you within 2 weeks your account will be deleted.\r\n\r\nHappy Kicking!", 'text/plain'),
       }, {
           // Success handler
           success: function(message) {
