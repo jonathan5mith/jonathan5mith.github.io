@@ -630,6 +630,13 @@ height:370px;
 	margin:auto;
 	font-size: 17px;
 }
+.maincontent2{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	max-width: 350px;
+	margin:auto;
+	font-size: 17px;
+}
 }
 
 @media (min-width: 992px){
@@ -650,6 +657,13 @@ height:370px;
 }
 .maincontentnopadding{
 
+	max-width: 220px;
+	margin:auto;
+	font-size: 19px;
+}
+.maincontent2{
+	padding-top: 30px;
+	padding-bottom: 30px;
 	max-width: 220px;
 	margin:auto;
 	font-size: 19px;
