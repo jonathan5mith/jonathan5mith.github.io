@@ -157,8 +157,11 @@
         </tr>
       </table>
 
+      <span id="graphtocome"></span>
+
       <div id="canvasremove">
       <div id="greyline"></div>
+
       <table id="marginbetweentables">
         <tr>
           <td><p id="stats"><span>Recent Kicks</span></p></td><td></td>
@@ -594,8 +597,7 @@ queryVests.first({
             var times = object.get('runTimes');
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
-            
-                     
+                                 
             if(times.length>0){
               document.getElementById("totalkicks").innerHTML = times.length;
             }            
@@ -607,6 +609,8 @@ queryVests.first({
             if(times.length==1 && times[0]!=null){
               var elem = document.getElementById("canvasremove");
               elem.parentNode.removeChild(elem);
+              document.getElementById("graphtocome").innerHTML = "When you've finished your second kick, a graph showing your latest Kicks (up to 5) will appear here";
+              
             }
             if(vests>=5){
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png" height="85">'
@@ -680,6 +684,8 @@ querySubmitTime.first({
     var elem = document.getElementById("removeimage");
     elem.parentNode.removeChild(elem);
     document.getElementById("thanks").innerHTML = '...and rest';
+
+
     }
     else{
     object.addUnique("runTimesHidden", dectime);
