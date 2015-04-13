@@ -1339,3 +1339,7 @@ canvas {
     vertical-align: middle;
     float: none;
 }
+
+.imgcenterabout{
+	text-align: center;
+}
