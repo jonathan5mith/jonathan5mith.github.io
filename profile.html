@@ -588,7 +588,7 @@ queryVests.equalTo("TwitterHandle", person);
 queryVests.first({
   
   success: function(object) {
-            var vests = object.get('vestsTogether');
+            var vests = object.get('points');
             var times = object.get('runTimes');
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
@@ -613,32 +613,32 @@ queryVests.first({
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png "height="85">'
             };
             
-            if(vests[0]==true){
+            if(vests>=20 && vests<40){
               document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest2.png" height="85">'
             }
             else{
               document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-            if(vests[1]==true){
+            if(vests>=40 && vests<60){
               document.getElementById("vest3").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest3.png" height="85">'
             }
             else{
               document.getElementById("vest3").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-            if(vests[2]==true){
+            if(vests>=60 && vests<80){
               document.getElementById("vest4").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest4.png" height="85">'
             }
             else{
               document.getElementById("vest4").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-            if(vests[3]==true){
+            if(vests>=80 && vests<100){
               document.getElementById("vest5").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest5.png" height="85">'
             }
             else{
               document.getElementById("vest5").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
             
-            if(vests[4]==true){
+            if(vests>=100 && vests<120){
               document.getElementById("vest6").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest6.png" height="85">'
             }
             else{
