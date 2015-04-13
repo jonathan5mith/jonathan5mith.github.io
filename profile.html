@@ -609,7 +609,7 @@ queryVests.first({
             if(times.length==1 && times[0]!=null){
               var elem = document.getElementById("canvasremove");
               elem.parentNode.removeChild(elem);
-              document.getElementById("graphtocome").innerHTML = "When you've finished your second kick, a graph showing your latest Kicks (up to 5) will appear here";
+              document.getElementById("graphtocome").innerHTML = "<div id='greyline'></div><p>When you've finished your second kick, a graph showing your latest Kicks (up to 5) will appear here</p>";
               
             }
             if(vests>=5){
