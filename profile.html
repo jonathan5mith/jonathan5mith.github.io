@@ -663,6 +663,7 @@ var ss = parseFloat(ssa);
 var dectime = mm+(ss/60);
 var runtimes = [dectime];
 var querySubmitTime = new Parse.Query(personalInfo);
+
 querySubmitTime.equalTo("kickId", uniqueid);
 querySubmitTime.first({
   success: function(object) {
@@ -692,8 +693,8 @@ querySubmitTime.first({
     }
    
   },
-  error: function(object, error) { 
-    document.getElementById("formconfirm").innerHTML = "<p>It looks like that's not worked. Check your Unique ID, and if there's still a problem, get in touch at jon@runwithkick.com</p>";
+  error: function(error) { 
+    document.getElementById("formconfirm").innerHTML = "<p>It looks like that's not worked. Check your Kick ID, and if there's still a problem, get in touch at jon@runwithkick.com</p>";
         var elem = document.getElementById("formremove");
         elem.parentNode.removeChild(elem);
         var elem = document.getElementById("removeimage");
