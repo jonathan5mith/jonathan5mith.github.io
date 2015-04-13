@@ -608,16 +608,17 @@ queryVests.first({
               var elem = document.getElementById("canvasremove");
               elem.parentNode.removeChild(elem);
             }
-            if(times.length>=1 && times[0]!=null){
+            if(vests>=5){
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png" height="85">'
+              var elem = document.getElementById("cardremove");
+              elem.parentNode.removeChild(elem);
             }
             else{
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png "height="85">'
             };
 
             if(vests>=5){
-              var elem = document.getElementById("cardremove");
-              elem.parentNode.removeChild(elem);
+
             }
             
             if(vests>=20){
