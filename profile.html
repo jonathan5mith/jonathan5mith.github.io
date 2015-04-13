@@ -451,7 +451,6 @@ queryName.first({
     var firstname = object.get('firstName');
     var lastname = object.get('lastName');
     document.getElementById("name").innerHTML = firstname+" "+lastname;
-    document.title="Kick " &middot+ " "+firstname+" "+lastname;
   },
   error: function(error) {
     document.getElementById("name").innerHTML = "N/A";
@@ -614,32 +613,32 @@ queryVests.first({
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png "height="85">'
             };
             
-            if(vests>=20 && vests<40){
+            if(vests<40){
               document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest2.png" height="85">'
             }
             else{
               document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-            if(vests>=40 && vests<60){
+            if(vests<60){
               document.getElementById("vest3").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest3.png" height="85">'
             }
             else{
               document.getElementById("vest3").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-            if(vests>=60 && vests<80){
+            if(vests<80){
               document.getElementById("vest4").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest4.png" height="85">'
             }
             else{
               document.getElementById("vest4").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
-            if(vests>=80 && vests<100){
+            if(vests<100){
               document.getElementById("vest5").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest5.png" height="85">'
             }
             else{
               document.getElementById("vest5").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
             }
             
-            if(vests>=100 && vests<120){
+            if(vests<120){
               document.getElementById("vest6").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest6.png" height="85">'
             }
             else{
