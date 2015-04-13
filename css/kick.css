@@ -35,7 +35,7 @@ position: absolute;
 }
 
 .navbar-default{
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.3);
 	border-width: 0px;
 	color:black;
 	border-radius: 0px;
@@ -749,7 +749,7 @@ height:370px;
 	padding-bottom: 30px;
 	max-width: 220px;
 	margin:auto;
-	font-size: 17px;
+	font-size: 20px;
 }
 
 .maincontentnopadding{
@@ -762,7 +762,7 @@ height:370px;
 	padding-bottom: 30px;
 	max-width: 220px;
 	margin:auto;
-	font-size: 17px;
+	font-size: 20px;
 }
 }
 
@@ -780,7 +780,7 @@ height:370px;
 	padding-bottom: 30px;
 
 	margin:auto;
-	font-size: 19px;
+	font-size: 22px;
 }
 .maincontentnopadding{
 
@@ -793,7 +793,7 @@ height:370px;
 	padding-bottom: 30px;
 	max-width: 350px;
 	margin:auto;
-	font-size: 19px;
+	font-size: 22px;
 }
 }
 
