@@ -267,8 +267,6 @@ else{
 }
 
 
-setBody("Did you request a password reset for your account?\r\n\r\nIf yes, click here:\r\nhttp://www.website.com", 'text/plain');
-
 newUser.save(null, {
   success: function(newUser) {
     document.getElementById("formconfirm").innerHTML = "Congratuations, "+firstname+", you're all signed up. ";
