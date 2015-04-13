@@ -614,12 +614,17 @@ queryVests.first({
             else{
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png "height="85">'
             };
+
+            if(vests>=5){
+              var elem = document.getElementById("cardremove");
+              elem.parentNode.removeChild(elem);
+            }
             
             if(vests>=20){
               document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest2.png" height="85">'
             }
             else{
-              document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png" height="85">'
+              document.getElementById("vest2").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank20.png" height="85">'
             }
             if(vests>=40){
               document.getElementById("vest3").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest3.png" height="85">'
@@ -660,9 +665,8 @@ var ss = parseFloat(ssa);
 var dectime = mm+(ss/60);
 var runtimes = [dectime];
 var querySubmitTime = new Parse.Query(personalInfo);
-
-querySubmitTime.get(uniqueid, {
-  
+querySubmitTime.equalTo("kickId", uniqueid);
+querySubmitTime.first({
   success: function(object) {
     
     var dog = object.get("runTimes");
