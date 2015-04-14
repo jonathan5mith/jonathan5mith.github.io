@@ -110,13 +110,19 @@
       <div class="border-below">
        
 
-        <p><span id="formconfirm0"></span></p>
+        <p><span id="formconfirm0"></span><span id="formconfirma0"></span></p>
         <div id='greyline'></div>
         <br>
-        <p><span id="formconfirm1"></span></p>
-        <p><span id="formconfirm2"></span></p>
-        <p><span id="formconfirm3"></span></p>
-        <p><span id="formconfirm4"></span></p>
+        <p><span id="formconfirm1"></span><span id="formconfirma1"></span></p>
+        <p><span id="formconfirm2"></span><span id="formconfirma2"></span></p>
+        <p><span id="formconfirm3"></span><span id="formconfirma3"></span></p>
+        <p><span id="formconfirm4"></span><span id="formconfirma4"></span></p>
+        <p><span id="formconfirm5"></span><span id="formconfirma5"></span></p>
+        <p><span id="formconfirm6"></span><span id="formconfirma6"></span></p>
+        <p><span id="formconfirm7"></span><span id="formconfirma7"></span></p>
+        <p><span id="formconfirm8"></span><span id="formconfirma8"></span></p>
+        <p><span id="formconfirm9"></span><span id="formconfirma9"></span></p>
+        <p><span id="formconfirm10"></span><span id="formconfirma10"></span></p>
        
         </div>
       </div>
@@ -182,7 +188,8 @@ queryPic.first({
       
       for(i=0;i<kickentrants.length;i++){
         var j = i.toString();
-        document.getElementById("formconfirm"+j).innerHTML = '<div id="minipic" style="background-image: url(https://twitter.com/'+kickentrants[i]+'/profile_image?size=original)"></div>'+ kickentrants[i];
+        document.getElementById("formconfirm"+j).innerHTML = '<div id="minipic" style="background-image: url(https://twitter.com/'+kickentrants[i]+'/profile_image?size=original)"></div>';
+        document.getElementById("formconfirma"+j).innerHTML = kickentrants[i];
       }
 
       
