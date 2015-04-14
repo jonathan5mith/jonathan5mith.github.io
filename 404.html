@@ -17,7 +17,7 @@
 
   var profile1 = location.pathname.match(/\/profile\/(.*)/)[1];
   var profile = profile1.split("@").pop();
-
+ alert(profile);
   if (profile.length>0){
     window.location.replace("http://runwithkick.com/profile?id="+profile);
   }
