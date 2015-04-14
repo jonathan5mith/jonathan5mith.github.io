@@ -110,10 +110,12 @@
       <div class="border-below">
        
 
-        <span id="formconfirm"></span>
+        <p><span id="formconfirm0"></span></p>
+        <p><span id="formconfirm1"></span></p>
+        <p><span id="formconfirm2"></span></p>
+        <p><span id="formconfirm3"></span></p>
+        <p><span id="formconfirm4"></span></p>
        
-        
-
         </div>
       </div>
   </div>
@@ -175,7 +177,13 @@ queryPic.first({
       document.getElementById("formconfirm").innerHTML = firstname+" doesn't have any active Kicks at the moment, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
     }
     else{
-      document.getElementById("formconfirm").innerHTML = "Hi";
+      
+      for(i=0;i<kickentrants.length;i++){
+        var j = i.toString();
+        document.getElementById("formconfirm"+j).innerHTML = kickentrants[i];
+      }
+
+      
     }
 
 
