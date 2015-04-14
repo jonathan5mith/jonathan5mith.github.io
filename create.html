@@ -177,7 +177,9 @@ queryCreate.first({
         elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
         elem.parentNode.removeChild(elem);
-    document.getElementById("formconfirm").innerHTML = 'Congratulations, '+name+" you've created a Kick, lets head over to your <a href='http://www.runwithkick.com/kicks?id="+twitterhandle+"Kick page</a> so you can tell people about it";    
+    document.getElementById("formconfirm").innerHTML = 'Congratulations, '
+
+    //+name+" you've created a Kick, lets head over to your <a href='http://www.runwithkick.com/kicks?id="+twitterhandle+"Kick page</a> so you can tell people about it";    
   },
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
