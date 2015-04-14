@@ -185,7 +185,7 @@ queryName.equalTo("TwitterHandle", person);
 queryName.first({
   success: function(object) {
     var firstname = object.get('firstName');
-    document.getElementById("name").innerHTML = firstname+"'s Kicks"
+    document.getElementById("name").innerHTML = firstname+"'s Kicks";
   },
   error: function(error) {
     document.getElementById("name").innerHTML = "N/A";
