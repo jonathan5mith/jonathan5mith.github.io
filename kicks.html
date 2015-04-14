@@ -180,8 +180,8 @@ var queryPic = new Parse.Query(personalInfo);
 queryPic.equalTo("TwitterHandle", person);
 queryPic.first({
   success: function(object) {
-    var twitterpic = object.get('kickEntrants');
-    alert(kickEntrants);
+    var kickentrants = object.get('kickEntrants');
+    alert(kickentrants);
   }, 
   error: function(error) {
     
