@@ -171,12 +171,11 @@ queryCreate.first({
     var twitterhandlex = object.get('TwitterHandle');
     var name = object.get("firstName");
     var entrants = object.get("kickEntrants");
-    alert(entrants.length);
 
     if (entrants.length>0){
       document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already created a Kick this week, head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page to see it</a>";
     }
-    else {    
+    else{    
     object.set("kickEntrants",[twitterhandlex]);
     object.save();
     var elem = document.getElementById("formremove");
