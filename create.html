@@ -175,9 +175,10 @@ var queryCreate = new Parse.Query(personalInfo);
 queryCreate.equalTo("kickId", kickid);
 queryCreate.first({
   success: function(object) {
-    var twitterhandle = object.get('TwitterHandle');
+    var twitterhandlex = object.get('TwitterHandle');
+
     alert(twitterhandle);
-    object.set("kickEntrants",[twitterhandle]);
+    object.set("kickEntrants",[twitterhandlex]);
     
 
     
