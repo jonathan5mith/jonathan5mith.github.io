@@ -167,8 +167,6 @@ var twitterhandle2 = twitterhandle1.split("@").pop();
 var twitterhandle = twitterhandle2.toLowerCase();
 var twitterpic = 'https://twitter.com/'+twitterhandle+'/profile_image?size=original';
 
-alert(kickid);
-
 //User database
 var personalInfo = Parse.Object.extend("upload1");
 
@@ -177,12 +175,11 @@ var queryCreate = new Parse.Query(personalInfo);
 queryCreate.equalTo("kickId", kickid);
 queryCreate.first({
   success: function(object) {
-    var twitterhandle = object.get('TwitterHandle'); 
+    var twitterhandle = object.get('TwitterHandle');
+    alert(twitterhandle);
+    object.set("kickEntrants",twitterhandle);
     
-    object.save(null,{
-      object.set("kickEntrants", [twitterhandle]);
-    }
-    )
+
     
   },
   error: function(error) {
