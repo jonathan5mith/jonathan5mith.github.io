@@ -100,10 +100,6 @@
 
 <div class="maincontain"> 
 
-    <div id="container">
-     <span id="twitterpicture"></span>
-  </div>
-
 
   <div class="formcontain">
     <div class="cardsform">
@@ -174,7 +170,6 @@ queryPic.first({
   success: function(object) {
     var kickentrants = object.get('kickEntrants');
     var firstname = object.get('firstName');
-    document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://twitter.com/'+person+'/profile_image?size=original)"></div>';
     if(kickentrants.length==0){
       document.getElementById("formconfirm").innerHTML = firstname+" doesn't have any active Kicks at the moment";
     }
