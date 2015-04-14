@@ -90,7 +90,7 @@
   
   <div class="sub-navbar2">
     <div class="text-container2">
-      <p class="line1">Kicks</p>
+      <p class="line1"><span id="name"></span></p>
     </div> 
 </div>
 
@@ -178,6 +178,19 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 
 var personalInfo = Parse.Object.extend("upload1");
 
+//namequery
+
+var queryName = new Parse.Query(personalInfo);
+queryName.equalTo("TwitterHandle", person);
+queryName.first({
+  success: function(object) {
+    var firstname = object.get('firstName');
+    document.getElementById("name").innerHTML = firstname+"'s Kicks"
+  },
+  error: function(error) {
+    document.getElementById("name").innerHTML = "N/A";
+  }
+  }
 
 
 
