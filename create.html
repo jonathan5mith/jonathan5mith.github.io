@@ -171,12 +171,12 @@ queryCreate.first({
     var twitterhandlex = object.get('TwitterHandle');
     var name = object.get("firstName");
     var entrants = object.get("kickEntrants");
+    alert(entrants.length);
 
     if (entrants.length>0){
       document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already created a Kick this week, head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page to see it</a>";
     }
-    else{    
-    alert(twitterhandlex);
+    else {    
     object.set("kickEntrants",[twitterhandlex]);
     object.save();
     var elem = document.getElementById("formremove");
@@ -185,10 +185,7 @@ queryCreate.first({
         elem.parentNode.removeChild(elem);
     document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've created a Kick. Let's head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page </a>so you can tell people about it</p>";  
       }
-  
-
-
-  },
+    },
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
   }
