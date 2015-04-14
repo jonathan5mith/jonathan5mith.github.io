@@ -159,7 +159,8 @@ function getQueryVariable(variable)
 
 var person1 = getQueryVariable("id");
 var person = person1.toLowerCase();
-document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://twitter.com/'+person+'/profile_image?size=original)"></div>';
+
+
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
@@ -173,6 +174,7 @@ queryPic.first({
   success: function(object) {
     var kickentrants = object.get('kickEntrants');
     var firstname = object.get('firstName');
+    document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://twitter.com/'+person+'/profile_image?size=original)"></div>';
     if(kickentrants.length==0){
       document.getElementById("formconfirm").innerHTML = firstname+" doesn't have any active Kicks at the moment";
     }
