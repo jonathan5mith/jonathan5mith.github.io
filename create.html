@@ -177,8 +177,8 @@ queryCreate.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
     alert(twitterhandlex);
-    object.addUnique("kickEntrants",twitterhandlex);
-       
+    object.set("kickEntrants",[twitterhandlex]);
+    object.save();   
   },
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
