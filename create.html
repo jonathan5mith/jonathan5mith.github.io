@@ -178,7 +178,12 @@ queryCreate.equalTo("kickId", kickid);
 queryCreate.first({
   success: function(object) {
     var twitterhandle = object.get('TwitterHandle'); 
-    object.set("kickEntrants", [twitterhandle]);
+    
+    object.save(null,{
+      object.set("kickEntrants", [twitterhandle]);
+    }
+    )
+    
   },
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
