@@ -90,7 +90,7 @@
   
   <div class="sub-navbar2">
     <div class="text-container2">
-      <p class="line1">Create</p>
+      <p class="line1">Kicks</p>
     </div> 
 </div>
 
@@ -102,7 +102,7 @@
   <div class="formcontain">
     <div class="cardsform">
       <div class="border-bottom">
-        <p class="mainheaders" id="removeimage">Make a Kick</p>
+        <p class="mainheaders" id="removeimage">Create</p>
 
       </div>
       <div class="border-below">
@@ -154,44 +154,32 @@
 <script type="text/javascript">
 // Initialisation
 
-function formSubmit() {
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+var person1 = getQueryVariable("id");
+var person = person1.toLowerCase();
+alert(person);
+
+
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
-var kickid = document.getElementById("kickid").value;
 
-//User database
+
 var personalInfo = Parse.Object.extend("upload1");
 
-//Query
-var queryCreate = new Parse.Query(personalInfo);
-queryCreate.equalTo("kickId", kickid);
-queryCreate.first({
-  success: function(object) {
-    var twitterhandlex = object.get('TwitterHandle');
-    var name = object.get("firstName");
-    var entrants = object.get("kickEntrants");
 
-    if (entrants.length>0){
-      document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already created a Kick this week, head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page to see it</a>";
-    }
-    else{    
-    object.set("kickEntrants",[twitterhandlex]);
-    object.save();
-    var elem = document.getElementById("formremove");
-        elem.parentNode.removeChild(elem);
-    var elem = document.getElementById("removeimage");
-        elem.parentNode.removeChild(elem);
-    document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've created a Kick. Let's head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page </a>so you can tell people about it</p>";  
-      }
-    },
-  error: function(error) {
-    alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
-  }
-  }
-); 
 
-}
 
 </script>
 
