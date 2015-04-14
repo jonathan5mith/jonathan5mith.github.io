@@ -24,6 +24,7 @@
 
   var kicks1 = location.pathname.match(/\/kicks\/(.*)/)[1];
   var kicks = kicks1.split("@").pop();
+  alert(kicks);
 
   if (kicks.length>0){
     window.location.replace("http://runwithkick.com/kicks?id="+kicks);
