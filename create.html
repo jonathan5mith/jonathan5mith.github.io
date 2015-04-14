@@ -175,13 +175,10 @@ var queryCreate = new Parse.Query(personalInfo);
 queryCreate.equalTo("kickId", kickid);
 queryCreate.first({
   success: function(object) {
-    var twitterhandlex = []
-    twitterhandlex[0] = object.get('TwitterHandle');
-    alert(twitterhandlex[0]);
-    object.set("kickEntrants",twitterhandlex);
-    
-
-    
+    var twitterhandlex = object.get('TwitterHandle');
+    alert(twitterhandlex);
+    object.addUnique("kickEntrants",twitterhandlex);
+       
   },
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
