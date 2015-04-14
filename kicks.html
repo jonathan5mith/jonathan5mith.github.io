@@ -147,6 +147,13 @@
         </tr>
       </table>
         <br>
+      <table>
+        <tr>
+          <td><span id="formconfirm5"></span><td>      
+          <td><span id="formconfirma5"></span></td>
+        </tr>
+      </table>
+        <br>
        
         </div>
       </div>
@@ -212,7 +219,10 @@ queryPic.first({
       
       for(i=0;i<kickentrants.length;i++){
         var j = i.toString();
-        document.getElementById("formconfirm"+j).innerHTML = '<div id="minipic" style="background-image: url(https://twitter.com/'+kickentrants[i]+'/profile_image?size=original)"></div>';
+        document.getElementById("formconfirm"+j).innerHTML = 
+
+
+        '<div id="minipic" style="background-image: url(https://twitter.com/'+kickentrants[i]+'/profile_image?size=original)"></div>';
         document.getElementById("formconfirma"+j).innerHTML = kickentrants[i];
       }
 
