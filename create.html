@@ -102,18 +102,15 @@
   <div class="formcontain">
     <div class="cardsform">
       <div class="border-bottom">
-        <p class="mainheaders"><span id="removeimage">Make a Kick</span><span id="thanks"></span></p>
+        <p class="mainheaders" id="removeimage">Make a Kick</span></p>
 
       </div>
       <div class="border-below">
        
         <div id="formremove">
-          
-          <div class="form-group">
-            <label>Twitter Handle</label>
-            <input type="name" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick" required>
-          </div>
 
+        <p>All you need to create a Kick is your Kick ID. Enter it below, push the button and we're off!</p>
+          
           <div class="form-group">
             <label>Kick ID</label>
             <input type="name" class="form-control" id="kickid" placeholder="Kick ID" required>
@@ -162,10 +159,6 @@ function formSubmit() {
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
 var kickid = document.getElementById("kickid").value;
-var twitterhandle1 = document.getElementById("twitterhandle").value;
-var twitterhandle2 = twitterhandle1.split("@").pop();
-var twitterhandle = twitterhandle2.toLowerCase();
-var twitterpic = 'https://twitter.com/'+twitterhandle+'/profile_image?size=original';
 
 //User database
 var personalInfo = Parse.Object.extend("upload1");
@@ -176,9 +169,15 @@ queryCreate.equalTo("kickId", kickid);
 queryCreate.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
+    var name = object.get("firstName");
     alert(twitterhandlex);
     object.set("kickEntrants",[twitterhandlex]);
-    object.save();   
+    object.save();
+    var elem = document.getElementById("formremove");
+        elem.parentNode.removeChild(elem);
+    var elem = document.getElementById("removeimage");
+        elem.parentNode.removeChild(elem);
+    document.getElementById("formconfirm").innerHTML = 'Congratulations, '+name+" you've created a Kick, lets head over to your <a href='http://www.runwithkick.com/kicks?id="+twitterhandle+"Kick page</a> so you can tell people about it";    
   },
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
