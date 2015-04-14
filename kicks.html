@@ -102,26 +102,11 @@
   <div class="formcontain">
     <div class="cardsform">
       <div class="border-bottom">
-        <p class="mainheaders" id="removeimage">Create</p>
+        <p class="mainheaders" id="removeimage">Active Kick</p>
 
       </div>
       <div class="border-below">
        
-        <div id="formremove">
-
-        <p>All you need to create a Kick is your Kick ID. Enter it below, push the button and we're off!</p>
-          
-          <div class="form-group">
-            
-            <input type="name" class="form-control" id="kickid" placeholder="Kick ID" required>
-          </div>
-
-          
-          <p class="pager" style="line-height: 60px;">
-            <button type="submit" id="submit" onclick="formSubmit(); " class="btn btn-default">Let's Go!</button>
-          </p>
-
-        </div>
 
         <span id="formconfirm"></span>
        
@@ -181,10 +166,18 @@ queryPic.equalTo("TwitterHandle", person);
 queryPic.first({
   success: function(object) {
     var kickentrants = object.get('kickEntrants');
-    alert(kickentrants);
+    var firstname = object.get('firstName');
+    if(kickentrants.length==0){
+      document.getElementById("formconfirm").innerHTML = firstname+" doesn't have any active Kicks at the moment";
+    }
+    else{
+      document.getElementById("formconfirm").innerHTML = '<img src="https://twitter.com/'+twitterpic+'/profile_image?size=original">'
+    }
+
+
   }, 
   error: function(error) {
-    
+    alert("something's gone wrong!");
   }
   }
 );
