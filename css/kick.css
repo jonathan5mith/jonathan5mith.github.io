@@ -1499,8 +1499,8 @@ canvas {
 }
 
 #minipic{
-	height: 40px; 
-	width: 40px;   
+	height: 50px; 
+	width: 50px;   
 	background-size: 100%;
     background-position: center;
     -moz-border-radius: 100%;
