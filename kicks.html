@@ -213,7 +213,7 @@ queryPic.first({
     var kickentrants = object.get('kickEntrants');
     var firstname = object.get('firstName');
     
-    if(kickentrants.length<1){
+    if(kickentrants.length==0){
       document.getElementById("formconfirmb").innerHTML = firstname+" doesn't have any active Kicks at the moment, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
       var elem = document.getElementById("greyline");
       elem.parentNode.removeChild(elem);
