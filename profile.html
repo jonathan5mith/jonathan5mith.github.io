@@ -178,7 +178,7 @@
 <div id="cardremove">
     <div class="cards twoinrow">
       <div class="border-bottom">
-        <p class="mainheaders" id="removeimage">Upload First Kick<span id="thanks"></span></p>
+        <p class="mainheaders" id="removeimage"><span id="uploadheader"></span><span id="thanks"></span></p>
       </div>
       
       <div class="border-below">
@@ -605,12 +605,15 @@ queryVests.first({
               var elem = document.getElementById("statsremove");
               elem.parentNode.removeChild(elem);
               document.getElementById("statsreplace").innerHTML = '<p>As soon as you upload your first Kick, your stats will appear here.</p>'
+              document.getElementById("uploadheader").innerHTML =  "Submit first Kick"
+
+
             }
             if(times.length==1 && times[0]!=null){
               var elem = document.getElementById("canvasremove");
               elem.parentNode.removeChild(elem);
               document.getElementById("graphtocome").innerHTML = "<div id='greyline'></div><br><p>As you add more Kicks, a graph showing your last 5 kicks will appear here</p>";
-              
+              document.getElementById("uploadheader").innerHTML =  "Submit Kick"
             }
             if(vests>=5){
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png" height="85">'
