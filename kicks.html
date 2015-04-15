@@ -326,8 +326,30 @@ queryNewParticipant.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
     var name = object.get("firstName");
-    object.addUnique("kickEntrants",twitterhandlex);
-    object.save();
+
+
+//nested query
+    var queryAddParticipant = new Parse.Query(personalInfo);
+    queryAddParticipant.equalTo("TwitterHandle", person);
+    queryAddParticipant.first({
+      success: function(object) {
+        object.addUnique("kickEntrants",twitterhandlex);
+        object.save();
+        
+        },
+      error: function(error) {
+        alert("Something has gone wrong! Email jon@runwithkick.com if the problem persists!");
+      }
+      }
+    ); 
+//nested query end
+
+
+
+
+
+
+
 
 
     var elem = document.getElementById("formremove");
