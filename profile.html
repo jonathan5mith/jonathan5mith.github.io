@@ -675,6 +675,16 @@ querySubmitTime.first({
   success: function(object) {
     
     var dog = object.get("runTimes");
+    var cat = object.get("runTimesHidden")
+
+    if (cat.length>0){
+      document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already submitted a Kick this week :-/, get in touch at jon@runwithkick.com if you think something's up</p>";
+    var elem = document.getElementById("formremove");
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById("removeimage");
+    elem.parentNode.removeChild(elem);
+    }
+
     if (dog.length==0){
     object.addUnique("runTimes", dectime);
     object.set("points",5);
