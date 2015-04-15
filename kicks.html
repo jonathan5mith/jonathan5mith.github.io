@@ -111,51 +111,29 @@
        
       <p><span id="formconfirmb"></span></p>
 
-      <table>
-        <tr>
-          <td><span id="formconfirm0"></span><td>      
-          <td><span id="formconfirma0"></span></td>
-        </tr>
-      </table>
-        <br>
+      <span id="formconfirm0">
+
         <span id="removegreyline"><div id='greyline'></div></span>
         <br>
-      <table>
-        <tr>
-          <td><span id="formconfirm1"></span><td>      
-          <td><span id="formconfirma1"></span></td>
-        </tr>
-      </table>
-        <br>
-      <table>
-        <tr>
-          <td><span id="formconfirm2"></span><td>      
-          <td><span id="formconfirma2"></span></td>
-        </tr>
-      </table>
-        <br>
-      <table>
-        <tr>
-          <td><span id="formconfirm3"></span><td>      
-          <td><span id="formconfirma3"></span></td>
-        </tr>
-      </table>
-        <br>
-      <table>
-        <tr>
-          <td><span id="formconfirm4"></span><td>      
-          <td><span id="formconfirma4"></span></td>
-        </tr>
-      </table>
-        <br>
-      <table>
-        <tr>
-          <td><span id="formconfirm5"></span><td>      
-          <td><span id="formconfirma5"></span></td>
-        </tr>
-      </table>
-        <br>
-       
+
+      <span id="formconfirm1"></span>
+      <span id="formconfirm2"></span>
+      <span id="formconfirm3"></span>
+      <span id="formconfirm4"></span>
+      <span id="formconfirm5"></span>
+      <span id="formconfirm6"></span>
+      <span id="formconfirm7"></span>
+      <span id="formconfirm8"></span>
+      <span id="formconfirm9"></span>
+      <span id="formconfirm10"></span>
+      <span id="formconfirm11"></span>
+      <span id="formconfirm12"></span>
+      <span id="formconfirm13"></span>
+      <span id="formconfirm14"></span>
+      <span id="formconfirm15"></span>
+      <span id="formconfirm16"></span>
+      <span id="formconfirm17"></span>
+      
         </div>
       </div>
   </div>
@@ -224,10 +202,18 @@ queryPic.first({
       for(i=0;i<kickentrants.length;i++){
         var j = i.toString();
         document.getElementById("formconfirm"+j).innerHTML = 
-
-
-        '<div id="minipic" style="background-image: url(https://twitter.com/'+kickentrants[i]+'/profile_image?size=original)"></div>';
-        document.getElementById("formconfirma"+j).innerHTML = kickentrants[i];
+"
+      <table>
+        <tr>
+          <td>
+            <div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div>
+          <td>      
+          <td>"kickentrants[i]"</td>
+        </tr>
+      </table>
+        <br>
+"
+        
       }
 
       
