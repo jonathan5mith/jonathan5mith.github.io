@@ -90,7 +90,7 @@
   
   <div class="sub-navbar2">
     <div class="text-container2">
-      <p class="line1">Kicks</p>
+      <p class="line1"><span id="nameenter"></span>'s Kicks</p>
     </div> 
 </div>
 
@@ -277,8 +277,6 @@ function getQueryVariable(variable)
 var person1 = getQueryVariable("id");
 var person = person1.toLowerCase();
 
-
-
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
 var personalInfo = Parse.Object.extend("upload1");
@@ -291,7 +289,7 @@ queryPic.first({
   success: function(object) {
     var kickentrants = object.get('kickEntrants');
     var firstname = object.get('firstName');
-    
+    document.getElementById("nameenter").innerHTML = firstname;    
     if(kickentrants.length==0){
       document.getElementById("formconfirmb").innerHTML = firstname+" doesn't have any active Kicks at the moment, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
       var elem = document.getElementById("removegreyline");
