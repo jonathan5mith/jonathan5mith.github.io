@@ -296,6 +296,8 @@ queryPic.first({
       document.getElementById("formconfirmb").innerHTML = firstname+" doesn't have any active Kicks at the moment, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
       var elem = document.getElementById("removegreyline");
       elem.parentNode.removeChild(elem);
+      var elem = document.getElementById("formremove");
+      elem.parentNode.removeChild(elem);
 
     }
 
@@ -343,13 +345,6 @@ queryNewParticipant.first({
       }
     ); 
 //nested query end
-
-
-
-
-
-
-
 
 
     var elem = document.getElementById("formremove");
