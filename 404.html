@@ -18,18 +18,10 @@
   var profile1 = location.pathname.match(/\/profile\/(.*)/)[1];
   var profile = profile1.split("@").pop();
   
-  var kicks1 = location.pathname.match(/\/kicks\/(.*)/)[1];
-  var kicks = kicks1.split("@").pop();
-
-
   if (profile.length>0){
     window.location.replace("http://runwithkick.com/profile?id="+profile);
   }
   
-  if(kicks.length>0){
-    window.location.replace("http://runwithkick.com/kicks?id="+kicks);
-  }
-
 
   </script>
 
