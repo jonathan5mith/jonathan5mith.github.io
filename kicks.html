@@ -90,7 +90,7 @@
   
   <div class="sub-navbar2">
     <div class="text-container2">
-      <p class="line1">Kicks</p>
+      <p class="line1"><span id="nameenter"></span>'s Kicks</p>
     </div> 
 </div>
 
@@ -261,8 +261,6 @@
 
 <script type="text/javascript">
 // Initialisation
-
-
 function getQueryVariable(variable)
 {
        var query = window.location.search.substring(1);
@@ -273,16 +271,11 @@ function getQueryVariable(variable)
        }
        return(false);
 }
-
 var person1 = getQueryVariable("id");
 var person = person1.toLowerCase();
-
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
-
 var personalInfo = Parse.Object.extend("upload1");
-
 //
-
 var queryPic = new Parse.Query(personalInfo);
 queryPic.equalTo("TwitterHandle", person);
 queryPic.first({
@@ -296,9 +289,7 @@ queryPic.first({
       elem.parentNode.removeChild(elem);
       var elem = document.getElementById("formremove");
       elem.parentNode.removeChild(elem);
-
     }
-
     else{
       
       for(i=0;i<kickentrants.length;i++){
@@ -307,27 +298,20 @@ queryPic.first({
         }
    
     }
-
-
   }, 
   error: function(error) {
     alert("something's gone wrong!");
   }
   }
 );
-
 function formSubmit() {
-
 var kickid = document.getElementById("kickid").value;
-
 var queryNewParticipant = new Parse.Query(personalInfo);
 queryNewParticipant.equalTo("kickId", kickid);
 queryNewParticipant.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
     var name = object.get("firstName");
-
-
 //nested query
     var queryAddParticipant = new Parse.Query(personalInfo);
     queryAddParticipant.equalTo("TwitterHandle", person);
@@ -343,24 +327,16 @@ queryNewParticipant.first({
       }
     ); 
 //nested query end
-
-
     var elem = document.getElementById("formremove");
         elem.parentNode.removeChild(elem);
     document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've entered the Kick. Refresh the page and you'll appear on the list</p>";  
-
     },
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
   }
   }
 ); 
-
-
-
 }
-
-
 </script>
 
 
