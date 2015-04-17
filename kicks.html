@@ -315,8 +315,10 @@ queryNewParticipant.first({
     var kickcount = object.get("kickCount");
     object.set("kickCount", kickcount+1);
     object.save();
-    
-    alert(kickcount);
+    if(kickcount>=3){
+    	alert("You've entered 3 kicks already this week")
+    	return
+    }
 //nested query
     var queryAddParticipant = new Parse.Query(personalInfo);
     queryAddParticipant.equalTo("TwitterHandle", person);
