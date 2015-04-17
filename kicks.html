@@ -313,8 +313,17 @@ queryNewParticipant.first({
     var twitterhandlex = object.get('TwitterHandle');
     var name = object.get("firstName");
     var kickcount = object.get("kickCount");
-    object.set("kickCount", kickcount+1);
+    
+    if(kickcount>=3){
+    	var elem = document.getElementById("formremove");
+        elem.parentNode.removeChild(elem);
+        document.getElementById("formconfirm").innerHTML = ":-/ You've already entered three Kicks this week</p>";  
+    }
+    
+    else{
+    	    object.set("kickCount", kickcount+1);
     object.save();
+    
 //nested query
     var queryAddParticipant = new Parse.Query(personalInfo);
     queryAddParticipant.equalTo("TwitterHandle", person);
@@ -338,6 +347,9 @@ queryNewParticipant.first({
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
   }
   }
+    }
+    
+
 ); 
 }
 </script>
