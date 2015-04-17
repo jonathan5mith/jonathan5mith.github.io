@@ -171,12 +171,14 @@ queryCreate.first({
     var twitterhandlex = object.get('TwitterHandle');
     var name = object.get("firstName");
     var entrants = object.get("kickEntrants");
+    var kickcount = object.get("kickCount");
 
     if (entrants.length>0){
-      document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already created a Kick this week, head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page to see it</a>";
+      document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already created a Kick this week, head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page to see it</a>. Remember you can also enter 2 more Kicks this week.";
     }
     else{    
     object.set("kickEntrants",[twitterhandlex]);
+    object.set("kickCount", kickcount+1);
     object.save();
     var elem = document.getElementById("formremove");
         elem.parentNode.removeChild(elem);
