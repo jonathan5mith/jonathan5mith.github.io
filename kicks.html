@@ -315,9 +315,6 @@ queryNewParticipant.first({
     var kickcount = object.get("kickCount");
     object.set("kickCount", kickcount+1);
     object.save();
-    
-    if (kickcount<3){
-    
 //nested query
     var queryAddParticipant = new Parse.Query(personalInfo);
     queryAddParticipant.equalTo("TwitterHandle", person);
@@ -337,14 +334,6 @@ queryNewParticipant.first({
         elem.parentNode.removeChild(elem);
     document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've entered the Kick. Refresh the page and you'll appear on the list</p>";  
     },
-    
-  };
-  
-  else{
-	var elem = document.getElementById("formremove");
-        elem.parentNode.removeChild(elem);
-    	document.getElementById("formconfirm").innerHTML = "<p>:-/ You've already entered 3 kicks this week, you'll have to wait until we start again next week to enter more. Good luck with this week's kicks!</p>"; 
-  };
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
   }
