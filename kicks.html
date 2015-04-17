@@ -312,6 +312,9 @@ queryNewParticipant.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
     var name = object.get("firstName");
+    var kickcount = object.get("kickCount");
+    object.set("kickCount", kickcount+1);
+    object.save();
 //nested query
     var queryAddParticipant = new Parse.Query(personalInfo);
     queryAddParticipant.equalTo("TwitterHandle", person);
