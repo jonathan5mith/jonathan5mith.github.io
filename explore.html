@@ -12,13 +12,14 @@
     <link rel="shortcut icon" href="https://dl.dropboxusercontent.com/u/10455351/Assets/browser_icon.ico">
     <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon.png">
     <title>Kick &middot; your next race is now</title>
+    <script src="//www.parsecdn.com/js/parse-1.4.0.min.js"></script>
+
 
 <!-- CSS -->
 <!--==============================================-->
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/kick.css" rel="stylesheet">    
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -100,9 +101,6 @@
 <div class="maincontain">
 
       <div class="cards-explore">
-      <div class="border-bottom-explore">
-        <p class="mainheaders-explore">Featured Kicks</p>
-      </div>
       
       <div class="border-below-explore">
         <div id="featuredkicks">
@@ -124,7 +122,7 @@
               <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/explore/rewardhealth.png"/img>
             </div>
             -->
-            <p id="featuredblurb">Featured kicks are popular or interesting kicks. If you've got something that would look good here, get in touch at info@runwithkick.com</p>
+            <p id="featuredblurb">Featured kicks are popular or interesting kicks. If you've got something that would look good here, get in touch at jon@runwithkick.com</p>
          </div>
 
         </div>
@@ -135,25 +133,22 @@
 <div class="maincontain">
 
     <div class="cards-explore">
-      <div class="border-bottom-explore">
-        <p class="mainheaders-explore">1 day left</p>
-      </div>
-      
+
       <div class="border-below-explore">
 
         <div class="row coltext">
 
-          <div class="col-sm-4 tweetpad">
-            <blockquote class="twitter-tweet tw-align-center" lang="en"><p>My headtorch is broken. That&#39;s what happens when you spend £3.49 on one from China 🙈 <a href="https://twitter.com/hashtag/ukrunchat?src=hash">#ukrunchat</a></p>&mdash; Shell (@shellmoby) <a href="https://twitter.com/shellmoby/status/581190195975962624">March 26, 2015</a></blockquote>
-            <script async src="//platform.twitter.com/widgets.js" comharset="utf-8"></script>
+          <div class="col-sm-4">
+            <p>example</p>
+            <span id="explore0"></span>
           </div>
-          <div class="col-sm-4 tweetpad">
-            <blockquote class="twitter-tweet tw-align-center" lang="en"><p><a href="https://twitter.com/hashtag/nhswdp?src=hash">#nhswdp</a> all nhs buildings should have free wifi access coverage everywhere. We could use apps to capture outcome data in clinics</p>&mdash; ollie hart (@olliehart7) <a href="https://twitter.com/olliehart7/status/581190124580564993">March 26, 2015</a></blockquote>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <div class="col-sm-4">
+            <p>example</p>
+            <span id="explore1"></span>
           </div>
-          <div class="col-sm-4 tweetpad">
-            <blockquote class="twitter-tweet tw-align-center" lang="en"><p>I still find it amazing how much my dog enjoys watching football! 😳</p>&mdash; Vincent (@190_bpm) <a href="https://twitter.com/190_bpm/status/581189945613791232">March 26, 2015</a></blockquote>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <div class="col-sm-4">
+            <p>example</p>
+            <span id="explore2"></span>
           </div>
 
         </div>
@@ -163,68 +158,7 @@
     </div>
     </div>
 
-    <div class="maincontain">
 
-<div class="cards-explore">
-      <div class="border-bottom-explore">
-        <p class="mainheaders-explore">3 days left</p>
-      </div>
-        <div class="row coltext">
-                <div class="border-below-explore">
-
-
-          <div class="col-sm-4 tweetpad">
-            <blockquote class="twitter-tweet tw-align-center" lang="en"><p>My headtorch is broken. That&#39;s what happens when you spend £3.49 on one from China 🙈 <a href="https://twitter.com/hashtag/ukrunchat?src=hash">#ukrunchat</a></p>&mdash; Shell (@shellmoby) <a href="https://twitter.com/shellmoby/status/581190195975962624">March 26, 2015</a></blockquote>
-            <script async src="//platform.twitter.com/widgets.js" comharset="utf-8"></script>
-          </div>
-          <div class="col-sm-4 tweetpad">
-            <blockquote class="twitter-tweet tw-align-center" lang="en"><p><a href="https://twitter.com/hashtag/nhswdp?src=hash">#nhswdp</a> all nhs buildings should have free wifi access coverage everywhere. We could use apps to capture outcome data in clinics</p>&mdash; ollie hart (@olliehart7) <a href="https://twitter.com/olliehart7/status/581190124580564993">March 26, 2015</a></blockquote>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-
-
-        </div>
-
-
-    </div>
-    </div>
-    <div class="maincontain">
-
-<div class="cards-explore">
-      <div class="border-bottom-explore">
-        <p class="mainheaders-explore">5 days left</p>
-      </div>
-      
-      <div class="border-below-explore ">
-
-        <div class="row coltext">
-
-        <div class="col-sm-4 tweetpad">
-            <div id="example1"></div>
-          </div>
-          <div class="col-sm-4 tweetpad">
-            <div id="example1"></div>
-          </div>
-          <div class="col-sm-4 tweetpad">
-            <div id="example1"></div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-</div>
 
 <!-- Get started-->
 <!--==============================================-->
@@ -240,7 +174,28 @@
 </div>
 
 
+<!-- Parse stuff-->
+<!--==============================================-->
 
+<script>
+
+Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
+var personalInfo = Parse.Object.extend("upload1");
+
+var queryExplore = new Parse.Query(personalInfo);
+queryExplore.exists("kickEntrants");
+queryExplore.first({
+  success: function(object) {
+    var kickentrants = object.get('kickEntrants');
+    alert(kickentrants);
+  }, 
+  error: function(error) {
+    alert("something's gone wrong!");
+  }
+  }
+);
+
+</script>
 
 
 <!-- Javascript stuff-->
@@ -252,12 +207,6 @@
     <script src="js/bootstrap.min.js"></script>
 
 
-
-<!-- Tweets-->
-<!--==============================================-->
-
-    <script type="text/javascript" src="js/twitterFetcher_min.js"></script>
-    <script type="text/javascript" src="js/exampleUsage.js"></script>
 
 <!--Browser Warning.js-->
 <!--==============================================-->
