@@ -193,7 +193,7 @@ queryCreate.first({
 	    document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've created a Kick. Let's head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page </a>so you can tell people about it</p>"; 
                     //nested query start
         var queryExplore = new Parse.Query(personalInfo);
-        queryExplore.equalTo("kickId", "123A");
+        queryExplore.equalTo("kickId", 123A);
         queryExplore.first({
             success: function(object){
              object.addUnique("kickEntrants",twitterhandlex);
