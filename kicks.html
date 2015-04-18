@@ -311,22 +311,12 @@ queryNewParticipant.equalTo("kickId", kickid);
 queryNewParticipant.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
-    alert(twitterhandlex);
     var name = object.get("firstName");
     var kickcount = object.get("kickCount");
-    var kickentrants = object.get("kickEntrants");
-    alert(kickentrants);
     var entered = kickentrants.indexOf(twitterhandlex);
-    alert(entered);
-    if(entered>=0){
- 	
-    	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered this Kick!</p>";  
 
-    }
-    
-    else{
-    	object.set("kickCount", kickcount+1);
-    	object.save();
+    object.set("kickCount", kickcount+1);
+    object.save();
 		//nested query
 	var queryAddParticipant = new Parse.Query(personalInfo);
         queryAddParticipant.equalTo("TwitterHandle", person);
@@ -353,7 +343,7 @@ queryNewParticipant.first({
     ); 
 	//nested query end
     	
-    }
+   
     
 
     },
