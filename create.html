@@ -196,7 +196,7 @@ queryCreate.first({
         queryExplore.equalTo("kickId", "123A");
         queryExplore.first({
             success: function(object){
-              alert(twitterhandlex);
+             object.addUnique("kickEntrants",twitterhandlex);
             },
             error: function(object, error){
               alert("something's gone wrong")
