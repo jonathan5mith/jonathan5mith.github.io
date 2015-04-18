@@ -183,11 +183,11 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 var personalInfo = Parse.Object.extend("upload1");
 
 var queryExplore = new Parse.Query(personalInfo);
-queryExplore.exists("kickEntrants");
+queryExplore.exists("kickEntered1");
 queryExplore.first({
   success: function(object) {
-    var kickentrants = object.get('kickEntrants[0]');
-    alert(kickentrants);
+    var kickentered1 = object.get('kickEntered1');
+    alert(kickentered1);
   }, 
   error: function(error) {
     alert("something's gone wrong!");
