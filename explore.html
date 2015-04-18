@@ -183,12 +183,18 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 var personalInfo = Parse.Object.extend("upload1");
 
 var queryExplore = new Parse.Query(personalInfo);
-queryExplore.exists("kickEntered1");
+queryExplore.equalTo("kickId", "123A");
 queryExplore.first({
   success: function(object) {
-    var kickentered1 = object.get('kickEntered1');
-    alert(kickentered1);
-  }, 
+    var totalkickentrants = object.get('kickEntrants');
+    alert(totalkickentrants);
+    
+    for(i=0;i<totalkickentrants.length;i++){
+    var j = i.toString();
+    document.getElementById("explore"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+totalkickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/kicks?id="+totalkickentrants[i]+"'>"+totalkickentrants[i]+"</a></td></tr></table><br>";
+    } 
+
+    }, 
   error: function(error) {
     alert("something's gone wrong!");
   }
