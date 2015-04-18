@@ -322,7 +322,10 @@ queryNewParticipant.first({
       success: function(object) {
         object.addUnique("kickEntrants",twitterhandlex);
         object.save();
-        
+        var elem = document.getElementById("formremove");
+        elem.parentNode.removeChild(elem);
+    	document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've entered the Kick. Refresh the page and you'll appear on the list</p>";  
+
         },
       error: function(error) {
         alert("Something has gone wrong! Email jon@runwithkick.com if the problem persists!");
@@ -330,9 +333,6 @@ queryNewParticipant.first({
       }
     ); 
 //nested query end
-    var elem = document.getElementById("formremove");
-        elem.parentNode.removeChild(elem);
-    document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've entered the Kick. Refresh the page and you'll appear on the list</p>";  
     },
   error: function(error) {
     alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
