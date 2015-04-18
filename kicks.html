@@ -294,7 +294,7 @@ queryPic.first({
       
       for(i=0;i<kickentrants.length;i++){
         var j = i.toString();
-        document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/kicks?id="+kickentrants[i]+">"+kickentrants[i]+"</a></td></tr></table><br>";
+        document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/kicks?id="+kickentrants[i]+"'>"+kickentrants[i]+"</a></td></tr></table><br>";
         }
    
     }
@@ -324,26 +324,18 @@ queryNewParticipant.first({
         
         if(entrants.indexOf(twitterhandlex)>=0){
         	var elem = document.getElementById("formremove");
-		elem.parentNode.removeChild(elem);
+		      elem.parentNode.removeChild(elem);
         	document.getElementById("formconfirm").innerHTML = "<p>You've already entered this Kick!</p>";  
 
         }
         else{
-        	        // if else start
-		        if(kickcount>=3){
-		        var elem = document.getElementById("formremove");
-		        elem.parentNode.removeChild(elem);
-		    	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered 3 Kicks this week. Good luck and come back next week to enter some more!</p>";  
 
-		        }
-		        else{
 		        object.addUnique("kickEntrants",twitterhandlex);
 		        object.save();
 		        var elem = document.getElementById("formremove");
 		        elem.parentNode.removeChild(elem);
 		    	document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've entered the Kick. Refresh the page and you'll appear on the list</p>";  
-		        }
-		        //if else finish
+
         }
         
       },
