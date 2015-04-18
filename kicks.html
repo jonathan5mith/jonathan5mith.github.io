@@ -323,7 +323,20 @@ queryNewParticipant.first({
         var entrants = object.get("kickEntrants");
         
         if(entrants.indexOf(twitterhandlex)>=0){
-        	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered this Kick!</p>";  
+        	document.getElementById("formconfirm").innerHTML = "<p>You've already entered this Kick!</p>";  
+        			        //nested query start
+		        var queryRemoveCount = new Parse.Query(personalInfo);
+		        queryRemoveCount.equalTo("kickId", kickid);
+		        queryRemoveCount.first({
+		        	success: function(object){
+		        		object.set("kickCount", kickcount);
+		        	},
+		        	error: function(error) {
+        				alert("Something has gone wrong! Email jon@runwithkick.com if the problem persists!");
+      				}
+		        	
+		        })
+		        //nested query end
         }
         else{
         	        // if else start
@@ -331,6 +344,20 @@ queryNewParticipant.first({
 		        var elem = document.getElementById("formremove");
 		        elem.parentNode.removeChild(elem);
 		    	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered 3 Kicks this week. Good luck and come back next week to enter some more!</p>";  
+		        //nested query start
+		        var queryRemoveCount = new Parse.Query(personalInfo);
+		        queryRemoveCount.equalTo("kickId", kickid);
+		        queryRemoveCount.first({
+		        	success: function(object){
+		        		object.set("kickCount", kickcount);
+		        	},
+		        	error: function(error) {
+        				alert("Something has gone wrong! Email jon@runwithkick.com if the problem persists!");
+      				}
+		        	
+		        })
+		        //nested query end		        	
+		        	
 		        }
 		        else{
 		        object.addUnique("kickEntrants",twitterhandlex);
@@ -342,10 +369,6 @@ queryNewParticipant.first({
 		        //if else finish
         }
         
-        
-      	
-      	
-      	
       },
       error: function(error) {
         alert("Something has gone wrong! Email jon@runwithkick.com if the problem persists!");
