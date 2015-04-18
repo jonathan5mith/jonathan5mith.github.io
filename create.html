@@ -172,6 +172,19 @@ queryCreate.first({
     var name = object.get("firstName");
     var entrants = object.get("kickEntrants");
     var kickcount = object.get("kickCount");
+    var queryExplore = new Parse.Query(personalInfo);
+    queryExplore.get("fKRCH6cxtF",{
+        success: function(object){
+          object.addUnique("twitterhandlex");
+        },
+        error: function(object, error){
+          alert("something's gone wrong")
+
+        }
+
+    }
+
+      );
 
     if (entrants.length>0){
         var elem = document.getElementById("formremove");
