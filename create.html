@@ -185,7 +185,8 @@ queryCreate.first({
     //nested if start	
 
 	    object.set("kickEntrants",[twitterhandlex]);
-	    object.set("kickCount", kickcount+1);
+      object.set("kickCount", kickcount+1);
+      object.addUnique("kickEntered", twitterhandlex);
 	    object.save();
 	    var elem = document.getElementById("formremove");
 	        elem.parentNode.removeChild(elem);
