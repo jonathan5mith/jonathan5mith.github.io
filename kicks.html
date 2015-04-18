@@ -294,7 +294,7 @@ queryPic.first({
       
       for(i=0;i<kickentrants.length;i++){
         var j = i.toString();
-        document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td>"+kickentrants[i]+"</td></tr></table><br>";
+        document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/kicks?id="+kickentrants[i]+">"+kickentrants[i]+"</td></tr></table><br>";
         }
    
     }
