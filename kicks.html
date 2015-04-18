@@ -320,20 +320,33 @@ queryNewParticipant.first({
     queryAddParticipant.equalTo("TwitterHandle", person);
     queryAddParticipant.first({
       success: function(object) {
+        var entrants = object.get("kickEntrants");
         
-        if(kickcount>=3){
-        var elem = document.getElementById("formremove");
-        elem.parentNode.removeChild(elem);
-    	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered 3 Kicks this week. Good luck and come back next week to enter some more!</p>";  
+        if(entrants.indexOf(kickcount)>=0){
+        	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered this Kick!</p>";  
         }
         else{
-        object.addUnique("kickEntrants",twitterhandlex);
-        object.save();
-        var elem = document.getElementById("formremove");
-        elem.parentNode.removeChild(elem);
-    	document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've entered the Kick. Refresh the page and you'll appear on the list</p>";  
+        	        // if else start
+		        if(kickcount>=3){
+		        var elem = document.getElementById("formremove");
+		        elem.parentNode.removeChild(elem);
+		    	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered 3 Kicks this week. Good luck and come back next week to enter some more!</p>";  
+		        }
+		        else{
+		        object.addUnique("kickEntrants",twitterhandlex);
+		        object.save();
+		        var elem = document.getElementById("formremove");
+		        elem.parentNode.removeChild(elem);
+		    	document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've entered the Kick. Refresh the page and you'll appear on the list</p>";  
+		        }
+		        //if else finish
         }
-        },
+        
+        
+      	
+      	
+      	
+      },
       error: function(error) {
         alert("Something has gone wrong! Email jon@runwithkick.com if the problem persists!");
       }
