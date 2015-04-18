@@ -221,10 +221,113 @@
       
       <div class="border-below">
 
+          <p><span id="formconfirmb"></span></p>
 
+          <span id="formconfirmc"></span>
 
-        
-      <span id="formconfirm"></span>
+          <span id="removegreyline"><div id='greyline'></div></span>
+          <br>
+          <span id="formconfirm0"></span>
+          <span id="formconfirm1"></span>
+          <span id="formconfirm2"></span>
+          <span id="formconfirm3"></span>
+          <span id="formconfirm4"></span>
+          <span id="formconfirm5"></span>
+          <span id="formconfirm6"></span>
+          <span id="formconfirm7"></span>
+          <span id="formconfirm8"></span>
+          <span id="formconfirm9"></span>
+          <span id="formconfirm10"></span>
+          <span id="formconfirm11"></span>
+          <span id="formconfirm12"></span>
+          <span id="formconfirm13"></span>
+          <span id="formconfirm14"></span>
+          <span id="formconfirm15"></span>
+          <span id="formconfirm16"></span>
+          <span id="formconfirm17"></span>
+          <span id="formconfirm18"></span>
+          <span id="formconfirm19"></span>
+          <span id="formconfirm20"></span>
+          <span id="formconfirm21"></span>
+          <span id="formconfirm22"></span>
+          <span id="formconfirm23"></span>
+          <span id="formconfirm24"></span>
+          <span id="formconfirm25"></span>
+          <span id="formconfirm26"></span>
+          <span id="formconfirm27"></span>
+          <span id="formconfirm28"></span>
+          <span id="formconfirm29"></span>
+          <span id="formconfirm30"></span>
+          <span id="formconfirm31"></span>
+          <span id="formconfirm32"></span>
+          <span id="formconfirm33"></span>
+          <span id="formconfirm34"></span>
+          <span id="formconfirm35"></span>
+          <span id="formconfirm36"></span>
+          <span id="formconfirm37"></span>
+          <span id="formconfirm38"></span>
+          <span id="formconfirm39"></span>
+          <span id="formconfirm40"></span>
+          <span id="formconfirm41"></span>
+          <span id="formconfirm42"></span>
+          <span id="formconfirm43"></span>
+          <span id="formconfirm44"></span>
+          <span id="formconfirm45"></span>
+          <span id="formconfirm46"></span>
+          <span id="formconfirm47"></span>
+          <span id="formconfirm48"></span>
+          <span id="formconfirm49"></span>
+          <span id="formconfirm50"></span>
+          <span id="formconfirm51"></span>
+          <span id="formconfirm52"></span>
+          <span id="formconfirm53"></span>
+          <span id="formconfirm54"></span>
+          <span id="formconfirm55"></span>
+          <span id="formconfirm56"></span>
+          <span id="formconfirm57"></span>
+          <span id="formconfirm58"></span>
+          <span id="formconfirm59"></span>
+          <span id="formconfirm60"></span>
+          <span id="formconfirm61"></span>
+          <span id="formconfirm62"></span>
+          <span id="formconfirm63"></span>
+          <span id="formconfirm64"></span>
+          <span id="formconfirm65"></span>
+          <span id="formconfirm66"></span>
+          <span id="formconfirm67"></span>
+          <span id="formconfirm68"></span>
+          <span id="formconfirm69"></span>
+          <span id="formconfirm70"></span>
+          <span id="formconfirm71"></span>
+          <span id="formconfirm72"></span>
+          <span id="formconfirm73"></span>
+          <span id="formconfirm74"></span>
+          <span id="formconfirm75"></span>
+          <span id="formconfirm76"></span>
+          <span id="formconfirm77"></span>
+          <span id="formconfirm78"></span>
+          <span id="formconfirm79"></span>
+          <span id="formconfirm80"></span>
+          <span id="formconfirm81"></span>
+          <span id="formconfirm82"></span>
+          <span id="formconfirm83"></span>
+          <span id="formconfirm84"></span>
+          <span id="formconfirm85"></span>
+          <span id="formconfirm86"></span>
+          <span id="formconfirm87"></span>
+          <span id="formconfirm88"></span>
+          <span id="formconfirm89"></span>
+          <span id="formconfirm90"></span>
+          <span id="formconfirm91"></span>
+          <span id="formconfirm92"></span>
+          <span id="formconfirm93"></span>
+          <span id="formconfirm94"></span>
+          <span id="formconfirm95"></span>
+          <span id="formconfirm96"></span>
+          <span id="formconfirm97"></span>
+          <span id="formconfirm98"></span>
+          <span id="formconfirm99"></span>
+          <span id="formconfirm100"></span>
 
 
       </div>
@@ -676,6 +779,34 @@ queryVests.first({
     
   }
 );
+
+//Kicks
+
+var queryKicksEntered = new Parse.Query(personalInfo);
+queryKicksEntered.equalTo("TwitterHandle", person);
+queryKicksEntered.first({
+  success: function(object) {
+    var kickentered = object.get('kickEntered');
+    if(kickentered.length==0){
+      document.getElementById("formconfirmb").innerHTML = firstname+" hasn't entered any Kicks yet this week, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
+      var elem = document.getElementById("removegreyline");
+      elem.parentNode.removeChild(elem);
+    }
+    else{
+      
+      for(i=0;i<kickentered.length;i++){
+        var j = i.toString();
+        document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentered[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/kicks?id="+kickentered[i]+"'>"+kickentered[i]+"</a></td></tr></table><br>";
+        }
+   
+    }
+  }, 
+  error: function(error) {
+    alert("something's gone wrong!");
+  }
+  }
+);
+
 // Timesubmit
 function formSubmit() {
 var uniqueid = document.getElementById("uniqueid").value;
