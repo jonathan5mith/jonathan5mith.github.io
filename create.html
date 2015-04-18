@@ -178,15 +178,7 @@ queryCreate.first({
     }
     else{
     //nested if start	
-	    if(kickcount>=3){
-	    var elem = document.getElementById("formremove");
-	        elem.parentNode.removeChild(elem);
-	    var elem = document.getElementById("removeimage");
-	        elem.parentNode.removeChild(elem);
-	    document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered 3 Kicks this week. Good luck and come back next week to enter some more!</p>";  
-	    }
-	    
-	    else{
+
 	    object.set("kickEntrants",[twitterhandlex]);
 	    object.set("kickCount", kickcount+1);
 	    object.save();
@@ -195,8 +187,7 @@ queryCreate.first({
 	    var elem = document.getElementById("removeimage");
 	        elem.parentNode.removeChild(elem);
 	    document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've created a Kick. Let's head over to your  <a href='http://runwithkick.com/kicks?id="+twitterhandlex+"'>Kick Page </a>so you can tell people about it</p>";  
-	    }
-    
+	    
       }
     },
   error: function(error) {
