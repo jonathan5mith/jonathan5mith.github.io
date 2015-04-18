@@ -137,20 +137,15 @@
       <div class="border-below-explore">
 
         <div class="row coltext">
-
           <div class="col-sm-4">
-
             <span id="explore0"></span>
           </div>
           <div class="col-sm-4">
-
             <span id="explore1"></span>
           </div>
           <div class="col-sm-4">
-
             <span id="explore2"></span>
           </div>
-
         </div>
 
 
@@ -190,7 +185,7 @@ queryExplore.first({
     
     for(i=0;i<totalkickentrants.length;i++){
     var j = i.toString();
-    document.getElementById("explore"+j).innerHTML = "<br><table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+totalkickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/kicks?id="+totalkickentrants[i]+"'>"+totalkickentrants[i]+"</a></td></tr></table>";
+    document.getElementById("explore"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+totalkickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/kicks?id="+totalkickentrants[i]+"'>"+totalkickentrants[i]+"</a></td></tr></table><br>";
     } 
 
     }, 
