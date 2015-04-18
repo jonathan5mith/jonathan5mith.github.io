@@ -782,8 +782,12 @@ queryKicksEntered.equalTo("TwitterHandle", person);
 queryKicksEntered.first({
   success: function(object) {
     var kickentered = object.get('kickEntered');
-    var firstname = object.get("firstName");
-    if(kickentered.length>0{
+    if(kickentered.length==0){
+      document.getElementById("formconfirmb").innerHTML = firstname+" hasn't entered any Kicks yet this week, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
+      var elem = document.getElementById("removegreyline");
+      elem.parentNode.removeChild(elem);
+    }
+    else{
       
       for(i=0;i<kickentered.length;i++){
         var j = i.toString();
@@ -791,13 +795,6 @@ queryKicksEntered.first({
         }
    
     }
-
-    else{
-      document.getElementById("formconfirmb").innerHTML = firstname+" hasn't entered any Kicks yet this week, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
-      var elem = document.getElementById("removegreyline");
-      elem.parentNode.removeChild(elem);
-    }
-
   }, 
   error: function(error) {
     alert("something's gone wrong!");
