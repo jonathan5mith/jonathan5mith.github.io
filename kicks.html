@@ -304,6 +304,8 @@ queryPic.first({
   }
   }
 );
+
+
 function formSubmit() {
 var kickid = document.getElementById("kickid").value;
 var queryNewParticipant = new Parse.Query(personalInfo);
@@ -314,6 +316,7 @@ queryNewParticipant.first({
     var name = object.get("firstName");
     var kickcount = object.get("kickCount");
     object.set("kickCount", kickcount+1);
+    object.addUnique(person);
     object.save();
 //nested query
     var queryAddParticipant = new Parse.Query(personalInfo);
