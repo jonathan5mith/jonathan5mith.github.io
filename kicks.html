@@ -315,6 +315,7 @@ queryNewParticipant.first({
     var kickcount = object.get("kickCount");
     var kickentrants = object.get("kickEntrants");
     var entered = kickentrants.indexOf(twitterhandlex);
+    alert(entered);
     if(entered>=0){
  	
     	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered this Kick!</p>";  
