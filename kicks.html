@@ -311,9 +311,11 @@ queryNewParticipant.equalTo("kickId", kickid);
 queryNewParticipant.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
+    alert(twitterhandlex);
     var name = object.get("firstName");
     var kickcount = object.get("kickCount");
     var kickentrants = object.get("kickEntrants");
+    alert(kickentrants);
     var entered = kickentrants.indexOf(twitterhandlex);
     alert(entered);
     if(entered>=0){
