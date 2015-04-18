@@ -323,6 +323,8 @@ queryNewParticipant.first({
         var entrants = object.get("kickEntrants");
         
         if(entrants.indexOf(twitterhandlex)>=0){
+        	var elem = document.getElementById("formremove");
+		elem.parentNode.removeChild(elem);
         	document.getElementById("formconfirm").innerHTML = "<p>You've already entered this Kick!</p>";  
 
         }
