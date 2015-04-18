@@ -186,7 +186,7 @@ var queryExplore = new Parse.Query(personalInfo);
 queryExplore.exists("kickEntrants");
 queryExplore.first({
   success: function(object) {
-    var kickentrants = object.get('kickEntrants');
+    var kickentrants = object.get('kickEntrants[0]');
     alert(kickentrants);
   }, 
   error: function(error) {
@@ -222,5 +222,5 @@ try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
 catch(e){window.attachEvent("onload", $buo_f)}
 </script> 
 	
-  </body> 
+  </body>
 </html>
