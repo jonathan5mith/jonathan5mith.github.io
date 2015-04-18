@@ -322,7 +322,7 @@ queryNewParticipant.first({
       success: function(object) {
         var entrants = object.get("kickEntrants");
         
-        if(entrants.indexOf(kickcount)>=0){
+        if(entrants.indexOf(twitterhandlex)>=0){
         	document.getElementById("formconfirm").innerHTML = "<p>It looks like you've already entered this Kick!</p>";  
         }
         else{
