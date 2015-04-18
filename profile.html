@@ -782,7 +782,7 @@ queryKicksEntered.equalTo("TwitterHandle", person);
 queryKicksEntered.first({
   success: function(object) {
     var kickentered = object.get('kickEntered');
-    
+    var firstname = object.get("firstName");
     if(kickentered.length>0{
       
       for(i=0;i<kickentered.length;i++){
