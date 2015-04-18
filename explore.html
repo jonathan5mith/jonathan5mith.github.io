@@ -139,15 +139,15 @@
         <div class="row coltext">
 
           <div class="col-sm-4">
-            <p>example</p>
+
             <span id="explore0"></span>
           </div>
           <div class="col-sm-4">
-            <p>example</p>
+
             <span id="explore1"></span>
           </div>
           <div class="col-sm-4">
-            <p>example</p>
+
             <span id="explore2"></span>
           </div>
 
@@ -187,7 +187,6 @@ queryExplore.equalTo("kickId", "123A");
 queryExplore.first({
   success: function(object) {
     var totalkickentrants = object.get('kickEntrants');
-    alert(totalkickentrants);
     
     for(i=0;i<totalkickentrants.length;i++){
     var j = i.toString();
