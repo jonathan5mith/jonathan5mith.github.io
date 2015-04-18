@@ -175,7 +175,7 @@ queryCreate.first({
     var queryExplore = new Parse.Query(personalInfo);
     queryExplore.get("fKRCH6cxtF",{
         success: function(object){
-          object.addUnique("twitterhandlex");
+          object.addUnique("kickEntrants", twitterhandlex);
         },
         error: function(object, error){
           alert("something's gone wrong")
