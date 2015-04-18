@@ -222,11 +222,6 @@
       <div class="border-below">
 
           <p><span id="formconfirmb"></span></p>
-
-          <span id="formconfirmc"></span>
-
-          <span id="removegreyline"><div id='greyline'></div></span>
-          <br>
           <span id="formconfirm0"></span>
           <span id="formconfirm1"></span>
           <span id="formconfirm2"></span>
@@ -780,14 +775,14 @@ queryVests.first({
   }
 );
 
-//Kicks
+//Kicks Entered
 
 var queryKicksEntered = new Parse.Query(personalInfo);
 queryKicksEntered.equalTo("TwitterHandle", person);
 queryKicksEntered.first({
   success: function(object) {
     var kickentered = object.get('kickEntered');
-    if(kickentered.length==0){
+    if(kickentered==[]){
       document.getElementById("formconfirmb").innerHTML = firstname+" hasn't entered any Kicks yet this week, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
       var elem = document.getElementById("removegreyline");
       elem.parentNode.removeChild(elem);
