@@ -359,7 +359,7 @@ queryNewParticipant.first({
 
 var KickData = Parse.Object.extend("KickData");
 var queryKickData = new Parse.Query(KickData);
-queryNewParticipant.equalTo("TwitterHandle", person);
+queryKickData.equalTo("TwitterHandle", person);
 
 queryNewParticipant.first({
   success: function(object) {
