@@ -430,7 +430,7 @@ queryPic.first({
     }
   }, 
   error: function(error) {
-    alert("something's gone wrong!");
+    alert("Something has gone wrong! It's probably some kind of annoying server thing, but email jon@runwithkick.com if the problem persists!");
   }
   }
 );
@@ -445,6 +445,11 @@ queryNewParticipant.first({
     var twitterhandlex = object.get('TwitterHandle');
     var name = object.get("firstName");
     var kickcount = object.get("kickCount");
+    var kickhistory = object.get("runTimes");
+
+    if(kickhistory.length>0){
+
+
     object.set("kickCount", kickcount+1);
     object.addUnique("kickEntered",person);
     object.save();
@@ -473,14 +478,29 @@ queryNewParticipant.first({
         
       },
       error: function(error) {
-        alert("Something has gone wrong! Email jon@runwithkick.com if the problem persists!");
+        alert("Something has gone wrong! It's probably some kind of annoying server thing, but email jon@runwithkick.com if the problem persists!");
       }
       }
     ); 
 //nested query end
+}
+
+else{
+            var elem = document.getElementById("formremove");
+          elem.parentNode.removeChild(elem);
+          document.getElementById("formconfirm").innerHTML = "<p>You can't create your first Kick without submitting a time. Head over to your <a href='http://runwithkick.com/profile?id="+twitterhandlex+"'>Profile Page</a> where you can submit your first time</p>";  
+
+}
+
+    
+
+
+
+
+
     },
   error: function(error) {
-    alert("Kick ID not recognised, please check and try again! Email jon@runwithkick.com if the problem persists!");
+    alert("Something has gone wrong! It's probably some kind of annoying server thing, but email jon@runwithkick.com if the problem persists!");
   }
   }
 ); 
