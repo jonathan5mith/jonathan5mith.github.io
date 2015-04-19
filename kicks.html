@@ -498,7 +498,7 @@ queryKickData.first({
 
       for(i=0;i<entrants.length;i++){
         var j = i.toString();
-        document.getElementById("lastweek"+j).innerHTML = "<div class='col-xs-2'><div id='minipic'style='background-image: url(https://twitter.com/"+entrants[i]+"/profile_image?size=original)'></div></div><div class='col-xs-6'><a href='http://www.runwithkick.com/kicks?id="+entrants[i]+"'>"+entrants[i]+"</a></div><div class='col-xs-2'>"+times[i]+"</div><div class='col-xs-2'>"+points[i]+"</div>";
+        document.getElementById("lastweek"+j).innerHTML = "<div class='col-xs-2'><div id='minipic'style='background-image: url(https://twitter.com/"+entrants[i]+"/profile_image?size=original)'></div></div><div class='col-xs-6'><a href='http://www.runwithkick.com/kicks?id="+entrants[i]+"'>"+entrants[i]+"</a></div><div class='col-xs-2'><p>"+times[i]+"</p></div><div class='col-xs-2'><p>"+points[i]+"</p></div>";
         }
 
     },
