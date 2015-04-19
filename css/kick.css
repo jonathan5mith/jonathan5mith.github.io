@@ -1510,6 +1510,17 @@ canvas {
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
+
+}
+
+#minipic1{
+	height: 50px; 
+	width: 50px;   
+	background-size: 100%;
+    background-position: center;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
      -moz-opacity:.60;
 	 filter:alpha(opacity=60);
 	 opacity:.60;
