@@ -74,7 +74,8 @@ position: absolute;
 @media (min-width: 768px) { .navbar-collapse.in{ overflow-x:visible;} }
 
 .nopadding {
-   padding: 0 !important;
+   padding-left: 0 !important;
+   padding-right: 5px !important;
    margin: 0 !important;
 }
 
@@ -1509,4 +1510,15 @@ canvas {
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
+}
+
+#centerpoints{
+	margin:auto auto;
+	vertical-align: middle;
+	background-color: rgba(150,150,150,.3);
+}
+
+#resultspoints{
+	font-size: 20px;
+	color:white;
 }
