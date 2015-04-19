@@ -361,7 +361,7 @@ var KickData = Parse.Object.extend("KickData");
 var queryKickData = new Parse.Query(KickData);
 queryKickData.equalTo("TwitterHandle", person);
 
-queryNewParticipant.first({
+queryKickData.first({
   success: function(object) {
     var entrants = object.get('kickEntrants');
     var times = object.get("kickTimes");
