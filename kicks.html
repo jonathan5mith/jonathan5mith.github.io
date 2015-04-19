@@ -284,7 +284,7 @@ queryPic.first({
     var firstname = object.get('firstName');
     document.getElementById("nameenter").innerHTML = firstname;    
     if(kickentrants.length==0){
-      document.getElementById("formconfirmb").innerHTML = firstname+" doesn't have any active Kicks this week, get started by <a href='http://www.runwithkick.com/create'>creating a kick</a>.";
+      document.getElementById("formconfirmb").innerHTML = firstname+" doesn't have any active Kicks this week. If you're "+firstname+" or somone else, get started by <a href='http://www.runwithkick.com/create'>creating a kick</a>.";
       var elem = document.getElementById("removegreyline");
       elem.parentNode.removeChild(elem);
       var elem = document.getElementById("formremove");
