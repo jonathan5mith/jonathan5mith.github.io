@@ -172,6 +172,10 @@ queryCreate.first({
     var name = object.get("firstName");
     var entrants = object.get("kickEntrants");
     var kickcount = object.get("kickCount");
+    var kickhistory = object.get("runTimes");
+
+    if (kickhistory.length>0){
+
     if (entrants.length>0){
         var elem = document.getElementById("formremove");
         elem.parentNode.removeChild(elem);
@@ -206,6 +210,17 @@ queryCreate.first({
         });
         //nested query end
 	    
+      }
+      }
+      else{
+      var elem = document.getElementById("formremove");
+        elem.parentNode.removeChild(elem);
+      var elem = document.getElementById("removeimage");
+        elem.parentNode.removeChild(elem);
+
+        document.getElementById("formconfirm").innerHTML = "<p>You can't create your first Kick without submitting a time. Head over to your <a href='http://runwithkick.com/profile?id="+twitterhandlex+"'>Profile Page</a> where you can submit your first time";
+
+
       }
 
 
