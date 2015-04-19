@@ -274,6 +274,7 @@ function getQueryVariable(variable)
 var person1 = getQueryVariable("id");
 var person = person1.toLowerCase();
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
+
 var personalInfo = Parse.Object.extend("upload1");
 //
 var queryPic = new Parse.Query(personalInfo);
@@ -355,6 +356,31 @@ queryNewParticipant.first({
   }
 ); 
 }
+
+var KickData = Parse.Object.extend("KickData");
+var queryKickData = new Parse.Query(KickData);
+queryNewParticipant.equalTo("TwitterHandle", person);
+
+queryNewParticipant.first({
+  success: function(object) {
+    var entrants = object.get('kickEntrants');
+    var times = object.get("kickTimes");
+    var points = object.get("points");
+
+    alert(entrants);
+    alert(times);
+    alert(points);
+    },
+
+  error: function(error) {
+    alert("something's gone wrong!");
+  }
+  }
+);
+
+
+
+
 </script>
 
 
