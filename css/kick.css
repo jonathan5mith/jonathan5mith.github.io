@@ -1518,5 +1518,5 @@ canvas {
 	font-weight: bold;
 	color:gray;
 	text-align: center;
-	line-height: 100%;
+	vertical-align: middle;
 }
