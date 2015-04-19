@@ -74,8 +74,7 @@ position: absolute;
 @media (min-width: 768px) { .navbar-collapse.in{ overflow-x:visible;} }
 
 .nopadding {
-   padding-left: 0 !important;
-   padding-right: 5px !important;
+   padding: 0 !important;
    margin: 0 !important;
 }
 
