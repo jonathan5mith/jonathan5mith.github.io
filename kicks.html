@@ -238,6 +238,10 @@
 
 
         </div>  
+      
+      <p>I've just made a Kick! You can join here: <span id="tweetlink"></span> #bringit</p>
+
+
       </div>
   </div>
 </div>
@@ -424,6 +428,8 @@ queryPic.first({
     }
     else{
       
+      document.getElementById("tweetlink").innerHTML = "http://www.runwithkick.com/kicks?id="+person;
+
       for(i=0;i<kickentrants.length;i++){
         var j = i.toString();
         document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/profile?id="+kickentrants[i]+"'>"+kickentrants[i]+"</a></td></tr></table><br>";
