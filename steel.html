@@ -168,7 +168,7 @@
   <div class="col-sm-4">
     
       <img id="steel-logo" src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/steel_club.png" /img>
-    <p class="maincontent">Combined time of the 4 fastest from each of South Yorkshire's clubs</p>
+    <p class="maincontent">Combined time of the 4 fastest (2 men, 2 women) from each of Sheffield's clubs</p>
   </div>
 </div>
 <div/>
@@ -239,6 +239,11 @@
               
             </select>
 
+          </div>
+          
+          <div class="radio">
+            <label class="radio-inline"><input type="radio" name="optradio">Option 1</label>
+            <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
           </div>
 
           <p class="pager" style="line-height: 60px;">
@@ -314,7 +319,7 @@ steelDetails.set("club", club);
 
 steelDetails.save(null, {
   success: function(steelDetails) {
-    document.getElementById("formconfirm").innerHTML = "<p>Thanks for entering Steel 10k! An email has been sent to "+emailaddress+"with your race number</p><p>we'll be in touch by email closer to the event to let you know how to submit your time!</p> <p>In the meantime you can race any time by entering a Kick, <a href='http://runwithkick.com/getstarted'>find out more here</a></p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Thanks for entering Steel 10k! An email has been sent to "+emailaddress+" with your race number</p><p>We'll be in touch by email closer to the event to let you know how to submit your time!</p><p>In the meantime you can race any time by entering a Kick, <a href='http://runwithkick.com/getstarted'>find out more here</a></p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
