@@ -1556,12 +1556,13 @@ canvas {
 }
 
 
-
-
 #resultspoints{
 	font-size: 35px;
 	font-weight: bold;
-	color:black;
+	color: black;
+   	-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
 	text-align: center;
 	vertical-align: middle;
 }
