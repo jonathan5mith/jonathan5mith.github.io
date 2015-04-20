@@ -1549,10 +1549,10 @@ canvas {
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
-    /*  -moz-opacity:.60;
+     -moz-opacity:.60;
 	 filter:alpha(opacity=60);
 	 opacity:.60;
-	 z-index: 10000000;*/
+	 z-index: 10000000;
 }
 
 
@@ -1562,7 +1562,7 @@ canvas {
 	color: black;
    	-webkit-text-fill-color: white; /* Will override color (regardless of order) */
    	-webkit-text-stroke-width: 1px;
-   	-webkit-text-stroke-color: gray;
+   	-webkit-text-stroke-color: black;
 	text-align: center;
 	vertical-align: middle;
 }
