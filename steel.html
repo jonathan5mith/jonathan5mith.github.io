@@ -240,10 +240,10 @@
             </select>
 
           </div>
-          
-          <div class="radio">
-            <label class="radio-inline"><input type="radio" name="optradio">Option 1</label>
-            <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+
+          <div class="radio" id="male-female">
+            <label class="radio-inline"><input type="radio" name="optradio">Male</label>
+            <label class="radio-inline"><input type="radio" name="optradio">Female</label>
           </div>
 
           <p class="pager" style="line-height: 60px;">
@@ -307,6 +307,9 @@ var lastname = document.getElementById("lastname").value;
 var emailaddress = document.getElementById("emailaddress").value;
 var twitterhandle = document.getElementById("twitterhandle").value;
 var club = document.getElementById("club").value;
+var club = document.getElementById("club").value;
+var gender = document.getElementById("male-female").value;
+
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
