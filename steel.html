@@ -284,6 +284,19 @@ function formSubmit() {
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
+function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    for( var i=0; i < 8; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+var kickId = makeid();
+
 var firstname = document.getElementById("firstname").value;
 var lastname = document.getElementById("lastname").value;
 var emailaddress = document.getElementById("emailaddress").value;
@@ -308,6 +321,23 @@ steelDetails.save(null, {
     elem.parentNode.removeChild(elem);
     document.getElementById("thanks").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/steel/thanks.png"/img>';
     
+
+      Parse.Cloud.run('myMandrillFunction1', {
+      Address: emailaddress,
+      EmailText: "Hi, "+firstname+" you've entered the steel 10k!!\r\n\r\nYour race number, a unique number you'll need to upload your time, is "+kickId+"\r\n\r\nWe'll be in touch closer to the race with details of how to submit your time\r\n\r\nIn the meantime, why not go to www.runwithkick.com and enter some Kicks!\r\n\r\nHappy Kicking!",
+      }, {
+          // Success handler
+          success: function(message) {
+          document.getElementById("emailconfirm").innerHTML = 'An email will be sent to '+emailaddress+" with your Kick ID. Please check your junk folder if you don't get it!";
+
+          },
+          // Error handler
+          error: function(message) {
+          document.getElementById("emailconfirm").innerHTML = "At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and I'll sort it all out</p>";
+          }
+      });
+
+
   },
   error: function(steelDetails, error) {
     alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we'll see if we can get to the bottom of it");
