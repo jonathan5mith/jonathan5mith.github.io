@@ -310,6 +310,8 @@ var club = document.getElementById("club").value;
 var club = document.getElementById("club").value;
 var gender = document.getElementById("male-female").value;
 
+alert(gender);
+
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
@@ -319,6 +321,7 @@ steelDetails.set("lastName", lastname);
 steelDetails.set("emailAddress", emailaddress);
 steelDetails.set("twitterHandle", twitterhandle);
 steelDetails.set("club", club);
+steelDetails.set("gender", gender);
 
 steelDetails.save(null, {
   success: function(steelDetails) {
