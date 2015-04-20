@@ -244,10 +244,10 @@
           <div class="form-group">
             <label>Gender</label>
             <select class="form-control" id="male-female">
-              <option value='' disabled selected style='display:none;'>Select Gender</option>
+              <!--<option value='' disabled selected style='display:none;'>Select Gender</option>-->
               <option value="Male">Male</option>
               <option value="Female">Female</option>
-             </select>
+            </select>
 
           </div>
 
@@ -315,9 +315,6 @@ var twitterhandle = document.getElementById("twitterhandle").value;
 var club = document.getElementById("club").value;
 var club = document.getElementById("club").value;
 var gender = document.getElementById("male-female").value;
-
-alert(gender);
-
 
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
