@@ -177,6 +177,9 @@ queryCreate.first({
     var entrants = object.get("kickEntrants");
     var kickcount = object.get("kickCount");
     var kickhistory = object.get("runTimes");
+    var kickentered = object.get("kickEntered");
+
+    if (kickentered.length<5){
 
     if (kickhistory.length>0){
 
@@ -232,7 +235,17 @@ queryCreate.first({
 
       }
 
+      }
+      else{
 
+      var elem = document.getElementById("formremove");
+        elem.parentNode.removeChild(elem);
+      var elem = document.getElementById("removeimage");
+        elem.parentNode.removeChild(elem);
+
+          document.getElementById("formconfirm").innerHTML = "<p>You've already entered 5 kicks this week.</p>";  
+
+      }
 
 
     },
