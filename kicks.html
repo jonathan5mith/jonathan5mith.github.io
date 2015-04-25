@@ -223,10 +223,6 @@
       <div id="formremove">
 
         <br>
-        
-
-        
-       
           <div class="form-group">
             <input type="name" class="form-control" id="kickid" placeholder="Enter your Kick ID to join" required>
           </div>
@@ -460,6 +456,9 @@ queryNewParticipant.first({
     var name = object.get("firstName");
     var kickcount = object.get("kickCount");
     var kickhistory = object.get("runTimes");
+    var kicksentered = object.get("kickEntered");
+
+    if(kicksentered.length<3){
 
     if(kickhistory.length>0){
 
@@ -506,9 +505,15 @@ else{
 
 }
 
-    
+    }
+  else{
+
+            var elem = document.getElementById("formremove");
+          elem.parentNode.removeChild(elem);
+          document.getElementById("formconfirm").innerHTML = "<p>You've already entered 3 Kicks this week.</p>";  
 
 
+  }
 
 
 
@@ -516,6 +521,8 @@ else{
   error: function(error) {
     alert("Something has gone wrong! It's probably some kind of annoying server thing, but email jon@runwithkick.com if the problem persists!");
   }
+
+
   }
 ); 
 }
