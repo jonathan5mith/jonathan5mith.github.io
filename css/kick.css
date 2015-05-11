@@ -994,9 +994,10 @@ height:370px;
 	width: 150px;
 	margin:auto;
 	line-height: 30px;
-	font-size:26px;
+	font-size:20px;
 	padding-bottom: 5px;
-	;
+	margin-bottom: 10px;
+	
 }
 
 #getstarted a{
@@ -1013,6 +1014,8 @@ height:370px;
 
 #getstarted a:active{
 	text-decoration: none;
+	font-weight: 400;
+
 	}
 
 
@@ -1727,6 +1730,10 @@ canvas {
 	font-weight: bold;
 }
 
+.bottombar{
+	max-width: 800px;
+}
+
 
 }
 
@@ -1741,6 +1748,10 @@ canvas {
 	font-weight: bold;
 }
 
+.bottombar{
+	max-width: 350px;
+}
 
 }
+
 
