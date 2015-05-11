@@ -41,6 +41,7 @@ position: absolute;
 	border-radius: 0px;
 }
 
+
 .navbar-collapse{
 	border-top: none;
 	box-shadow: none;
@@ -70,6 +71,35 @@ position: absolute;
 .icon-bar{
 	background-color:white;
 }
+
+.dropdown-menu{
+		background-color: rgba(0,0,0,0.3);
+	}
+
+.dropdown-menu > li> a.hover{
+	color:white;
+	font-weight: bold;
+}
+
+.dropdown-menu > li> a{
+	color:white;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li> a:hover{
+	color:white;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li> a{
+	color:white;
+}
+
+.navbar-default .navbar-nav > .open > a:focus {
+background-color: rgba(0,0,0,0);
+color: white;
+font-weight: bold;
+}
+
+
 
 @media (min-width: 768px) { .navbar-collapse.in{ overflow-x:visible;} }
 
