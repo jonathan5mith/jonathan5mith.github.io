@@ -1566,3 +1566,29 @@ canvas {
 	text-align: center;
 	vertical-align: middle;
 }
+
+#vestdescription{
+	font-size: 15px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+
+
+@media (min-width: 768px) {
+
+#olympicseriestitle{
+	height:50px;
+}
+
+}
+
+@media (max-width: 767px) {
+
+#olympicseriestitle{
+	height:30px;
+}
+
+}
