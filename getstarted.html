@@ -318,7 +318,9 @@ newUser.save(null, {
 
       Parse.Cloud.run('myMandrillFunction', {
       Address: emailaddress,
-      EmailText: "Hi, "+firstname+" welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+"\r\n\r\nThe next step is to follow @runwithkick on twitter and send your Kick ID back as a direct message to validate.\r\n\r\nYou can still enter Kicks in the meantime, but if you're not validated within 2 weeks your account will be deleted.\r\n\r\nHappy Kicking!",
+      EmailText: "Hi, "+firstname+" welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+". Keep this safe, you’ll need to do most stuff in Kick! 
+\r\n\r\nNow you’re signed up, you can create and enter Kicks, and come results day on Monday you can see how you did, collect points and vests. 
+\r\n\r\nRemember to check out our latest event at www.runwithkick.com/steel\r\n\r\nHappy Kicking!",
       }, {
           // Success handler
           success: function(message) {
