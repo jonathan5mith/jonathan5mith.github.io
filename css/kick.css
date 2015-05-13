@@ -898,10 +898,8 @@ height:370px;
 	font-weight: 400;
 }
 
-.subheaders{
-	font-size: 20px;
-	font-weight: 400px;
-}
+
+
 
 .highlight-text{
 	background-color: gray;
@@ -1761,7 +1759,7 @@ canvas {
 @media (min-width: 768px) {
 
 #olympicseriestitle{
-	height:40px;
+width:400px;
 }
 
 #bigtitles{
@@ -1773,13 +1771,25 @@ canvas {
 	max-width: 800px;
 }
 
+.subheaders{
+	font-size: 30px;
+	font-weight: 400px;
+		max-width: 800px;
+	font-weight: 300;
+	text-align: center;
+	margin: auto auto;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 
 }
 
 @media (max-width: 767px) {
 
 #olympicseriestitle{
-	height:30px;
+	width:300px;
 }
 
 #bigtitles{
@@ -1790,7 +1800,22 @@ canvas {
 .bottombar{
 	max-width: 350px;
 }
+.subheaders{
+	font-size: 20px;
+	font-weight: 400px;
+		max-width: 800px;
+	font-weight: 300;
+	text-align: center;
+	margin: auto auto;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
 
 }
 
+.subheaders1{
+	font-size: 20px;
+	font-weight: 400px;
+}
 
