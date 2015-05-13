@@ -344,10 +344,8 @@ newUser.save(null, {
     alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we'll see if we can get to the bottom of it");
   }
 });
-}
 
-
-var queryExplore = new Parse.Query(newUser);
+var queryExplore = new Parse.Query(NewUser);
 queryExplore.equalTo("kickId", "123A");
 queryExplore.first({
     success: function(object){
@@ -359,6 +357,11 @@ queryExplore.first({
     }
 
 });
+
+
+}
+
+
 
 
 </script>
