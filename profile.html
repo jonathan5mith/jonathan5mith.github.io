@@ -747,32 +747,14 @@ queryVests.first({
             var vests = object.get('points');
             var times = object.get('runTimes');
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
+
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
                                  
-            if(times.length>0){
-              document.getElementById("totalkicks").innerHTML = times.length;
-            }
-
-            if(times.length==0){
-              var elem = document.getElementById("statsremove");
-              elem.parentNode.removeChild(elem);
-              document.getElementById("statsreplace").innerHTML = '<p>'+person+' hasnt entered any times yet, as soon as they upload their first Kick, thier stats will appear here.</p>'
-              document.getElementById("uploadheader").innerHTML =  "Send first Kick"
-            }
-
-
-            if(times.length==1){
-              var elem = document.getElementById("canvasremove");
-              elem.parentNode.removeChild(elem);
-              document.getElementById("graphtocome").innerHTML = "<div id='greyline'></div><br><p>As you add more Kicks, a graph showing your last 5 kicks will appear here</p>";
-              document.getElementById("uploadheader").innerHTML =  "Send Kick"
-            }
 
             if(vests>=5){
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png" height="85">'
-
             }
-            
+
             else{
               document.getElementById("vest1").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank.png "height="85">'
             };
@@ -808,6 +790,26 @@ queryVests.first({
             }
             else{
               document.getElementById("vest6").innerHTML = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/blank100.png" height="85">'
+            }
+
+            if(times.length>0){
+              document.getElementById("totalkicks").innerHTML = times.length;
+            }
+
+
+            if(times.length==0){
+              var elem = document.getElementById("statsremove");
+              elem.parentNode.removeChild(elem);
+              document.getElementById("statsreplace").innerHTML = '<p>'+person+' hasnt entered any times yet, as soon as they upload their first Kick, thier stats will appear here.</p>'
+              document.getElementById("uploadheader").innerHTML =  "Send first Kick"
+            }
+
+
+            if(times.length==1){
+              var elem = document.getElementById("canvasremove");
+              elem.parentNode.removeChild(elem);
+              document.getElementById("graphtocome").innerHTML = "<div id='greyline'></div><br><p>As you add more Kicks, a graph showing your last 5 kicks will appear here</p>";
+              document.getElementById("uploadheader").innerHTML =  "Send Kick"
             }
     },
     
