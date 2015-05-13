@@ -122,7 +122,7 @@
   <div id="profile-name">
 
     <p class="mainheaders"><span id="theirname"></span></p>
-    <p class="subheaders1"><span id="visitprofile"></span><span id="validateduser"></span></p>
+    <br>
     <!--<p class="subheaders">
       <form class="navbar-form navbar-center" role="search">
         <div class="form-group">
@@ -638,8 +638,6 @@ queryPic.first({
     var twitterpic = object.get('TwitterHandle');
     var firstname = object.get('firstName');
     document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://twitter.com/'+twitterpic+'/profile_image?size=original)"></div>';
-    document.getElementById("theirname").innerHTML = firstname+"'s Kicks";
-    document.getElementById("visitprofile").innerHTML = firstname+"'s Profile";
 
 
   }, 
