@@ -81,9 +81,18 @@ position: absolute;
 	font-weight: bold;
 }
 
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+		background-color: rgba(0,0,0,0);
+		font-weight: bold;	
+
+}
+
 .dropdown-menu > li> a{
 	color:white;
+
 }
+
+
 
 .navbar-default .navbar-nav .open .dropdown-menu > li> a:hover{
 	color:white;
