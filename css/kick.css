@@ -1019,9 +1019,9 @@ height:370px;
 }
 
 #getstarted{
-	background-color: rgba(150,150,150,.9);
+	background-color: rgba(150,150,150,.6);
 	border-radius: 2px;
-	width: 130px;
+	width: 115px;
 	margin:auto;
 	line-height: 30px;
 	font-size:18px;
@@ -1765,7 +1765,7 @@ width:400px;
 }
 
 .bottombar{
-	max-width: 700px;
+	max-width: 900px;
 	margin: auto auto;
 }
 
@@ -1796,7 +1796,7 @@ width:400px;
 }
 
 .bottombar{
-	max-width: 350px;
+	max-width: 280px;
 		margin: auto auto;
 
 }
