@@ -746,7 +746,7 @@ queryVests.first({
   success: function(object) {
             var vests = object.get('points');
             var times = object.get('runTimes');
-            var firstname = object.get('firstName');
+            var firstname = object.get('firstName')
             var imgtag = '<img src="https://dl.dropboxusercontent.com/u/10455351/Assets/';
 
             //lots of horrible if statements - need to work out why for loop isn't working with Parse
@@ -824,6 +824,7 @@ queryKicksEntered.equalTo("TwitterHandle", person);
 queryKicksEntered.first({
   success: function(object) {
     var kickentered = object.get('kickEntered');
+    var firstname = object.get('firstName');
 
     if(kickentered.length>0){
       
@@ -835,7 +836,7 @@ queryKicksEntered.first({
     }
 
     else{
-      document.getElementById("formconfirmb").innerHTML = person+" hasn't entered any Kicks yet this week, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
+      document.getElementById("formconfirmb").innerHTML = firstname+" hasn't entered any Kicks yet this week, why not <a href='http://www.runwithkick.com/create'>create a kick</a> and challenge them?";
       var elem = document.getElementById("removegreyline");
       elem.parentNode.removeChild(elem);
     }
