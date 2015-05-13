@@ -224,6 +224,11 @@ querySubmitTime.first({
     
     var dog = object.get("runTimes");
     var cat = object.get("runTimesHidden");
+    var parrot = object.get("kickEntered");
+
+    if (parrot.length==0){
+      alert(parrot.length)
+    }
 
     if (dog.length==0){
     object.addUnique("runTimes", dectime);
