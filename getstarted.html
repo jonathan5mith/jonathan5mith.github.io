@@ -347,6 +347,19 @@ newUser.save(null, {
 }
 
 
+var queryExplore = new Parse.Query(personalInfo);
+queryExplore.equalTo("kickId", "123A");
+queryExplore.first({
+    success: function(object){
+     object.addUnique("kickEntrants",twitterhandle);
+     object.save();
+    },
+    error: function(error){
+      alert("something's gone wrong")
+    }
+
+});
+
 
 </script>
 
