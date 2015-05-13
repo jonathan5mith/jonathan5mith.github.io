@@ -347,7 +347,7 @@ newUser.save(null, {
 }
 
 
-var queryExplore = new Parse.Query(personalInfo);
+var queryExplore = new Parse.Query(NewUser);
 queryExplore.equalTo("kickId", "123A");
 queryExplore.first({
     success: function(object){
