@@ -308,6 +308,14 @@ font-weight: bold;
 	margin-top: 90px;
 	display:inline-block;
 	text-align: center;
+	width:300px;
+	}
+
+	.text-containera {
+
+	margin-top: 70px;
+	display:inline-block;
+	text-align: center;
 	}
 
 
@@ -354,6 +362,13 @@ font-weight: bold;
 	text-align: center;
 	}
 
+.text-containera {
+
+margin-top: 95px;
+display:inline-block;
+text-align: center;
+}
+
 }
 
 @media (min-width: 1200px) {
@@ -393,6 +408,13 @@ font-weight: bold;
 	display:inline-block;
 	text-align: center;
 	}
+
+.text-containera {
+
+margin-top: 110px;
+display:inline-block;
+text-align: center;
+}
 }
 
 /* -----Vests text containers -----*/
@@ -519,15 +541,7 @@ font-weight: bold;
 	text-align: center;
 	}
 
-.line1{
-	width: 330px;
-	color:white;
-<<<<<<< HEAD
-	border-color:white;
-=======
-	border-color:#333;
->>>>>>> origin/master
-}
+
 
 
 }
@@ -551,16 +565,6 @@ font-weight: bold;
 	text-align: center;
 
 	}
-	.line1{
-
-	color:white;
-<<<<<<< HEAD
-	border-color:white;
-=======
-	border-color:#333;
->>>>>>> origin/master
-}
-
 
 
 }
@@ -584,17 +588,6 @@ font-weight: bold;
 	display:inline-block;
 	text-align: center;
 	}
-
-		.line1{
-
-	color:white;
-<<<<<<< HEAD
-	border-color:white;
-=======
-	border-color:#333;
->>>>>>> origin/master
-
-}
 
 
 }
@@ -1801,7 +1794,7 @@ width:400px;
 	max-width: 350px;
 }
 .subheaders{
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 400px;
 		max-width: 800px;
 	font-weight: 300;
