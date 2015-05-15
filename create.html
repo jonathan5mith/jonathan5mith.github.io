@@ -220,6 +220,14 @@ queryCreate.equalTo("kickId", kickid);
 queryCreate.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
+    if(twitterhandlex.length == 0){
+
+      document.getElementById("formconfirm").innerHTML = "<p style='color:#990000; text-align:center'>Please enter a valid Kick ID</p>"
+          }
+
+          else{
+
+
     var name = object.get("firstName");
     var entrants = object.get("kickEntrants");
     var kickcount = object.get("kickCount");
@@ -289,7 +297,7 @@ queryCreate.first({
           document.getElementById("formconfirm").innerHTML = "<p>Sorry, "+name+" you've already entered 5 Kicks this week, so you can't create one. Good luck and see you on results day!</p>";  
 
       }
-
+}
 
     },
   error: function(error) {
