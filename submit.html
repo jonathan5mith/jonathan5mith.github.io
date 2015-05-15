@@ -222,7 +222,7 @@ var ss = parseFloat(ssa);
 var dectime = mm+(ss/60);
 var runtimes = [dectime];
 
-else if(ss>=60||isNaN(mm)==true||isNaN(ss)==true){
+if(ss>=60||isNaN(mm)==true||isNaN(ss)==true){
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please enter a valid time</p>"
 }
 else if(dectime<12.7){
