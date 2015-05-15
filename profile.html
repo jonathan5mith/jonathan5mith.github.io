@@ -504,6 +504,8 @@
             </div>
           </div>
 
+                   <span id="formconfirmfind"></span>
+
 
 
         </div>
@@ -888,7 +890,7 @@ querySubmitTime.first({
     else{
     object.addUnique("runTimesHidden", dectime);
     object.save();
-    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
+    document.getElementById("formconfirmfind").innerHTML = "<p>Fantastic, you've submitted your Kick</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
@@ -908,9 +910,12 @@ function formSubmit1() {
 var twitterhandle1 = document.getElementById("twitterhandleprofile").value;
 var twitterhandle2 = twitterhandle1.split("@").pop();
 var twitterhandle = twitterhandle2.toLowerCase();
-
+if(twitterhandle.length==0){
+ document.getElementById("formconfirmfind").innerHTML = "<p>Please enter something</p>"
+}
+else{
 window.location.replace("http://runwithkick.com/profile?id="+twitterhandle);
-
+}
 }
 
 </script>
