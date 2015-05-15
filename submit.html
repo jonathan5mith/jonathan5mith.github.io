@@ -222,6 +222,15 @@ var ss = parseFloat(ssa);
 var dectime = mm+(ss/60);
 var runtimes = [dectime];
 
+else if(ss>=60||isNaN(mm)==true||isNaN(ss)==true){
+document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please enter a valid time</p>"
+}
+else if(dectime<12.7){
+document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Um, that's a world record. Pull the other one</p>"
+}
+
+else{
+
 var querySubmitTime = new Parse.Query(personalInfo);
 
 querySubmitTime.equalTo("kickId", uniqueid);
@@ -275,6 +284,7 @@ querySubmitTime.first({
     alert("It looks like that's not worked. Check your Kick ID, and if there's still a problem, get in touch at jon@runwithkick.com");
           }
 });
+}
 };
 
 </script>
