@@ -220,7 +220,7 @@ queryCreate.equalTo("kickId", kickid);
 queryCreate.first({
   success: function(object) {
     var twitterhandlex = object.get('TwitterHandle');
-    if(twitterhandlex.length == 0){
+    if(twitterhandlex == null){
 
       document.getElementById("formconfirm").innerHTML = "<p style='color:#990000; text-align:center'>Please enter a valid Kick ID</p>"
           }
