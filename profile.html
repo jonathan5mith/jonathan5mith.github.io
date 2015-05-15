@@ -106,7 +106,7 @@
 <!-- Main page content-->
 <!--==============================================-->
 
-
+<div id="removeall">
 <div class="maincontain">
 
 
@@ -518,6 +518,7 @@
 
 </div>
 </div>
+</div>
 
 
 
@@ -606,6 +607,11 @@ var queryName = new Parse.Query(personalInfo);
 queryName.equalTo("TwitterHandle", person);
 queryName.first({
   success: function(object) {
+    var twittercheck = object.get("TwitterHandle");
+    if(twittercheck.length==0){
+      var elem = document.getElementById("removeall");
+      elem.parentNode.removeChild(elem);
+    }
     var firstname = object.get('firstName');
     var lastname = object.get('lastName');
     document.getElementById("name").innerHTML = firstname+" "+lastname;
@@ -681,7 +687,6 @@ queryTimes.first({
   success:function(object) {
         
     var times = object.get('runTimes');
-    
     var runtimes= times.slice(-5);
     
     //defining the conversion formula
