@@ -364,6 +364,11 @@ var club = document.getElementById("club").value;
 var club = document.getElementById("club").value;
 var gender = document.getElementById("male-female").value;
 
+if(firstname.length==0 || lastname.length==0 || emailaddress.length==0){
+  alert("Please fill in all required fields")};
+else{
+
+
 var SteelDetails = Parse.Object.extend("SteelTest");
 var steelDetails = new SteelDetails();
 
@@ -406,6 +411,7 @@ steelDetails.save(null, {
     alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we'll see if we can get to the bottom of it");
   }
 });
+}
 }
 
 </script>
