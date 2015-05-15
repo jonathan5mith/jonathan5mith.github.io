@@ -272,7 +272,7 @@ return text;
 
 var kickId = makeid();
 
-if(firstname.length==0||lastname.length==0||city.length==0||country.length==0||twitterhandle.length==0||emailaddress.length==0||){
+if(firstname.length==0||lastname.length==0||city.length==0||country.length==0||twitterhandle.length==0||emailaddress.length==0){
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please fill in all required fields</p>"
 }
 else{
@@ -280,8 +280,6 @@ else{
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
-
-
 
 
 if (runtimes.length == 0) {
