@@ -243,7 +243,7 @@ querySubmitTime.first({
     var twitterhandle= object.get("TwitterHandle");
 
     if (parrot.length==0 && dog>0){
-      document.getElementById("formconfirm").innerHTML = "<p>You need to <a href='http://www.runwithkick.com/create'>create</a> or <a href='http://www.runwithkick.com/explore'>eneter</a> a Kick before you submit a time</p>. If you're struggling to find anything, you can always enter the <a href='http://www.runwithkick.com/kicks?id=jonathan5mith'>official weekly Kick</a>";
+      document.getElementById("formconfirm").innerHTML = "<p>You need to <a href='http://www.runwithkick.com/create'>create</a> or <a href='http://www.runwithkick.com/explore'>eneter</a> a Kick before you submit a time this week.</p>If you're struggling to find anything, you can always enter the <a href='http://www.runwithkick.com/kicks?id=jonathan5mith'>official weekly Kick</a>";
     }
 
     else{
@@ -271,7 +271,7 @@ querySubmitTime.first({
     else{
     object.addUnique("runTimesHidden", dectime);
     object.save();
-    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted your Kick</p> <p>Your time will appear on your profile when the Kick finishes and we'll also tweet you your result!</p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted this week's Kick</p> <p>Your time will appear on your profile on Monday and we'll also tweet you your result!</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
