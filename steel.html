@@ -341,6 +341,19 @@
 
 function formSubmit() {
 
+var firstname = document.getElementById("firstname").value;
+var lastname = document.getElementById("lastname").value;
+var emailaddress = document.getElementById("emailaddress").value;
+var twitterhandle = document.getElementById("twitterhandle").value;
+var club = document.getElementById("club").value;
+var gender = document.getElementById("male-female").value;
+
+alert(firstname.length);
+
+//if(firstname.length==0 || lastname.length==0 || emailaddress.length==0){
+  //alert("Please fill in all required fields")};
+
+
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
 function makeid()
@@ -355,18 +368,6 @@ function makeid()
 }
 
 var kickId = makeid();
-
-var firstname = document.getElementById("firstname").value;
-var lastname = document.getElementById("lastname").value;
-var emailaddress = document.getElementById("emailaddress").value;
-var twitterhandle = document.getElementById("twitterhandle").value;
-var club = document.getElementById("club").value;
-var club = document.getElementById("club").value;
-var gender = document.getElementById("male-female").value;
-
-if(firstname.length==0 || lastname.length==0 || emailaddress.length==0){
-  alert("Please fill in all required fields")};
-else{
 
 
 var SteelDetails = Parse.Object.extend("SteelTest");
@@ -412,7 +413,7 @@ steelDetails.save(null, {
   }
 });
 }
-}
+
 
 </script>
 
