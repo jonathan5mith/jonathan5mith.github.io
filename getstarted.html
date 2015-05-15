@@ -276,9 +276,14 @@ if(firstname.length==0||lastname.length==0||city.length==0||country.length==0||t
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please fill in all required fields</p>"
 }
 
-else if(ss>60||isNaN(mm)==true||isNaN(ss)==true){
+else if(ss>=60||isNaN(mm)==true||isNaN(ss)==true){
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please enter a valid time</p>"
 }
+else if(dectime<12.7){
+document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Um, that's a world record. Pull the other one</p>"
+
+}
+
 else{
 
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
