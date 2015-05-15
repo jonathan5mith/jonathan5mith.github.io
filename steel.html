@@ -377,8 +377,7 @@ steelDetails.set("raceNumber", kickId);
 
 steelDetails.save(null, {
   success: function(steelDetails) {
-    document.getElementById("formconfirm").innerHTML = "<p>Thanks for entering Steel 10k! An email has been sent to "+emailaddress+" with your Race ID, which you'll use to submit your results (we'll be in touch closer to the event with details of how to do this!)</p><p>The steel 10k is about runing for fun, but please do consider giving a small donation to Weston Park Cancer Charity, an amazing organisation, by clicking the link below. Thanks!</p>
-    <p><img src='https://images.justgiving.com/image/b1565f2c-91bd-41e6-827d-8b12736b1956.jpg?template=size200x200'></p><p>In the meantime you can race any time by entering a Kick, <a href='http://runwithkick.com/getstarted'>find out more here</a></p>";
+    document.getElementById("formconfirm").innerHTML = "<p>Thanks for entering Steel 10k! An email has been sent to "+emailaddress+" with your Race ID, which you'll use to submit your results (we'll be in touch closer to the event with details of how to do this!)</p><p>The steel 10k is about runing for fun, but please do consider giving a small donation to Weston Park Cancer Charity, an amazing organisation, by clicking the link below. Thanks!</p><p><img src='https://images.justgiving.com/image/b1565f2c-91bd-41e6-827d-8b12736b1956.jpg?template=size200x200'></p><p>In the meantime you can race any time by entering a Kick, <a href='http://runwithkick.com/getstarted'>find out more here</a></p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
