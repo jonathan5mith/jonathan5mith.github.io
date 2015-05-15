@@ -911,7 +911,7 @@ var twitterhandle1 = document.getElementById("twitterhandleprofile").value;
 var twitterhandle2 = twitterhandle1.split("@").pop();
 var twitterhandle = twitterhandle2.toLowerCase();
 if(twitterhandle.length==0){
- document.getElementById("formconfirmfind").innerHTML = "<p>Please enter something</p>"
+ document.getElementById("formconfirmfind").innerHTML = "<br><p style='color:#990000; text-align:center'>Please enter something</p>"
 }
 else{
 window.location.replace("http://runwithkick.com/profile?id="+twitterhandle);
