@@ -672,8 +672,8 @@ var queryValidated = new Parse.Query(personalInfo);
 queryValidated.equalTo("TwitterHandle", person);
 queryValidated.first({
   success: function(object) {
-    var validated = object.get('validated');
-    if (validated==true) {
+    var validated = object.get('validatedLink');
+    if (validated.length>0) {
       document.getElementById("validateduser").innerHTML = ' <i title="Validated User" class="fa fa-check-circle"></i>';
     }
     else {
