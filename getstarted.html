@@ -194,6 +194,9 @@
     <input type="text" class="form-control" id="validated" placeholder="Link" required>
   </div>
 
+<div class="checkbox" >
+  <label style="font-size:14px; font-weight:300"><input type="checkbox" value="true" id="emailoff" >Don't send me information about Kick</label>
+</div>
 
 
   <p style="line-height: 40px; text-align:center">
@@ -280,6 +283,7 @@ var ssa = document.getElementById("ss").value;
 var mm = parseFloat(mma);
 var ss = parseFloat(ssa);
 var validated = document.getElementById("validated").value;
+var emailoff = document.getElementById("emailoff").value;
 var dectime = mm+(ss/60);
 if (dectime>0){
 var runtimes = [dectime];
@@ -336,6 +340,8 @@ newUser.set("kickEntrants",[]);
 newUser.set("kickEntered",[]);
 newUser.set("kickCount",0);
 newUser.set("validatedLink", validated)
+newUser.set("emailOff", emailoff)
+
 }
 else{
 newUser.set("firstName", firstname);
@@ -353,6 +359,7 @@ newUser.set("kickEntrants",[]);
 newUser.set("kickEntered",[]);
 newUser.set("kickCount",0);
 newUser.set("validatedLink", validated)
+newUser.set("emailOff", emailoff)
 }
 
 
