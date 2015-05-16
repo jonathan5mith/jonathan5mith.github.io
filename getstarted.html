@@ -177,7 +177,7 @@
 
   
 <div class="form-group">
-  <p style="font-weight:400;">Your best 5k in the last 6 months</p>
+  <p style="font-weight:400;">Your best 5k in the last 6 months <i class="fa fa-question-circle" title="If you've not done a 5k recently, or even before, leave this blank and get out and run one. You can put your time in later."></i></p>
 
   <div class="col-xs-6 nopadding">
       <input type="text" class="form-control pull-left" placeholder="mm" id="mm"/>
@@ -185,10 +185,16 @@
   <div class="col-xs-6 nopadding">
       <input type="text" class="form-control pull-left" placeholder="ss" id="ss"/>
   </div>
-
+    <p style="font-size:14px">You can leave this blank and submit your time later.</p>
 </div>
 
-  <p style="font-size:14px; padding-top:20px">Don't worry if you've not done a 5k recently, you can leave this blank, run 5k and submit your time later.</p>
+
+  <div class="form-group">
+    <label >Validation  <i class="fa fa-question-circle" title="Provide a link to your online activities (e.g. Parkrun/Strava page) here if you want to be validated - we will do spot checks of validated runners. It's not required, but gives your fellow runners peace of mind that you're not pulling a fast one!"></i></label>
+    <input type="text" class="form-control" id="validated" placeholder="Link" required>
+  </div>
+
+
 
   <p style="line-height: 40px; text-align:center">
     <button type="submit" id="submit" onclick="formSubmit(); " class="btn btn-default">Let's Go!</button>
@@ -273,6 +279,7 @@ var mma = document.getElementById("mm").value;
 var ssa = document.getElementById("ss").value;
 var mm = parseFloat(mma);
 var ss = parseFloat(ssa);
+var validated = document.getElementById("validated").value;
 var dectime = mm+(ss/60);
 if (dectime>0){
 var runtimes = [dectime];
@@ -280,7 +287,6 @@ var runtimes = [dectime];
 else{
 var runtimes = [];
 }
-
 
 function makeid()
 {
@@ -329,6 +335,7 @@ newUser.set("kickId", kickId);
 newUser.set("kickEntrants",[]);
 newUser.set("kickEntered",[]);
 newUser.set("kickCount",0);
+newUser.set("validatedLink", validated)
 }
 else{
 newUser.set("firstName", firstname);
@@ -345,6 +352,7 @@ newUser.set("kickId", kickId);
 newUser.set("kickEntrants",[]);
 newUser.set("kickEntered",[]);
 newUser.set("kickCount",0);
+newUser.set("validatedLink", validated)
 }
 
 
@@ -360,7 +368,7 @@ document.getElementById("thanks").innerHTML = 'Congratuations!';
 
 Parse.Cloud.run('myMandrillFunction', {
 Address: emailaddress,
-EmailText: "Hi, "+firstname+" welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+". Keep this safe, you’ll need to do most stuff in Kick!\r\n\r\nNow you’re signed up, you can create and enter Kicks, and come results day on Monday you can see how you did, collect points and vests.\r\n\r\nRemember to check out our latest event at www.runwithkick.com/steel\r\n\r\nHappy Kicking!",
+EmailText: "Hi, "+firstname+" welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+". Keep this safe, you’ll need to do most stuff in Kick!\r\n\r\nNow you’re signed up, you can create and enter Kicks, and come results day on Monday you'll see how you did and collect points and vests.\r\n\r\nRemember to check out our latest event at www.runwithkick.com/steel\r\n\r\nHappy Kicking!",
 }, {
   // Success handler
   success: function(message) {
