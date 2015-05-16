@@ -130,7 +130,6 @@
 <!-- Main page content-->
 <!--==============================================-->
 
-<div id="removeall">
 <div class="maincontain">
 
 
@@ -157,6 +156,9 @@
       </form>
     </p>-->
 </div>
+
+<div id="removeall">
+
 
 
 <!-- Columns-->
@@ -633,7 +635,12 @@ queryName.first({
   success: function(object) {
     var firstname = object.get('firstName');
     var lastname = object.get('lastName');
+    var nonRunner = object.get('nonRunner');
     document.getElementById("name").innerHTML = firstname+" "+lastname;
+    if (nonRunner == true){
+      var elem = document.getElementById("removeall");
+      elem.parentNode.removeChild(elem);
+    }
   },
   error: function(error) {
     document.getElementById("name").innerHTML = "N/A";
