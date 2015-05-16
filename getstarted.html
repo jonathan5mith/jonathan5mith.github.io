@@ -177,7 +177,7 @@
 
   
 <div class="form-group">
-  <p style="font-weight:400;">Your best 5k</p>
+  <p style="font-weight:400;">Your best 5k in the last 6 months</p>
 
   <div class="col-xs-6 nopadding">
       <input type="text" class="form-control pull-left" placeholder="mm" id="mm"/>
@@ -188,7 +188,7 @@
 
 </div>
 
-  <p style="font-size:14px; padding-top:20px">Don't worry if you've not done a 5k recently, you can leave this blank for the moment, and submit a time later.</p>
+  <p style="font-size:14px; padding-top:20px">Don't worry if you've not done a 5k recently, you can leave this blank, run 5k and submit your time later.</p>
 
   <p style="line-height: 40px; text-align:center">
     <button type="submit" id="submit" onclick="formSubmit(); " class="btn btn-default">Let's Go!</button>
@@ -299,11 +299,11 @@ if(firstname.length==0||lastname.length==0||city.length==0||country.length==0||t
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please fill in all required fields</p>"
 }
 
-else if(ss>=60||isNaN(mm)==true||isNaN(ss)==true){
+else if(ss>=60){
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please enter a valid time</p>"
 }
 else if(dectime<12.7){
-document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Um, that's a world record. Pull the other one</p>"
+document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Um, so that's a world record. Pull the other one</p>"
 
 }
 
