@@ -612,7 +612,7 @@ queryName.first({
     document.getElementById("name").innerHTML = firstname+" "+lastname;
   },
   error: function(error) {
-    alert("nope");
+    document.getElementById("name").innerHTML = "N/A";
   }
   }
 );
