@@ -646,7 +646,7 @@ queryName.first({
 
   },
   error: function(error) {
-    document.getElementById("name").innerHTML = "N/A";
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
   }
   }
 );
@@ -660,7 +660,7 @@ queryLocation.first({
     document.getElementById("location").innerHTML = city+", "+country;
   },
   error: function(error) {
-    document.getElementById("location").innerHTML = "N/A";
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
   }
   }
 );
@@ -678,7 +678,7 @@ queryValidated.first({
     }
   },
   error: function(error) {
-    document.getElementById("name").innerHTML = "N/A";
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
   }
   }
   
@@ -692,7 +692,7 @@ queryPoints.first({
     document.getElementById("points").innerHTML = points;
   },
   error: function(error) {
-    document.getElementById("points").innerHTML = "N/A";
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
   }
 });
 // -----------------Profile image
@@ -704,7 +704,7 @@ queryPic.first({
     document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://twitter.com/'+twitterpic+'/profile_image?size=original)"></div>';
   }, 
   error: function(error) {
-    document.getElementById("twitterpicture").innerHTML = "N/A";
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
   }
   }
 );
@@ -771,7 +771,7 @@ queryTimes.first({
     });
     },
   error: function(error) {
-    document.getElementById("runtimes").innerHTML = "N/A";
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
   },
 });
 // -----------------Vests
@@ -878,7 +878,7 @@ queryKicksEntered.first({
     }
   }, 
   error: function(error) {
-    alert("something's gone wrong!");
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
   }
   }
 );
