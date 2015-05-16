@@ -126,7 +126,7 @@ color: white;
 @media (max-width: 767px) {
 
 .sub-navbar {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-95a.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-127b.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
@@ -174,13 +174,16 @@ color: white;
 
 	}
 
-	.text-container {
+	.text-container-front {
 
-	margin-top: 90px;
+	margin-top: 100px;
 	display:inline-block;
 	text-align: center;
 	}
 
+#frontpageimage{
+	width:300px;
+}
 
 }
 
@@ -189,11 +192,11 @@ color: white;
 @media (min-width: 768px) and (max-width: 1199px) {
 
 .sub-navbar {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-95.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-127a.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
-	height: 414px;
+	height: 400px;
 	padding-top: 0px;
 	text-align: center;
 	}
@@ -218,22 +221,26 @@ color: white;
 	
 	}
 
-.text-container {
+.text-container-front {
 
-	margin-top: 175px;
+	margin-top: 145px;
 	display:inline-block;
 	text-align: center;
 	}
+
+#frontpageimage{
+width:450px;
+}
 
 }
 
 @media (min-width: 1200px) {
 .sub-navbar {
-	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-95b.jpg');
+	background-image: url('https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-127.jpg');
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: top;
 	width: 100%;	
-	height: 430px;
+	height: 550px;
 	padding-top: 0px;
 	text-align: center;
 	}
@@ -258,12 +265,16 @@ color: white;
 	
 	}
 
-.text-container {
+.text-container-front {
 
-	margin-top: 160px;
+	margin-top: 210px;
 	display:inline-block;
 	text-align: center;
 	}
+
+#frontpageimage{
+width:550px;
+}
 }
 
 
@@ -1027,8 +1038,18 @@ height:370px;
 	font-size:18px;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
-	
-}
+	}
+
+#getstartedfront{
+	background-color: rgba(150,150,150,1);
+	border-radius: 2px;
+	width: 150px;
+	margin:auto;
+	line-height: 30px;
+	font-size:25px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	}
 
 #getstarted a{
 	color:white;
@@ -1047,6 +1068,26 @@ height:370px;
 	font-weight: 400;
 
 	}
+
+
+	#getstartedfront a{
+	color:white;
+	text-decoration: none;
+	font-weight: 300;
+}
+#getstartedfront a:hover{
+	text-decoration: none;
+	font-weight: 400;
+
+
+}
+
+#getstartedfront a:active{
+	text-decoration: none;
+	font-weight: 400;
+
+	}
+
 
 
 /* -----------Profile Pics ----------- */
