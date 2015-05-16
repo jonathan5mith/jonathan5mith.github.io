@@ -157,6 +157,8 @@
     </p>-->
 </div>
 
+<span id="message"></span>
+
 <div id="removeall">
 
 
@@ -640,6 +642,10 @@ queryName.first({
     if (nonRunner == true){
       var elem = document.getElementById("removeall");
       elem.parentNode.removeChild(elem);
+      if (person=="runwithkick"){
+        document.getElementById("message").innerHTML = "<p>Kick doesn't do any running, but you can check out <a href='http://www.runwithkick.com/profile?id=jonathan5mith>Jon's Profile</a></p>";
+
+      }
     }
   },
   error: function(error) {
