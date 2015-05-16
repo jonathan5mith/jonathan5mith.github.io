@@ -607,14 +607,9 @@ var queryName = new Parse.Query(personalInfo);
 queryName.equalTo("TwitterHandle", person);
 queryName.first({
   success: function(object) {
-    var twittercheck = object.get("TwitterHandle");
-    alert(twittercheck.length);
-    if(twittercheck.length==0){
-      var elem = document.getElementById("removeall");
-      elem.parentNode.removeChild(elem);
-    }
     var firstname = object.get('firstName');
     var lastname = object.get('lastName');
+    alert(firstname);
     document.getElementById("name").innerHTML = firstname+" "+lastname;
   },
   error: function(error) {
