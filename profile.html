@@ -639,13 +639,12 @@ queryName.first({
     var firstname = object.get('firstName');
     var lastname = object.get('lastName');
     var nonRunner = object.get('nonRunner');
-    alert(nonRunner);
     document.getElementById("name").innerHTML = firstname+" "+lastname;
     if (nonRunner == true){
       var elem = document.getElementById("removeall");
       elem.parentNode.removeChild(elem);
       if (person=="runwithkick"){
-        document.getElementById("message").innerHTML = "<br><p class='subheaders1'>Kick doesn't do any running, but you can check out <a href='http://www.runwithkick.com/profile?id=jonathan5mith'>Jon's Profile</a></p>";
+        document.getElementById("message").innerHTML = "<br><p class='subheaders1'>Kick doesn't actually do any running, but you can check out <a href='http://www.runwithkick.com/profile?id=jonathan5mith'>Jon's Profile</a></p>";
 
       }
     }
