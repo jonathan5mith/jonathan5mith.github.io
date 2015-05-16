@@ -196,8 +196,7 @@
 
 <div class="checkbox" >
   <label style="font-size:14px; font-weight:300">
-  <input type="checkbox" value="true" id="emailoff" >Don't send me information about Kick</label>
-  <input type="hidden" value="false" id="emailoff" >
+  <input type="checkbox" id="emailoff" >Don't send me information about Kick</label>
 </div>
 
 
@@ -285,7 +284,7 @@ var ssa = document.getElementById("ss").value;
 var mm = parseFloat(mma);
 var ss = parseFloat(ssa);
 var validated = document.getElementById("validated").value;
-var emailoff = document.getElementById("emailoff").value;
+var emailoff = document.getElementById("emailoff").checked;
 var dectime = mm+(ss/60);
 if (dectime>0){
 var runtimes = [dectime];
