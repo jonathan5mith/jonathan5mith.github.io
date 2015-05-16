@@ -392,7 +392,7 @@ EmailText: "Hi, "+firstname+" welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+"
 
 },
 error: function(newUser, error) {
-alert("hmm, for some reason this hasn't worked - contact jon@runwithkick and we'll see if we can get to the bottom of it");
+alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
 }
 });
 
@@ -404,7 +404,7 @@ object.addUnique("kickEntered",twitterhandle);
 object.save();
 },
 error: function(error){
-alert("something's gone wrong")
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
 }
 
 });
