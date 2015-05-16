@@ -609,11 +609,10 @@ queryName.first({
   success: function(object) {
     var firstname = object.get('firstName');
     var lastname = object.get('lastName');
-    alert(firstname);
     document.getElementById("name").innerHTML = firstname+" "+lastname;
   },
   error: function(error) {
-    document.getElementById("name").innerHTML = "N/A";
+    alert("nope");
   }
   }
 );
