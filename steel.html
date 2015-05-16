@@ -237,6 +237,7 @@
           <div class="form-group">
             <label>*Gender</label>
             <select class="form-control" id="male-female">
+              <option value='' disabled selected style='display:none;'>Please select</option>
               <option value="Female">Female</option>
               <option value="Male">Male</option>
             </select>
@@ -244,15 +245,15 @@
           </div>
 
           <div class="form-group">
-            <label>*Email Address</label>
+            <label>*Email Address <i class="fa fa-question-circle" title="We'll send you a confirmation email, and emails about the Steel 10k before race weekend. Just tick below if you don't want to receive other emails about Kick."></i></label>
             <input type="email" class="form-control" id="emailaddress" placeholder="Email address">
           </div>
           
           <div class="form-group">
-            <label>Twitter Handle</label>
+            <label>Twitter Handle <i class="fa fa-question-circle" title="Put your twitter handle here and sign up to Kick before the race and you'll get points for completing the Steel 10k!"></i></label>
             <input type="text" class="form-control" id="twitterhandle" placeholder="e.g. @runwithkick">
           </div>
-          <p style="font-size:14px">Put your twitter handle here and <a href="www.runwithkick.com/getstarted">sign up to Kick </a>before the race, you'll get points for completing the Steel 10k!</p>
+          <p style="font-size:14px"></p>
 
           <div class="form-group">
             <label>Club</label>
@@ -295,7 +296,10 @@
           </div>
 
 
-
+<div class="checkbox" >
+  <label style="font-size:14px; font-weight:300">
+  <input type="checkbox" id="emailoff" >Don't send me emails about Kick</label>
+</div>
 
           <p style="line-height: 40px; text-align:center">
             <button type="submit" id="submit" onclick="formSubmit();" class="btn btn-default">Enter Steel 10k</button>
@@ -385,6 +389,7 @@ var twitterhandle = document.getElementById("twitterhandle").value;
 var club = document.getElementById("club").value;
 var club = document.getElementById("club").value;
 var gender = document.getElementById("male-female").value;
+var emailoff = document.getElementById("emailoff").checked;
 
 if(firstname.length==0||lastname.length==0||emailaddress.length==0){
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please fill in all required fields</p>"
@@ -403,6 +408,7 @@ steelDetails.set("twitterHandle", twitterhandle);
 steelDetails.set("club", club);
 steelDetails.set("gender", gender);
 steelDetails.set("raceNumber", kickId);
+steelDetails.set("emailOff", emailoff);
 
 steelDetails.save(null, {
   success: function(steelDetails) {
