@@ -641,7 +641,7 @@ queryName.first({
     var lastname = object.get('lastName');
     var nonRunner = object.get('nonRunner');
     document.getElementById("name").innerHTML = firstname+" "+lastname;
-    document.getElementById("visitkicks").innerHTML = "<a href='http://www.runwithkick.com/kicks?id="+person+"'>"+firstname+"'s Kicks</a>"
+    document.getElementById("visitkicks").innerHTML = "<a href='http://www.runwithkick.com/kicks?id="+person+"'>"+firstname+"'s Kicks<i class="fa fa-arrow-right"></i></a>"
     if (nonRunner == true){
       var elem = document.getElementById("removeall");
       elem.parentNode.removeChild(elem);
