@@ -147,6 +147,7 @@
 
     <p class="mainheaders"><span id="name"></span></p>
     <p class="subheaders1"><span id="location"></span><span id="validateduser"></span></p>
+    <p class="subheaders1"><span id="visitkicks"></span><span id="validateduser"></span></p>
         <span id="message"></span>
 
     <!--<p class="subheaders">
@@ -630,6 +631,7 @@ Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGo
 
 
 var personalInfo = Parse.Object.extend("upload1");
+
 // -----------------Name query
 var queryName = new Parse.Query(personalInfo);
 queryName.equalTo("TwitterHandle", person);
@@ -639,6 +641,7 @@ queryName.first({
     var lastname = object.get('lastName');
     var nonRunner = object.get('nonRunner');
     document.getElementById("name").innerHTML = firstname+" "+lastname;
+    document.getElementById("visitkicks").innerHTML = "<a href='http://www.runwithkick.com/kicks?id="+person+"'>"+firstname+"'s Kicks</a>"
     if (nonRunner == true){
       var elem = document.getElementById("removeall");
       elem.parentNode.removeChild(elem);
