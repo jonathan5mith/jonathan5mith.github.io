@@ -659,7 +659,7 @@ queryLocation.first({
   success: function(object) {
     var city = object.get('city');
     var country = object.get('country');
-    document.getElementById("location").innerHTML = city+", "+country;
+    document.getElementById("location").innerHTML = city+", "+country+" ";
   },
   error: function(error) {
     alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
