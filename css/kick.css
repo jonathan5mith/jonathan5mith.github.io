@@ -31,6 +31,12 @@ position: absolute;
 
 }
 
+.navbar-fixed-bottom{
+
+position: absolute;
+
+}
+
 .navbar-brand{
 	padding-top: 10px;
 }
@@ -1585,9 +1591,6 @@ tr{
 	margin-top: 40px;
 	background-color: white;
 	box-shadow: 0px 0px 2px #888888;
-	position:absolute;
-	bottom:-300px;
-	width:100%;
 
 
 
