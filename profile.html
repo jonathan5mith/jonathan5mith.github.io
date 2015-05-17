@@ -843,7 +843,7 @@ queryVests.first({
             if(times.length==0){
               var elem = document.getElementById("statsremove");
               elem.parentNode.removeChild(elem);
-              document.getElementById("statsreplace").innerHTML = '<p>'+firstname+' hasnt entered any times yet, as soon as they upload their first Kick, thier stats will appear here.</p>'
+              document.getElementById("statsreplace").innerHTML = '<p>'+firstname+' hasnt entered any times yet, as soon as they upload their first Kick, thier stats will appear here and they will recieive their first vest!</p>'
               document.getElementById("uploadheader").innerHTML =  "Send first Kick"
             }
 
@@ -851,7 +851,7 @@ queryVests.first({
             if(times.length==1){
               var elem = document.getElementById("canvasremove");
               elem.parentNode.removeChild(elem);
-              document.getElementById("graphtocome").innerHTML = "<div id='greyline'></div><br><p>As "+firstname+" adds more Kicks, a graph showing their last 5 Kicks will appear here.</p>";
+              document.getElementById("graphtocome").innerHTML = "<div id='greyline'></div><br><p>"+firstname+" has entered their first Kick and recieved 5 points and their first vest. As "+firstname+" adds more Kicks, a graph showing their last 5 Kicks will appear here.</p>";
               document.getElementById("uploadheader").innerHTML =  "Send Kick"
             }
     },
