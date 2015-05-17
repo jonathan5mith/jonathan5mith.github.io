@@ -154,7 +154,10 @@
 
 
 
+
     <p class="mainheaders"><span id="theirname"></span></p>
+    <p class="subheaders1"><span id="visitkicks"></span></p>
+
     <br>
     <!--<p class="subheaders">
       <form class="navbar-form navbar-center" role="search">
@@ -676,6 +679,8 @@ queryPic.first({
     var firstname = object.get('firstName');
     document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://twitter.com/'+twitterpic+'/profile_image?size=original)"></div>';
     document.getElementById("theirname").innerHTML = firstname+"'s Kicks";
+    document.getElementById("visitkicks").innerHTML = "<a href='http://www.runwithkick.com/kicks?id="+person+"'><i class='fa fa-angle-left'></i>"+firstname+"'s Profile </a>";
+
 
 
   }, 
