@@ -90,26 +90,17 @@
 <div id="navbar" class="collapse navbar-collapse">
   <ul class="nav navbar-nav navbar-right">
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Go to Profile <span class="caret"></span></a>
-      <ul class="dropdown-menu" role="menu">
-        <div class="navbar-form navbar-left" style="width:270px; border-top:0px; border-bottom:0px" role="search">
-          <div class="input-group">
-          <input type="text" class="form-control" id="twitterhandleprofile" placeholder="Twitter Handle">
-          </div>
-          <button type="submit" class="btn btn-default" onclick="formSubmit1();">Go!</button>
-        </div>
-      </ul>
-    </li>
-    <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Navigate <span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-          <li><a href="http://runwithkick.com/getstarted" style="font-weight:600">Get Started</a></li>
-        <li><a href="http://runwithkick.com/howitworks">How Kick Works</a></li>
+        <li><a href="http://runwithkick.com/getstarted" style="font-weight:600">Get Started</a></li>
+    <li><a href="http://runwithkick.com/howitworks">How it Works</a></li>
+     
         <li><a href="http://runwithkick.com/create">Create a Kick</a></li>
         <li><a href="http://runwithkick.com/explore">Explore Kicks</a></li>
         <li><a href="http://runwithkick.com/steel">Events</a></li>
       </ul>
     </li>
+    <li><a href="http://runwithkick.com/gotoprofile">Go to Profile</a></li>
     <li><a href="http://runwithkick.com/about">About</a></li>
     <li><a href="http://blog.runwithkick.com">Blog</a></li>
     <li><a href="https://www.strava.com/clubs/kick-122494" target="_blank" title="Strava"><img src="https://dl.dropboxusercontent.com/u/10455351/Assets/strava1.png"/></a></li>
@@ -169,6 +160,7 @@
 <br>        
 <h2 id="getstartedfront"><a href="http://www.runwithkick.com/getstarted" style="font-weight:300">Get Started</a></h2>
 
+
 </div>
   
 
@@ -225,15 +217,6 @@
 
 <script> 
 
-function formSubmit1() {
-
-var twitterhandle1 = document.getElementById("twitterhandleprofile").value;
-var twitterhandle2 = twitterhandle1.split("@").pop();
-var twitterhandle = twitterhandle2.toLowerCase();
-
-window.location.replace("http://runwithkick.com/profile?id="+twitterhandle);
-
-}
 
 
 var $buoop = {c:2}; 
