@@ -1887,3 +1887,16 @@ width:400px;
 	font-weight: 400px;
 }
 
+
+
+@media (max-width: 767px)  {
+  #kickcycleimage {
+	width:250px;
+	  }
+}
+
+@media (min-width: 768px)  {
+  #kickcycleimage {
+		width:400px;
+  }
+}

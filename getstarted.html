@@ -377,7 +377,7 @@ document.getElementById("thanks").innerHTML = 'Congratuations!';
 
 Parse.Cloud.run('myMandrillFunction', {
 Address: emailaddress,
-EmailText: "Hi, "+firstname+" welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+". Keep this safe, you’ll need to do most stuff in Kick!\r\n\r\nNow you’re signed up, you can create and enter Kicks, and come results day on Monday you'll see how you did and collect points and vests.\r\n\r\nRemember to check out our latest event at www.runwithkick.com/steel\r\n\r\nHappy Kicking!",
+EmailText: "Hi "+firstname+", welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+". Keep this safe, you’ll need to do most stuff in Kick.\r\n\r\nNow you’re signed up, you can create and enter Kicks, and come results day on Mondays you'll see how you did and collect points and vests.\r\n\r\nRemember to check out our latest event at www.runwithkick.com/steel\r\n\r\nHappy Kicking!",
 }, {
   // Success handler
   success: function(message) {
