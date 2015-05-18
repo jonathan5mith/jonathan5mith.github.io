@@ -1893,10 +1893,17 @@ width:400px;
   #kickcycleimage {
 	width:250px;
 	  }
+	#timesexample{
+	width:250px;
+	  }
 }
 
 @media (min-width: 768px)  {
   #kickcycleimage {
 		width:400px;
   }
+  	#timesexample{
+	width:400px;
+	  }
 }
+
