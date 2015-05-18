@@ -386,7 +386,11 @@ var kickId = makeid();
 var firstname = document.getElementById("firstname").value;
 var lastname = document.getElementById("lastname").value;
 var emailaddress = document.getElementById("emailaddress").value;
-var twitterhandle = document.getElementById("twitterhandle").value;
+
+var twitterhandle1 = document.getElementById("twitterhandle").value;
+var twitterhandle2 = twitterhandle1.split("@").pop();
+var twitterhandle = twitterhandle2.toLowerCase();
+
 var club = document.getElementById("club").value;
 var club = document.getElementById("club").value;
 var gender = document.getElementById("male-female").value;
