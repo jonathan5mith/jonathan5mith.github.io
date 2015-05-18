@@ -312,10 +312,10 @@
               <button type="submit" id="submit" class="btn btn-default" onclick="formSubmit();">Join Kick</button>
             </div>
           </div>
+                  <br>
+        <p style="font-size:13px">Make sure your Kick ID is correct, as it won't do anything if it's not!</p>
 
       </div>
-        <br>
-        <p style="font-size:13px">Make sure your Kick ID is correct, as it won't do anything if it's not!</p>
 
       <span id="formconfirm"></span>
        
@@ -614,7 +614,7 @@ queryNewParticipant.first({
 else{
             var elem = document.getElementById("formremove");
           elem.parentNode.removeChild(elem);
-          document.getElementById("formconfirm").innerHTML = "<p>You can't enter a Kick without submitting your first Kick. Head over to your <a href='http://runwithkick.com/profile?id="+twitterhandlex+"'>Profile Page</a> where you can submit your first Kick.</p>";  
+          document.getElementById("formconfirm").innerHTML = "<p>You can't enter a Kick without submitting your first Kick. Head over to the <a href='http://runwithkick.com/submit'>Submit Page</a> where you can submit your first Kick.</p>";  
 
 }
 
