@@ -369,7 +369,6 @@ newUser.set("emailOff", emailoff)
 newUser.save(null, {
 success: function(newUser) {
 document.getElementById("formconfirm").innerHTML = "Congratuations, "+firstname+", you're all signed up. ";
-document.getElementById("formconfirm1").innerHTML ="<p><a href='http://runwithkick.com/profile?id="+twitterhandle+"'>My Profile</a></p><p>Now you're signed up, you can <a href='http://runwithkick.com/create'>create</a> and share Kicks or <a href='http://runwithkick.com/explore'>explore</a> Kicks that others have made. Happy Kicking!</p><p>You can follow Kick on Twitter or Facebook using the links below</p><p style='text-align:center; font-size:15px; padding-top:20px'><a href='http://www.twitter.com/runwithkick' target='_blank' title='Kick on Twitter'><i class='fa fa-twitter social-icons'></i> Kick on Twitter </a>&nbsp;&nbsp;<a href='http://www.facebook.com/runwithkick' target='_blank' title='Kick on Facebook'><i class='fa fa-facebook social-icons'></i> Kick on Facebook</a></p>";
 var elem = document.getElementById("formremove");
 elem.parentNode.removeChild(elem);
 var elem = document.getElementById("removeimage");
