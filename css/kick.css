@@ -198,7 +198,7 @@ color: white;
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 100%;	
-	height: 400px;
+	height: 350px;
 	padding-top: 0px;
 	text-align: center;
 	}
@@ -225,7 +225,7 @@ color: white;
 
 .text-container-front {
 
-	margin-top: 145px;
+	margin-top: 135px;
 	display:inline-block;
 	text-align: center;
 	}
@@ -242,7 +242,7 @@ width:450px;
 	background-repeat: no-repeat;
 	background-position: top;
 	width: 100%;	
-	height: 550px;
+	height: 450px;
 	padding-top: 0px;
 	text-align: center;
 	}
@@ -269,7 +269,7 @@ width:450px;
 
 .text-container-front {
 
-	margin-top: 210px;
+	margin-top: 180px;
 	display:inline-block;
 	text-align: center;
 	}
