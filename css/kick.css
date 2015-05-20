@@ -1849,6 +1849,18 @@ width:400px;
 	padding-right: 20px;
 }
 
+.subheaders2{
+	font-size: 25px;
+	font-weight: 400px;
+		max-width: 800px;
+	font-weight: 300;
+	text-align: center;
+	margin: auto auto;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 
 }
 
