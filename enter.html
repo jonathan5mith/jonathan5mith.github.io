@@ -1,0 +1,753 @@
+<!-- Welcome to the code! ==================================================================== -->
+
+<!-- If you like the project and think you can bring some tech/deisgn skills to the table, tweet me on @jonathan5mith-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kick &middot; kicks</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" ></script>
+    <script src="//www.parsecdn.com/js/parse-1.4.0.min.js"></script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+<!-- Favs --> 
+<!--==============================================-->
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="img/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="img/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="img/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="img/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="img/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="img/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="img/mstile-310x310.png" />
+
+
+<!-- CSS -->
+<!--==============================================-->
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/kick.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Google Fonts -->
+<!--==============================================-->
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,500, 700,900|Merriweather' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+
+
+<!-- Font Awesome -->
+<!--==============================================-->
+
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+
+
+<!-- Body begins -->
+<!--==============================================-->
+
+  <body >
+    
+<!-- Navbar -->
+<!--==============================================-->
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-options="scrolltop: false">
+<div class="container">
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="index.html"> <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/kick%20white%20small2.png"/></a>
+</div>
+<div id="navbar" class="collapse navbar-collapse">
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Do stuff<span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="http://runwithkick.com/getstarted" style="font-weight:600">Get Started</a></li>
+        <li><a href="http://runwithkick.com/gotoprofile">Go to a Profile</a></li>
+        <li><a href="http://runwithkick.com/create">Create a Kick</a></li>
+        <li><a href="http://runwithkick.com/explore">Explore Kicks</a></li>
+        <li><a href="http://runwithkick.com/submit">Submit a Time</a></li>
+
+        <li><a href="http://runwithkick.com/steel">Events</a></li>
+      </ul>
+    </li>
+    <li><a href="http://runwithkick.com/howitworks">How it Works</a></li>
+    <li><a href="http://runwithkick.com/about">About</a></li>
+    <li><a href="http://blog.runwithkick.com">Blog</a></li>
+    <li><a href="https://www.strava.com/clubs/kick-122494" target="_blank" title="Strava"><img src="https://dl.dropboxusercontent.com/u/10455351/Assets/strava1.png"/></a></li>
+    <li><a href="http://www.twitter.com/runwithkick" target="_blank" title="Twitter"><i class="fa fa-twitter social-icons"></i></a></li>
+    <li><a href="https://www.facebook.com/runwithkick" target="_blank" title="Facebook"><i class="fa fa-facebook social-icons"></i></a></li>
+    <!--<li><a href="https://www.instagram.com/jonathan5mith" target="_blank" title="Instagram"><i class="fa fa-instagram social-icons"></i></a></li>-->
+
+  </ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
+
+<!-- Sub navbar - picture, text container & text-->
+<!--==============================================-->
+  
+<div class="sub-navbar2">
+
+</div>
+
+<!--<span id="nameenter"></span> - for entering name above-->
+
+<!-- Main page content-->
+<!--==============================================-->
+
+
+
+
+<div class="maincontain"> 
+
+<!-- Profile Image-->
+
+
+  <div id="container">
+     <span id="twitterpicture"></span>
+  </div>
+
+<span id="message"></span>
+
+
+<div id="removeall">
+
+
+<div id="profile-name">
+
+
+
+
+
+    <p class="mainheaders"><span id="theirname"></span></p>
+    <p class="subheaders1"><span id="visitkicks"></span></p>
+
+    <br>
+
+      <p class="subheaders">This is where you enter a race. Before you do so, you'll need to <a href="http://www.runwithkick.com/getstarted" target="_blank">sign up</a> for Kick. Good luck!</p>
+      <br>
+
+    <!--<p class="subheaders">
+      <form class="navbar-form navbar-center" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="New profile">
+        </div>
+        <button type="submit" class="btn btn-default">Go!</button>
+      </form>
+    </p>-->
+</div>
+
+
+<!-- Cards-->
+
+
+  <div class="formcontain">
+    <div class="cardsform">
+      <div class="border-bottom">
+        <p class="mainheaders" id="removeimage">This Week</p>
+
+      </div>
+      <div class="border-below">
+       
+      <p><span id="formconfirmb"></span></p>
+
+      <span id="formconfirm0"></span>
+
+      <span id="removegreyline"><div id='greyline'></div></span>
+      <br>
+
+      <span id="formconfirm1"></span>
+      <span id="formconfirm2"></span>
+      <span id="formconfirm3"></span>
+      <span id="formconfirm4"></span>
+      <span id="formconfirm5"></span>
+      <span id="formconfirm6"></span>
+      <span id="formconfirm7"></span>
+      <span id="formconfirm8"></span>
+      <span id="formconfirm9"></span>
+      <span id="formconfirm10"></span>
+      <span id="formconfirm11"></span>
+      <span id="formconfirm12"></span>
+      <span id="formconfirm13"></span>
+      <span id="formconfirm14"></span>
+      <span id="formconfirm15"></span>
+      <span id="formconfirm16"></span>
+      <span id="formconfirm17"></span>
+      <span id="formconfirm18"></span>
+      <span id="formconfirm19"></span>
+      <span id="formconfirm20"></span>
+      <span id="formconfirm21"></span>
+      <span id="formconfirm22"></span>
+      <span id="formconfirm23"></span>
+      <span id="formconfirm24"></span>
+      <span id="formconfirm25"></span>
+      <span id="formconfirm26"></span>
+      <span id="formconfirm27"></span>
+      <span id="formconfirm28"></span>
+      <span id="formconfirm29"></span>
+      <span id="formconfirm30"></span>
+      <span id="formconfirm31"></span>
+      <span id="formconfirm32"></span>
+      <span id="formconfirm33"></span>
+      <span id="formconfirm34"></span>
+      <span id="formconfirm35"></span>
+      <span id="formconfirm36"></span>
+      <span id="formconfirm37"></span>
+      <span id="formconfirm38"></span>
+      <span id="formconfirm39"></span>
+      <span id="formconfirm40"></span>
+      <span id="formconfirm41"></span>
+      <span id="formconfirm42"></span>
+      <span id="formconfirm43"></span>
+      <span id="formconfirm44"></span>
+      <span id="formconfirm45"></span>
+      <span id="formconfirm46"></span>
+      <span id="formconfirm47"></span>
+      <span id="formconfirm48"></span>
+      <span id="formconfirm49"></span>
+      <span id="formconfirm50"></span>
+      <span id="formconfirm51"></span>
+      <span id="formconfirm52"></span>
+      <span id="formconfirm53"></span>
+      <span id="formconfirm54"></span>
+      <span id="formconfirm55"></span>
+      <span id="formconfirm56"></span>
+      <span id="formconfirm57"></span>
+      <span id="formconfirm58"></span>
+      <span id="formconfirm59"></span>
+      <span id="formconfirm60"></span>
+      <span id="formconfirm61"></span>
+      <span id="formconfirm62"></span>
+      <span id="formconfirm63"></span>
+      <span id="formconfirm64"></span>
+      <span id="formconfirm65"></span>
+      <span id="formconfirm66"></span>
+      <span id="formconfirm67"></span>
+      <span id="formconfirm68"></span>
+      <span id="formconfirm69"></span>
+      <span id="formconfirm70"></span>
+      <span id="formconfirm71"></span>
+      <span id="formconfirm72"></span>
+      <span id="formconfirm73"></span>
+      <span id="formconfirm74"></span>
+      <span id="formconfirm75"></span>
+      <span id="formconfirm76"></span>
+      <span id="formconfirm77"></span>
+      <span id="formconfirm78"></span>
+      <span id="formconfirm79"></span>
+      <span id="formconfirm80"></span>
+      <span id="formconfirm81"></span>
+      <span id="formconfirm82"></span>
+      <span id="formconfirm83"></span>
+      <span id="formconfirm84"></span>
+      <span id="formconfirm85"></span>
+      <span id="formconfirm86"></span>
+      <span id="formconfirm87"></span>
+      <span id="formconfirm88"></span>
+      <span id="formconfirm89"></span>
+      <span id="formconfirm90"></span>
+      <span id="formconfirm91"></span>
+      <span id="formconfirm92"></span>
+      <span id="formconfirm93"></span>
+      <span id="formconfirm94"></span>
+      <span id="formconfirm95"></span>
+      <span id="formconfirm96"></span>
+      <span id="formconfirm97"></span>
+      <span id="formconfirm98"></span>
+      <span id="formconfirm99"></span>
+      <span id="formconfirm100"></span>
+      
+      <div id="formremove">
+
+        <br>
+
+<!--    OLD FORM
+
+          <div class="form-group">
+            <input type="name" class="form-control" id="kickid" placeholder="Enter your Kick ID to join" required>
+          </div>
+
+          
+          <p class="pager" style="line-height: 30px;">
+            <button type="submit" id="submit" onclick="formSubmit(); " class="btn btn-default">Join Kick</button>
+          </p>
+-->
+
+          <div class="form-inline profileform" role="form">
+            <div class="input-group">
+              <input type="text" class="form-control"  id="kickid" placeholder="Enter Kick ID" style="width:150px;margin-right:10px" required>
+              <button type="submit" id="submit" class="btn btn-default" onclick="formSubmit();">Join Kick</button>
+            </div>
+          </div>
+                  <br>
+        <p style="font-size:13px">Make sure your Kick ID is correct, as it won't do anything if it's not!</p>
+
+      </div>
+
+      <span id="formconfirm"></span>
+       
+
+
+        </div>  
+      <br>
+      <p id="featuredblurb" style="text-align:center; width:300px; font-size:20px"><i class="fa fa-twitter social-icons"></i><span id="tweetlink"></span></p>  
+
+
+      </div>
+  </div>
+<p class="subheaders">After the first week's Kicks, results for this Kick will appear below.</p>
+</div>
+</div>
+</div>
+
+
+
+<!--
+<div class="maincontain"> 
+
+  <div class="formcontain">
+    <div class="cardsform">
+      <div class="border-bottom">
+        <p class="mainheaders" id="removeimage">Last Week</p>
+
+      </div>
+      <div class="border-below">
+       
+      <p><span id="formconfirmb"></span></p>
+
+      <span id="lastweek0"></span>
+      <span id="lastweek1"></span>
+      <span id="lastweek2"></span>
+      <span id="lastweek3"></span>
+      <span id="lastweek4"></span>
+      <span id="lastweek5"></span>
+      <span id="lastweek6"></span>
+      <span id="lastweek7"></span>
+      <span id="lastweek8"></span>
+      <span id="lastweek9"></span>
+      <span id="lastweek10"></span>
+      <span id="lastweek11"></span>
+      <span id="lastweek12"></span>
+      <span id="lastweek13"></span>
+      <span id="lastweek14"></span>
+      <span id="lastweek15"></span>
+      <span id="lastweek16"></span>
+      <span id="lastweek17"></span>
+      <span id="lastweek18"></span>
+      <span id="lastweek19"></span>
+      <span id="lastweek20"></span>
+      <span id="lastweek21"></span>
+      <span id="lastweek22"></span>
+      <span id="lastweek23"></span>
+      <span id="lastweek24"></span>
+      <span id="lastweek25"></span>
+      <span id="lastweek26"></span>
+      <span id="lastweek27"></span>
+      <span id="lastweek28"></span>
+      <span id="lastweek29"></span>
+      <span id="lastweek30"></span>
+      <span id="lastweek31"></span>
+      <span id="lastweek32"></span>
+      <span id="lastweek33"></span>
+      <span id="lastweek34"></span>
+      <span id="lastweek35"></span>
+      <span id="lastweek36"></span>
+      <span id="lastweek37"></span>
+      <span id="lastweek38"></span>
+      <span id="lastweek39"></span>
+      <span id="lastweek40"></span>
+      <span id="lastweek41"></span>
+      <span id="lastweek42"></span>
+      <span id="lastweek43"></span>
+      <span id="lastweek44"></span>
+      <span id="lastweek45"></span>
+      <span id="lastweek46"></span>
+      <span id="lastweek47"></span>
+      <span id="lastweek48"></span>
+      <span id="lastweek49"></span>
+      <span id="lastweek50"></span>
+      <span id="lastweek51"></span>
+      <span id="lastweek52"></span>
+      <span id="lastweek53"></span>
+      <span id="lastweek54"></span>
+      <span id="lastweek55"></span>
+      <span id="lastweek56"></span>
+      <span id="lastweek57"></span>
+      <span id="lastweek58"></span>
+      <span id="lastweek59"></span>
+      <span id="lastweek60"></span>
+      <span id="lastweek61"></span>
+      <span id="lastweek62"></span>
+      <span id="lastweek63"></span>
+      <span id="lastweek64"></span>
+      <span id="lastweek65"></span>
+      <span id="lastweek66"></span>
+      <span id="lastweek67"></span>
+      <span id="lastweek68"></span>
+      <span id="lastweek69"></span>
+      <span id="lastweek70"></span>
+      <span id="lastweek71"></span>
+      <span id="lastweek72"></span>
+      <span id="lastweek73"></span>
+      <span id="lastweek74"></span>
+      <span id="lastweek75"></span>
+      <span id="lastweek76"></span>
+      <span id="lastweek77"></span>
+      <span id="lastweek78"></span>
+      <span id="lastweek79"></span>
+      <span id="lastweek80"></span>
+      <span id="lastweek81"></span>
+      <span id="lastweek82"></span>
+      <span id="lastweek83"></span>
+      <span id="lastweek84"></span>
+      <span id="lastweek85"></span>
+      <span id="lastweek86"></span>
+      <span id="lastweek87"></span>
+      <span id="lastweek88"></span>
+      <span id="lastweek89"></span>
+      <span id="lastweek90"></span>
+      <span id="lastweek91"></span>
+      <span id="lastweek92"></span>
+      <span id="lastweek93"></span>
+      <span id="lastweek94"></span>
+      <span id="lastweek95"></span>
+      <span id="lastweek96"></span>
+      <span id="lastweek97"></span>
+      <span id="lastweek98"></span>
+      <span id="lastweek99"></span>
+      <span id="lastweek100"></span>
+
+      
+      <span id="formconfirm"></span>
+       
+
+
+        </div>  
+      </div>
+  </div>
+</div>
+
+-->
+
+
+<!-- Bottom Navbar-->
+<!--==============================================-->
+
+
+<div class="bottomnav">
+
+<div class="bottombar">
+    <div class="row coltext">
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-2 col-xs-6">
+        <h2 id="getstarted"><a href="http://www.runwithkick.com/howitworks">How it Works</a></h2>
+      </div>
+      <div class="col-sm-2 col-xs-6">
+        <h2 id="getstarted"><a href="http://www.runwithkick.com/create">Create a Kick</a></h2>
+      </div>
+      <div class="col-sm-2 col-xs-6">
+        <h2 id="getstarted"><a href="http://www.runwithkick.com/explore">Find a Kick</a></h2>
+      </div>
+      <div class="col-sm-2 col-xs-6">
+        <h2 id="getstarted"><a href="http://www.runwithkick.com/submit">Submit a Time</a></h2>
+      </div>
+            <div class="col-sm-2 col-xs-6">
+        <h2 id="getstarted"><a href="http://www.runwithkick.com/steel">Events</a></h2>
+      </div>
+            <div class="col-sm-1">
+      </div>
+    </div>
+
+</div>
+    <!--<p style="padding-top:10px; padding-bottom:0px; text-align:center">© 2015 Jonathan Smith</p>-->
+
+</div>
+
+
+
+
+<!-- Parse stuff-->
+<!--==============================================-->
+
+
+<script type="text/javascript">
+// Initialisation
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+var person1 = getQueryVariable("id");
+var person = person1.toLowerCase();
+Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
+
+var personalInfo = Parse.Object.extend("upload1");
+//
+var queryPic = new Parse.Query(personalInfo);
+queryPic.equalTo("TwitterHandle", person);
+queryPic.first({
+  success: function(object) {
+    var kickentrants = object.get('kickEntrants');
+    var firstname = object.get('firstName');
+    //document.getElementById("nameenter").innerHTML = firstname;    
+    if(kickentrants.length==0){
+      document.getElementById("formconfirmb").innerHTML = firstname+" doesn't have any active Kicks this week. If you're "+firstname+" or somone else, get started by <a href='http://www.runwithkick.com/create'>creating a kick</a>.";
+      var elem = document.getElementById("removegreyline");
+      elem.parentNode.removeChild(elem);
+      var elem = document.getElementById("formremove");
+      elem.parentNode.removeChild(elem);
+      var elem = document.getElementById("featuredblurb");
+      elem.parentNode.removeChild(elem);
+
+
+    }
+    else{
+      
+      document.getElementById("tweetlink").innerHTML = "<a href='https://twitter.com/intent/tweet?text=Check%20out%20this%20kick!%20%23letskick%20pic.twitter.com%2FaVuL2IIDQ6&url=http%3A%2F%2Frunwithkick.com%2Fkicks?id="+person+"'> Tweet this Kick!</a>"
+      
+
+      for(i=0;i<kickentrants.length;i++){
+        var j = i.toString();
+        document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/profile?id="+kickentrants[i]+"'>"+kickentrants[i]+"</a></td></tr></table><br>";
+        }
+   
+    }
+  }, 
+  error: function(error) {
+    alert("Something has gone wrong! It's probably some kind of annoying server thing, but email jon@runwithkick.com if the problem persists!");
+  }
+  }
+);
+
+
+function formSubmit() {
+var kickid = document.getElementById("kickid").value;
+var queryNewParticipant = new Parse.Query(personalInfo);
+queryNewParticipant.equalTo("kickId", kickid);
+queryNewParticipant.first({
+  success: function(object) {
+    var twitterhandlex = object.get('TwitterHandle');
+    var name = object.get("firstName");
+    var kickcount = object.get("kickCount");
+    var kickhistory = object.get("runTimes");
+    var kicksentered = object.get("kickEntered");
+
+    if(kicksentered.length<5){
+
+    if(kickhistory.length>0){
+
+
+    object.set("kickCount", kickcount+1);
+    object.addUnique("kickEntered",person);
+    object.save();
+//nested query
+    var queryAddParticipant = new Parse.Query(personalInfo);
+    queryAddParticipant.equalTo("TwitterHandle", person);
+    queryAddParticipant.first({
+      success: function(object) {
+        var entrants = object.get("kickEntrants");
+        
+        if(entrants.indexOf(twitterhandlex)>=0){
+        	var elem = document.getElementById("formremove");
+		      elem.parentNode.removeChild(elem);
+        	document.getElementById("formconfirm").innerHTML = "<p>You've already entered this Kick!</p>";  
+
+        }
+        else{
+
+		        object.addUnique("kickEntrants",twitterhandlex);
+		        object.save();
+		        var elem = document.getElementById("formremove");
+		        elem.parentNode.removeChild(elem);
+		    	document.getElementById("formconfirm").innerHTML = "<p>Congratulations, "+name+" you've entered the Kick. Refresh the page and you'll appear on the list</p>";  
+
+        }
+        
+      },
+      error: function(error) {
+        alert("Something has gone wrong! It's probably some kind of annoying server thing, but email jon@runwithkick.com if the problem persists!");
+      }
+      }
+    ); 
+//nested query end
+}
+
+else{
+            var elem = document.getElementById("formremove");
+          elem.parentNode.removeChild(elem);
+          document.getElementById("formconfirm").innerHTML = "<p>You can't enter a Kick without submitting your first Kick. Head over to the <a href='http://runwithkick.com/submit'>Submit Page</a> where you can submit your first Kick.</p>";  
+
+}
+
+    }
+  else{
+
+            var elem = document.getElementById("formremove");
+          elem.parentNode.removeChild(elem);
+          document.getElementById("formconfirm").innerHTML = "<p>Sorry, "+name+" you've already entered 5 Kicks this week. Good luck and see you on results day!</p>";  
+
+
+  }
+
+
+
+    },
+  error: function(error) {
+    alert("Something has gone wrong! It's probably some kind of annoying server thing, but email jon@runwithkick.com if the problem persists!");
+  }
+
+
+  }
+); 
+}
+
+var KickData = Parse.Object.extend("KickData");
+var queryKickData = new Parse.Query(KickData);
+queryKickData.equalTo("TwitterHandle", person);
+
+queryKickData.first({
+  success: function(object) {
+    var entrants = object.get('kickEntrants');
+    var times = object.get("kickTimes");
+    var points = object.get("points");
+
+    if(entrants.length>0){
+
+      for(i=0;i<entrants.length;i++){
+        var j = i.toString();
+        document.getElementById("lastweek"+j).innerHTML = "<table><tr><td><div id='minipic1' style='background-image: url(https://twitter.com/"+entrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/profile?id="+entrants[i]+"'>"+entrants[i]+"</a></td><td><p id='resultspoints'>"+points[i]+"</p></td></tr><table><br>";
+        }
+      }
+
+      else{
+        document.getElementById("lastweek0").innerHTML = "<p style='text-align:center'>No Kicks last week</p>"
+      }
+
+
+    },
+
+  error: function(error) {
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
+  }
+  }
+);
+
+
+
+// -----------------Profile image & Name
+var queryPic = new Parse.Query(personalInfo);
+queryPic.equalTo("TwitterHandle", person);
+queryPic.first({
+  success: function(object) {
+    var twitterpic = object.get('TwitterHandle');
+    var firstname = object.get('firstName');
+    document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://twitter.com/'+twitterpic+'/profile_image?size=original)"></div>';
+    document.getElementById("theirname").innerHTML = firstname+"'s Kicks";
+    document.getElementById("visitkicks").innerHTML = "<a href='http://www.runwithkick.com/profile?id="+person+"'>"+firstname+"'s Profile <i class='fa fa-angle-right'></i></a>";
+
+
+
+  }, 
+  error: function(error) {
+    document.getElementById("twitterpicture").innerHTML = "Something";
+  }
+  }
+);
+
+
+// Check if Registered
+
+
+var queryExplore = new Parse.Query(personalInfo);
+queryExplore.equalTo("kickId", "123A");
+queryExplore.first({
+  success: function(object) {
+    var ifregistered = object.get('kickEntered');
+    
+      if(ifregistered.indexOf(person)==-1){
+      var elem = document.getElementById("removeall");
+      elem.parentNode.removeChild(elem);
+      document.getElementById("message").innerHTML = "<p class='subheaders' style='padding-bottom:40px'>It looks like there isn't anyone signed up with this username.</p><br><div class='maincontain' style='text-align: center; padding-top: 0px'><a href='http://www.runwithkick.com/getstarted'><img src='https://dl.dropboxusercontent.com/u/10455351/Assets/signupforkick.png' /img style='height:150px'></a></div></p>";
+      document.getElementById("twitterpicture").innerHTML = '<div id="inner" style="background-image: url(https://dl.dropboxusercontent.com/u/10455351/Assets/hmm.png)"></div>';
+
+      }
+
+    }, 
+  error: function(error) {
+    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
+  }
+  }
+);
+
+
+
+
+</script>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+<!--Browser Warning.js-->
+<!--==============================================-->
+
+<script> 
+var $buoop = {c:2}; 
+function $buo_f(){ 
+ var e = document.createElement("script"); 
+ e.src = "//browser-update.org/update.js"; 
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script> 
+	
+  </body>
+  </html>
