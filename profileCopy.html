@@ -469,14 +469,14 @@
       
       <div class="cards">
         <div class="border-bottom">
-          <p class="mainheaders">More Events</p>
+          <p class="mainheaders">Last race</p>
         </div>
       
         <div class="border-below">
           <table>
           <tr>
             <td>
-              More events coming soon!
+              <p id="stats"><span id="lastweek"></span></p>
             </td>
           </table>
 
@@ -606,6 +606,7 @@ queryName.first({
     var firstname = object.get('firstName');
     var lastname = object.get('lastName');
     var nonRunner = object.get('nonRunner');
+    document.getElementById("lastweek").innerHTML = firstname+"'s results from their last race will appear here after they have raced for the first time";
     document.getElementById("name").innerHTML = firstname+" "+lastname;
     document.getElementById("visitkicks").innerHTML = "<a href='http://www.runwithkick.com/kicks?id="+person+"'>"+firstname+"'s Kicks <i class='fa fa-angle-right'></i></a>"
     if (nonRunner == true){
