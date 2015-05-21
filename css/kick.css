@@ -1921,6 +1921,6 @@ width:400px;
 
 
 
-#submit:hover{
+#submit > p:hover{
 cursor:hand;
 }
