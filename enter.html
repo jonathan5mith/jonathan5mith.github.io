@@ -259,8 +259,9 @@
       <span id="formconfirm99"></span>
       <span id="formconfirm100"></span>
       
-      <p onclick="myFunction()" style="font-size:50px; text-align:center"><i class="fa fa-plus social-icons"></i></p>
-
+      <div id="removebutton">
+        <p onclick="myFunction()" style="font-size:50px; text-align:center"><i class="fa fa-plus social-icons"></i></p>
+      </div>
 
       <div id="formremove">
 
@@ -397,7 +398,9 @@ queryPic.first({
 
 function myFunction() {
 
-alert("itworked")
+var elem = document.getElementById("removebutton");
+elem.parentNode.removeChild(elem);
+
 }
 
 function formSubmit() {
