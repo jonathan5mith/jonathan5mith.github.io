@@ -281,8 +281,19 @@ var twitterhandle = twitterhandle2.toLowerCase();
 var twitterpic = 'https://twitter.com/'+twitterhandle+'/profile_image?size=original';
 var city = document.getElementById("city").value;
 var country = document.getElementById("country").value;
+var mma = document.getElementById("mm").value;
+var ssa = document.getElementById("ss").value;
+var mm = parseFloat(mma);
+var ss = parseFloat(ssa);
+var validated = document.getElementById("validated").value;
 var emailoff = document.getElementById("emailoff").checked;
-
+var dectime = mm+(ss/60);
+if (dectime>0){
+var runtimes = [dectime];
+}
+else{
+var runtimes = [];
+}
 
 function makeid()
 {
@@ -301,6 +312,13 @@ if(firstname.length==0||lastname.length==0||city.length==0||country.length==0||t
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please fill in all required fields</p>"
 }
 
+else if(ss>=60){
+document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please enter a valid time</p>"
+}
+else if(dectime<12.7){
+document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Um, so that's a world record. Pull the other one</p>"
+
+}
 
 else{
 
@@ -309,6 +327,7 @@ var NewUser = Parse.Object.extend("upload1");
 var newUser = new NewUser();
 
 
+if (runtimes.length == 0) {
 newUser.set("firstName", firstname);
 newUser.set("lastName", lastname);
 newUser.set("emailAddress", emailaddress);
@@ -326,6 +345,24 @@ newUser.set("kickCount",0);
 newUser.set("validatedLink", validated)
 newUser.set("emailOff", emailoff)
 
+}
+else{
+newUser.set("firstName", firstname);
+newUser.set("lastName", lastname);
+newUser.set("emailAddress", emailaddress);
+newUser.set("TwitterHandle", twitterhandle);
+newUser.set("city", city);
+newUser.set("country", country);
+newUser.set("twitterPicture", twitterpic);
+newUser.set("runTimes", runtimes);
+newUser.set("runTimesHidden",[]);
+newUser.set("points",5);
+newUser.set("kickId", kickId);
+newUser.set("kickEntrants",[]);
+newUser.set("kickEntered",[]);
+newUser.set("kickCount",0);
+newUser.set("validatedLink", validated)
+newUser.set("emailOff", emailoff)
 }
 
 
