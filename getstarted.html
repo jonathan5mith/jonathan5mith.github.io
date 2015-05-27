@@ -330,7 +330,7 @@ newUser.set("emailOff", emailoff);
 newUser.save(null, {
 success: function(newUser) {
 document.getElementById("formconfirm").innerHTML = "Congratuations, "+firstname+", you're all signed up. ";
-document.getElementById("formconfirm1").innerHTML ="<p>Now you're signed up, you can check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"' target='_blank'>profile</a>, <a href='http://runwithkick.com/create' target='_blank'>create</a> and share Kicks or <a href='http://runwithkick.com/explore' target='_blank'>explore</a> Kicks that others have made.</p><p style='font-weight:400'>You can see your profile at any time by going to: runwithkick.com/profile/"+twitterhandle+"</p><p>Follow Kick on Twitter or Facebook using the links below</p><p style='text-align:center; font-size:15px; padding-top:20px'><a href='http://www.twitter.com/runwithkick' target='_blank' title='Kick on Twitter'><i class='fa fa-twitter social-icons'></i> Kick on Twitter </a>&nbsp;&nbsp;<a href='http://www.facebook.com/runwithkick' target='_blank' title='Kick on Facebook'><i class='fa fa-facebook social-icons'></i> Kick on Facebook</a></p>";
+document.getElementById("formconfirm1").innerHTML ="<p>Now you're signed up, you can check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"' target='_blank'>profile</a>.</p><p style='font-weight:400'>You can see your profile at any time by going to: runwithkick.com/profile/"+twitterhandle+"</p><p>Follow Kick on Twitter or Facebook using the links below</p><p style='text-align:center; font-size:15px; padding-top:20px'><a href='http://www.twitter.com/runwithkick' target='_blank' title='Kick on Twitter'><i class='fa fa-twitter social-icons'></i> Kick on Twitter </a>&nbsp;&nbsp;<a href='http://www.facebook.com/runwithkick' target='_blank' title='Kick on Facebook'><i class='fa fa-facebook social-icons'></i> Kick on Facebook</a></p>";
 var elem = document.getElementById("formremove");
 elem.parentNode.removeChild(elem);
 var elem = document.getElementById("removeimage");
@@ -339,16 +339,16 @@ document.getElementById("thanks").innerHTML = 'Congratuations!';
 
 Parse.Cloud.run('myMandrillFunction', {
 Address: emailaddress,
-EmailText: "Hi "+firstname+", welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+". Keep this safe, you’ll need to do most stuff in Kick.\r\n\r\nNow you’re signed up, you can create and enter Kicks, and come results day on Mondays you'll see how you did and collect points and vests.\r\n\r\nRemember to check out our latest event at www.runwithkick.com/steel\r\n\r\nHappy Kicking!",
+EmailText: "Hi "+firstname+", welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+". Keep this safe as you'll need it to submit your time, and you can use it to enter future races.\r\n\r\nRemember, you can also favorite the weekly race tweet to enter the race too! Check out twitter.com/runwithkick to find it.\r\n\r\nGood Luck!",
 }, {
   // Success handler
   success: function(message) {
-  document.getElementById("emailconfirm").innerHTML = 'An email will be sent to '+emailaddress+" with your Kick ID. Please check your junk folder if you don't get it!";
+  document.getElementById("emailconfirm").innerHTML = 'An email will be sent to '+emailaddress+" with your Kick ID, which you'll need to submit your time. Please check your junk folder if you don't get it!";
 
   },
   // Error handler
   error: function(message) {
-  document.getElementById("emailconfirm").innerHTML = "At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and I'll sort it all out</p>";
+  document.getElementById("emailconfirm").innerHTML = "At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and I'll sort it all out.";
   }
 });
 
