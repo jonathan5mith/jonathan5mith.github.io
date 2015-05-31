@@ -177,8 +177,9 @@
         </p>
 
         <br>
+        <div id="formremove22">
         <p style="font-size:13px">Make sure your Kick ID is correct, as it won't do anything if it's not!</p>
-
+        </div>
         </div>
 
          <span id="formconfirm"></span>
@@ -251,6 +252,9 @@ var runtimes = [dectime];
 
 if(ss>=60||isNaN(mm)==true||isNaN(ss)==true){
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please enter a valid time</p>"
+var elem = document.getElementById("formremove22");
+elem.parentNode.removeChild(elem);
+
 }
 else if(dectime<12.7){
 document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Um, that's a world record. Pull the other one</p>"
