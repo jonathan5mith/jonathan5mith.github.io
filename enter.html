@@ -397,9 +397,7 @@ queryNewParticipant.first({
     var kickhistory = object.get("runTimes");
     var kicksentered = object.get("kickEntered");
 
-    if(kicksentered.length<5){
 
-    if(kickhistory.length>0){
 
 
     object.set("kickCount", kickcount+1);
@@ -435,24 +433,6 @@ queryNewParticipant.first({
       }
     ); 
 //nested query end
-}
-
-else{
-            var elem = document.getElementById("formremove");
-          elem.parentNode.removeChild(elem);
-          document.getElementById("formconfirm").innerHTML = "<p>You can't enter a Kick without submitting your first Kick. Head over to the <a href='http://runwithkick.com/submit'>Submit Page</a> where you can submit your first Kick.</p>";  
-
-}
-
-    }
-  else{
-
-            var elem = document.getElementById("formremove");
-          elem.parentNode.removeChild(elem);
-          document.getElementById("formconfirm").innerHTML = "<p>Sorry, "+name+" you've already entered 5 Kicks this week. Good luck and see you on results day!</p>";  
-
-
-  }
 
 
 
