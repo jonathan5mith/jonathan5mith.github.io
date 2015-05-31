@@ -312,7 +312,7 @@ width:550px;
 	letter-spacing: 3px;
 	margin-right: auto;
 	margin-left: auto;
-	/*max-width: 500px;*/
+	max-width: 300px;
 
 	}
 
@@ -326,7 +326,7 @@ width:550px;
 
 	.text-containera {
 
-	margin-top: 70px;
+	margin-top: 45px;
 	display:inline-block;
 	text-align: center;
 	}
