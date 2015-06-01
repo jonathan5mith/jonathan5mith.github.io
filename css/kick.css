@@ -1920,6 +1920,6 @@ width:400px;
 }
 
 
-#submit > p:hover{
-cursor:pointer;
+#pointerhand{
+	cursor:pointer;
 }
