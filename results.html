@@ -332,16 +332,7 @@ queryPic.first({
   success: function(object) {
     var kickentrants = object.get('kickEntrants');
     var firstname = object.get('firstName');
-    var lastname = object.get('lastName');
-    var runtimes = object.get('runTimes');
-    var latesttime1 = runtimes.slice(-1).pop();
 
-    function minTommss(minutes){
-      var sign = minutes < 0 ? "-" : "";
-      var min = Math.floor(Math.abs(minutes))
-      var sec = Math.floor((Math.abs(minutes) * 60) % 60);
-      return sign + (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
-    };
 
     var latesttime = minTommss(latesttime1);
 
@@ -362,7 +353,7 @@ queryPic.first({
     
       for(i=0;i<kickentrants.length;i++){
         var j = i.toString();
-        document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/profile?id="+kickentrants[i]+"'>"+firstname+" "+lastname+"</a></td><td>"+latesttime+"</td></tr></table><br>";
+        document.getElementById("formconfirm"+j).innerHTML = "<tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/profile?id="+kickentrants[i]+"'>"+kickentrants[i]+"</a></td></tr></table><br>";
         }
    
     }
