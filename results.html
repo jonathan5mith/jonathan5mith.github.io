@@ -142,7 +142,6 @@
        
       <p><span id="formconfirmb"></span></p>
 
-      <table>
       <span id="formconfirm0"></span>
       <span id="formconfirm1"></span>
       <span id="formconfirm2"></span>
@@ -244,7 +243,8 @@
       <span id="formconfirm98"></span>
       <span id="formconfirm99"></span>
       <span id="formconfirm100"></span>
-      </table>
+
+
       <div id="removebutton">
         <p onclick="myFunction()" style="font-size:70px; font-weight:400; color: gray; text-align:center;" id="pointerhand" title="Enter Race">+</p>
       </div>
@@ -350,7 +350,7 @@ queryPic.first({
     
       for(i=0;i<kickentrants.length;i++){
         var j = i.toString();
-        document.getElementById("formconfirm"+j).innerHTML = "<tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/profile?id="+kickentrants[i]+"'>"+kickentrants[i]+"</a></td></tr></table><br>";
+        document.getElementById("formconfirm"+j).innerHTML = "<table><tr><td><div id='minipic'style='background-image: url(https://twitter.com/"+kickentrants[i]+"/profile_image?size=original)'></div></td><td><a href='http://www.runwithkick.com/profile?id="+kickentrants[i]+"'>"+kickentrants[i]+"</a></td></tr></table><br></table>";
         }
    
     }
