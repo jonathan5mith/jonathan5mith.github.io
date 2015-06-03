@@ -97,7 +97,7 @@
   <ul class="nav navbar-nav navbar-right">
 
     <li><a href="http://runwithkick.com/getstarted"><b>Get Started</b></a></li>
-    <li><a href="http://runwithkick.com/enter">Enter Race</a></li>
+    <li><a href="http://runwithkick.com/enter">Enter 5k</a></li>
     <li><a href="http://runwithkick.com/submit">Submit Time</a></li>
     <li><a href="http://runwithkick.com/about">About</a></li>
     <!--<li><a href="https://www.strava.com/clubs/kick-122494" target="_blank" title="Strava"><img src="https://dl.dropboxusercontent.com/u/10455351/Assets/strava1.png"/></a></li>-->
@@ -123,7 +123,7 @@
 <!--==============================================-->
 
 
-<p class="subheaders">This is where it all starts, sign up for Kick below using your Twitter handle, and you can <a href="http://www.runwithkick.com/enter">enter the race</a> straight away! If you've favorited the race tweet, you'll be entered automatically, but you still need to sign up to submit your time.</p>
+<p class="subheaders">This is where it all starts, sign up for Kick below using your Twitter handle, and you can <a href="http://www.runwithkick.com/enter">enter </a> the weekly 5k race straight away! If you've favorited the race tweet, you'll be entered automatically (although not necessarily straight away!), but you still need to sign up to submit your time.</p>
 
 <div class="maincontain"> 
 <div class="formcontain">
@@ -316,7 +316,7 @@ newUser.set("emailOff", emailoff);
 newUser.save(null, {
 success: function(newUser) {
 document.getElementById("formconfirm").innerHTML = "Congratuations, "+firstname+", you're all signed up. ";
-document.getElementById("formconfirm1").innerHTML ="<p>Now you're signed up, you can check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"' target='_blank'>profile</a> which you can see at any time by going to runwithkick.com/profile/"+twitterhandle+"</p><p>Follow Kick on Twitter or Facebook using the links below</p><p style='text-align:center; font-size:15px; padding-top:20px'><a href='http://www.twitter.com/runwithkick' target='_blank' title='Kick on Twitter'><i class='fa fa-twitter social-icons'></i> Kick on Twitter </a>&nbsp;&nbsp;<a href='http://www.facebook.com/runwithkick' target='_blank' title='Kick on Facebook'><i class='fa fa-facebook social-icons'></i> Kick on Facebook</a></p>";
+document.getElementById("formconfirm1").innerHTML ="<p>Now you're signed up, you can <a href='http://runwithkick.com/enter' target='_blank'>enter</a> the race and check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"' target='_blank'>profile</a> which you can see at any time by going to runwithkick.com/profile/"+twitterhandle+"</p><p>Follow Kick on Twitter or Facebook using the links below</p><p style='text-align:center; font-size:15px; padding-top:20px'><a href='http://www.twitter.com/runwithkick' target='_blank' title='Kick on Twitter'><i class='fa fa-twitter social-icons'></i> Kick on Twitter </a>&nbsp;&nbsp;<a href='http://www.facebook.com/runwithkick' target='_blank' title='Kick on Facebook'><i class='fa fa-facebook social-icons'></i> Kick on Facebook</a></p>";
 var elem = document.getElementById("formremove");
 elem.parentNode.removeChild(elem);
 var elem = document.getElementById("removeimage");
