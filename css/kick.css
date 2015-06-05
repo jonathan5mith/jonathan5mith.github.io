@@ -1928,8 +1928,8 @@ width:400px;
 	    opacity: 0.5;
     background: #999; /* for non-css3 browsers */
 
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); /* for IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#000)); /* for webkit browsers */
-    background: -moz-linear-gradient(top,  #ccc,  #000); /* for firefox 3.6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='white'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  transparent,  white); /* for firefox 3.6+ */
 
 }
