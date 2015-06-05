@@ -379,9 +379,7 @@ queryPic.first({
 function myFunction() {
 
 var elem = document.getElementById("showmore");
-var elem1 = document.getElementById("divfade");
 elem.parentNode.removeChild(elem);
-elem1.parentNode.removeChild(elem1);
 
 document.getElementById('formremove').style.display = "block";
 
@@ -392,6 +390,10 @@ function myFunction1() {
 
 var elem = document.getElementById("removebutton");
 elem.parentNode.removeChild(elem);
+var elem1 = document.getElementById("divfade");
+
+elem1.parentNode.removeChild(elem1);
+
 
  document.getElementById('removeentrants').style.display = "block";
 
