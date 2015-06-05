@@ -175,7 +175,7 @@
       <span id="formconfirm5"></span>
       </div>
 
-      <p onclick="myFunction1()" style="font-size:70px; font-weight:400; color: gray; text-align:center;" id="showmore">Show all</p>
+      <p onclick="myFunction1()" style="font-size:20px; font-weight:400; color: gray; text-align:center;" id="showmore">Show all</p>
 
       <div id="removeentrants" style="display:none;">
       <span id="formconfirm5"></span>
@@ -378,13 +378,27 @@ queryPic.first({
 
 function myFunction() {
 
-var elem = document.getElementById("removebutton");
+var elem = document.getElementById("showmore");
+var elem1 = document.getElementById("divfade");
 elem.parentNode.removeChild(elem);
+elem1.parentNode.removeChild(elem1);
 
- document.getElementById('formremove').style.display = "block";
+document.getElementById('formremove').style.display = "block";
 
 
 }
+
+function myFunction1() {
+
+var elem = document.getElementById("removebutton");
+elem.parentNode.removeChild(elem);
+
+ document.getElementById('removeentrants').style.display = "block";
+
+
+}
+
+
 
 function formSubmit() {
 var kickid = document.getElementById("kickid").value;
