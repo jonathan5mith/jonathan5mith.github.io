@@ -148,6 +148,7 @@
       </div>
 <!--<i class="fa fa-plus social-icons"></i>-->
       <div id="formremove" style="display:none;" >
+        <p style="font-size:13px">Make sure your Kick ID is correct, as it won't do anything if it's not!</p>
 
         <br>
           <div class="form-inline profileform" role="form">
@@ -157,12 +158,11 @@
             </div>
           </div>
                   <br>
-        <p style="font-size:13px">Make sure your Kick ID is correct, as it won't do anything if it's not!</p>
 
       </div>
 
       <span id="formconfirm"></span>
-       
+
       <p><span id="formconfirmb"></span></p>
 
       <span id="formconfirm0"></span>
@@ -334,7 +334,8 @@ var queryPic = new Parse.Query(personalInfo);
 queryPic.equalTo("TwitterHandle", person);
 queryPic.first({
   success: function(object) {
-    var kickentrants = object.get('kickEntrants');
+    var kickentrants1 = object.get('kickEntrants');
+    var kickentrants = kickentrants1.reverse();
     var firstname = object.get('firstName');
     //document.getElementById("nameenter").innerHTML = firstname;    
     if(kickentrants.length==0){
