@@ -1933,3 +1933,7 @@ width:400px;
     background: -moz-linear-gradient(top,  transparent,  white); /* for firefox 3.6+ */
 
 }
+
+#showmore{
+	cursor:pointer;
+}
