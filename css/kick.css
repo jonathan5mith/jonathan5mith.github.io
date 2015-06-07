@@ -1909,6 +1909,7 @@ width:400px;
 	  }
 	.colhide{
 		display:none;
+		width: 0px;
 	}
 	  .responsive{
 	margin-left: 0px;
