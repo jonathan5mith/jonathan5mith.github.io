@@ -1907,6 +1907,9 @@ width:400px;
 	#timesexample{
 	width:250px;
 	  }
+
+
+
 }
 
 @media (min-width: 768px)  {
@@ -1916,6 +1919,12 @@ width:400px;
   	#timesexample{
 	width:400px;
 	  }
+
+	  .responsive{
+	width:700px;
+	margin:auto auto;
+
+}
 }
 
 
@@ -1940,3 +1949,4 @@ width:400px;
 table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
     content: " \25B4\25BE" 
 }
+
