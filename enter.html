@@ -412,8 +412,6 @@ queryNewParticipant.first({
     var kicksentered = object.get("kickEntered");
 
 
-
-
     object.set("kickCount", kickcount+1);
     object.addUnique("kickEntered",person);
     object.save();
@@ -469,6 +467,15 @@ queryKickData.first({
     var entrants = object.get('kickEntrants');
     var times = object.get("kickTimes");
     var points = object.get("points");
+
+    if(entrants.length<=5){
+      document.getElementById("showall").innerHTML = "Show All"
+    }
+
+    else{
+      document.getElementById("showall").innerHTML = ""
+    }
+
 
     if(entrants.length>0){
 
