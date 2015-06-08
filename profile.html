@@ -480,7 +480,20 @@ queryName.first({
     var firstname = object.get('firstName');
     var lastname = object.get('lastName');
     var nonRunner = object.get('nonRunner');
-    document.getElementById("lastrace").innerHTML = firstname+"'s results will appear here after they have raced for the first time";
+    var lastweek = object.get('lastWeek');
+
+    if(lastweek.length == 0){
+          document.getElementById("lastrace").innerHTML = firstname+"'s results will appear here after they have raced for the first time";
+    }
+
+    else{
+          document.getElementById("lastrace").innerHTML = "<table><tr><td>Position</td><td>Time</td><td>Points</td></tr></table>";
+    }
+    
+
+    
+
+
     document.getElementById("name").innerHTML = firstname+" "+lastname;
     document.getElementById("visitkicks").innerHTML = "<a href='http://www.runwithkick.com/kicks?id="+person+"'>"+firstname+"'s Kicks <i class='fa fa-angle-right'></i></a>"
     if (nonRunner == true){
