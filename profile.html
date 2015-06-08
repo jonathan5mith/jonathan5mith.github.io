@@ -489,13 +489,10 @@ queryName.first({
     }
 
     else{
-          document.getElementById("lastrace").innerHTML = "<table><tr style='padding-bottom:10px'><td>Time</td><td>"+lastweek[0]+"</td></tr><tr style='padding-bottom:10px'><td>Position</td><td>"+lastweek[1]+"</td></tr><tr style='padding-bottom:10px'><td>Points</td><td>"+lastweek[2]+"</td></tr></table>";
+          document.getElementById("lastrace").innerHTML = "<table><tr><td><p id='stats'>Time</p></td><td><p id='stats'>"+lastweek[0]+"</p></td></tr><tr><td><p id='stats'>Position</p></td><td><p id='stats'>"+lastweek[1]+"</p></td></tr><tr><td><p id='stats'>Points</p></td><td><p id='stats'>"+lastweek[2]+"</p></td></tr></table>";
     }
     
-
-    
-
-
+ 
     document.getElementById("name").innerHTML = firstname+" "+lastname;
     document.getElementById("visitkicks").innerHTML = "<a href='http://www.runwithkick.com/kicks?id="+person+"'>"+firstname+"'s Kicks <i class='fa fa-angle-right'></i></a>"
     if (nonRunner == true){
