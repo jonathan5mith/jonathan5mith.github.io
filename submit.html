@@ -282,7 +282,7 @@ querySubmitTime.first({
     
     else{
 
-    if(dog.length==0){
+    if(dog.length!==0){
           object.addUnique("runTimesHidden", dectime);
     object.save();
     document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted this week's time</p> <p>Your time will appear on the results page and your profile on Monday and we'll also tweet you your result!</p>";
@@ -297,7 +297,7 @@ querySubmitTime.first({
 
           object.addUnique("runTimesHidden", dectime);
     object.save();
-    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've completed your first race and won your first vest (check it out below!)</p> <p>Your time will appear on the results page and your profile on Monday and we'll also tweet you your result!</p><img src='https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png' height='50px'/>";
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've completed your first race and won your first vest (check it out below!)</p><p style='text-align:center'><img src='https://dl.dropboxusercontent.com/u/10455351/Assets/vest1.png' height='100px'/></p><p>Your time will appear on the results page and your profile on Monday and we'll also tweet you your result!</p>";
     var elem = document.getElementById("formremove");
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById("removeimage");
