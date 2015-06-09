@@ -281,7 +281,9 @@ querySubmitTime.first({
     }
     
     else{
-    object.addUnique("runTimesHidden", dectime);
+
+    if(dog.length==0){
+          object.addUnique("runTimesHidden", dectime);
     object.save();
     document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've submitted this week's time</p> <p>Your time will appear on the results page and your profile on Monday and we'll also tweet you your result!</p>";
     var elem = document.getElementById("formremove");
@@ -289,6 +291,22 @@ querySubmitTime.first({
     var elem = document.getElementById("removeimage");
     elem.parentNode.removeChild(elem);
     document.getElementById("thanks").innerHTML = '...and rest';
+
+    }
+    else{
+
+          object.addUnique("runTimesHidden", dectime);
+    object.save();
+    document.getElementById("formconfirm").innerHTML = "<p>Fantastic, you've completed your first race and won your first vest (check it out below!)</p> <p>Your time will appear on the results page and your profile on Monday and we'll also tweet you your result!</p><img src='https://dl.dropboxusercontent.com/u/10455351/Assets/vests/vest1.png' height='50px'/>";
+    var elem = document.getElementById("formremove");
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById("removeimage");
+    elem.parentNode.removeChild(elem);
+    document.getElementById("thanks").innerHTML = '...and rest';
+
+    }
+
+
     }
     }
    
