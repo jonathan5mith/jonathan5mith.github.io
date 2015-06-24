@@ -424,13 +424,6 @@ queryNewParticipant.first({
       success: function(object) {
         var entrants = object.get("kickEntrants");
 
-            if(entrants.length<=5){
-      document.getElementById("showall").innerHTML = "Show All"
-    }
-
-    else{
-      document.getElementById("showall").innerHTML = ""
-    }
 
         
         if(entrants.indexOf(twitterhandlex)>=0){
@@ -475,9 +468,18 @@ queryKickData.equalTo("TwitterHandle", person);
 
 queryKickData.first({
   success: function(object) {
-    var entrants = object.get('kickEntrants');
+    var entrants = object.get("kickEntrants");
     var times = object.get("kickTimes");
     var points = object.get("points");
+
+    if(entrants.length<=5){
+      document.getElementById("showall").innerHTML = "Show All"
+    }
+
+    else{
+      document.getElementById("showall").innerHTML = ""
+    }
+
 
 
 
