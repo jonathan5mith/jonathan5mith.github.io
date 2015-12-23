@@ -274,26 +274,6 @@ var country = document.getElementById("country").value;
 var emailoff = document.getElementById("emailoff").checked;
 
 
-function makeid()
-{
-var text = "";
-var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-for( var i=0; i < 8; i++ )
-text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-return text;
-}
-
-var kickId = makeid();
-
-if(firstname.length==0||lastname.length==0||city.length==0||country.length==0||twitterhandle.length==0||emailaddress.length==0){
-document.getElementById("formconfirm").innerHTML = "<br><p style='color:#990000; text-align:center'>Please fill in all required fields</p>"
-}
-
-
-else{
-
 Parse.initialize("ImFHWsA4AQ8lDUSfaDlsokY2C6ld3e12bDtfecJ0", "7FynBYH2bC7k3NCvGoKtFsyNw0aTytfvtFo0H2Ei");
 
 var user = new Parse.User();
@@ -301,92 +281,21 @@ user.set("username", firstname);
 user.set("password", lastname);
 user.set("email", emailaddress);
 
+
+
 user.signUp(null, {
   success: function(user) {
     alert("horay!")
   },
   error: function(user, error) {
     // Show the error message somewhere and let the user try again.
-    alert("oh no");
-  }
-});
-
-}
-
-
-/*
-
-var NewUser = Parse.Object.extend("upload1");
-var newUser = new NewUser();
-
-
-newUser.set("firstName", firstname);
-newUser.set("lastName", lastname);
-newUser.set("emailAddress", emailaddress);
-newUser.set("TwitterHandle", twitterhandle);
-newUser.set("city", city);
-newUser.set("country", country);
-newUser.set("twitterPicture", twitterpic);
-newUser.set("runTimes", []);
-newUser.set("runTimesHidden",[]);
-newUser.set("points",0);
-newUser.set("kickId", kickId);
-newUser.set("kickEntrants",[]);
-newUser.set("kickEntered",[]);
-newUser.set("emailOff", emailoff);
-newUser.set("lastWeek",[]);
-}
-
-
-
-newUser.save(null, {
-success: function(newUser) {
-document.getElementById("formconfirm").innerHTML = "Congratuations, "+firstname+", you're all signed up. ";
-document.getElementById("formconfirm1").innerHTML ="<p>Now you're signed up, you can <a href='http://runwithkick.com/enter' target='_blank'>enter</a> the race and check out your <a href='http://runwithkick.com/profile?id="+twitterhandle+"' target='_blank'>profile</a> which you can see at any time by going to runwithkick.com/profile/"+twitterhandle+"</p><p>Follow Kick on Twitter or Facebook using the links below</p><p style='text-align:center; font-size:15px; padding-top:20px'><a href='http://www.twitter.com/runwithkick' target='_blank' title='Kick on Twitter'><i class='fa fa-twitter social-icons'></i> Kick on Twitter </a>&nbsp;&nbsp;<a href='http://www.facebook.com/runwithkick' target='_blank' title='Kick on Facebook'><i class='fa fa-facebook social-icons'></i> Kick on Facebook</a></p>";
-var elem = document.getElementById("formremove");
-elem.parentNode.removeChild(elem);
-var elem = document.getElementById("removeimage");
-elem.parentNode.removeChild(elem);
-document.getElementById("thanks").innerHTML = 'Congratuations!';
-
-Parse.Cloud.run('myMandrillFunction', {
-Address: emailaddress,
-EmailText: "Hi "+firstname+", welcome to Kick!\r\n\r\nYour Kick ID is "+kickId+". Keep this safe as you'll need it to submit your time, and you can use it to enter future races.\r\n\r\nRemember, you can also favorite the weekly race tweet to enter the race too! Check out twitter.com/runwithkick to find it.\r\n\r\nGood Luck!",
-}, {
-  // Success handler
-  success: function(message) {
-  document.getElementById("emailconfirm").innerHTML = 'An email will be sent to '+emailaddress+" with your Kick ID, which you'll need to submit your time. Please check your junk folder if you don't get it!";
-
-  },
-  // Error handler
-  error: function(message) {
-  document.getElementById("emailconfirm").innerHTML = "At this point you should have been sent an email with your Kick ID, but it looks like it's not worked, please contact jon@runwithkick.com and I'll sort it all out.";
-  }
+    alert("nay!")  }
 });
 
 
-},
-error: function(newUser, error) {
-alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
-}
-});
-
-var queryExplore = new Parse.Query(NewUser);
-queryExplore.equalTo("kickId", "123A");
-queryExplore.first({
-success: function(object){
-object.addUnique("kickEntered",twitterhandle);
-object.save();
-},
-error: function(error){
-    alert("It looks like something's gone wrong. It's probably a server thing, but contact jon@runwithkick.com if the problem persists");
-}
-
-});
 
 }
 
-*/
 
 
 
